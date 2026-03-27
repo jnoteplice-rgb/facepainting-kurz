@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFPS Professional Course — Část třetí: Designy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f0eb; color: #333; line-height: 1.7; }
+    .header { background: linear-gradient(135deg, #6a1b9a, #e91e63); color: white; padding: 40px 20px; text-align: center; }
+    .header h1 { font-size: 2em; margin-bottom: 8px; }
+    .header p { font-size: 1.1em; opacity: 0.9; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .toc { background: white; border-radius: 12px; padding: 24px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .toc h2 { color: #6a1b9a; margin-bottom: 12px; font-size: 1.3em; }
+    .toc ul { list-style: none; padding: 0; }
+    .toc li { padding: 6px 0; }
+    .toc a { color: #e91e63; text-decoration: none; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+    .module-header { background: linear-gradient(135deg, #6a1b9a, #8e24aa); color: white; padding: 20px 24px; border-radius: 12px 12px 0 0; margin-top: 36px; }
+    .module-header h2 { font-size: 1.4em; }
+    .lesson { background: white; border-radius: 0 0 12px 12px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
+    .lesson-title { background: #f3e5f5; padding: 16px 24px; border-bottom: 2px solid #ce93d8; }
+    .lesson-title h3 { color: #6a1b9a; font-size: 1.2em; }
+    .lesson-content { padding: 20px 24px; }
+    .lesson-content p { margin-bottom: 14px; font-size: 0.95em; }
+    .lesson-content h4 { color: #6a1b9a; margin: 18px 0 10px 0; font-size: 1.05em; }
+    .lesson-content ul { margin: 8px 0 14px 20px; }
+    .lesson-content li { margin-bottom: 6px; font-size: 0.93em; }
+    .tip { background: #fff3e0; border-left: 4px solid #ff9800; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .tip strong { color: #e65100; }
+    .note { background: #f3e5f5; border-left: 4px solid #8e24aa; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .warning { background: #fce4ec; border-left: 4px solid #c62828; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .warning strong { color: #c62828; }
+    .media-gallery { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; justify-content: center; }
+    .media-gallery img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    .media-caption { text-align: center; color: #777; font-size: 0.8em; margin-top: 4px; font-style: italic; }
+    .footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; margin-top: 40px; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 16px 0; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+    @media (max-width: 700px) { .media-gallery .half { width: 100%; } .header h1 { font-size: 1.4em; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎨 IFPS Professional Course — Část třetí: Designy</h1>
+  <p style="font-size: 0.85em; margin-top: 8px;">International Face Painting School — Překlad do češtiny</p>
+</div>
+
+<div class="container">
+
+  <!-- ÚVOD -->
+  <div class="lesson" style="border-radius: 12px; margin-top: 24px;">
+    <div class="lesson-title" style="border-radius: 12px 12px 0 0;"><h3>Úvod do Části třetí</h3></div>
+    <div class="lesson-content">
+      <p>Gratulujeme k úspěšnému dokončení Části druhé kurzu! 🎉 🎉</p>
+      <p>Odvedli jste skvělou práci při procházení všech technik a pečlivém studiu teorie z Části druhé. Pojďme si udělat rychlé opakování toho, co jste se naučili:</p>
+      <ul>
+        <li>✔️ Zvládli jste práci s různými konzistencemi barvy</li>
+        <li>✔️ Rozvinuli jste dovednosti v linkách a technice double dip</li>
+        <li>✔️ Objevili jste, jak používat filbert štětce a stali se mistry blendování</li>
+        <li>✔️ Víte, jak pracovat s houbičkami pro skvělé výsledky</li>
+        <li>✔️ Zvládli jste techniku one stroke a umíte malovat krásné one stroke růže</li>
+        <li>✔️ Víte, jak používat třpytky a šablony ve face paintingu</li>
+        <li>✔️ A objevili jste, jak si postavit perfektní face paintingový setup</li>
+      </ul>
+      <p>Jste už hrdí na své úspěchy? Protože my rozhodně ano! Teď je čas využít dovednosti zvládnuté v Části druhé a přejít k nejzajímavější části kurzu — Části třetí, vytváření fantastických face paintingových designů!</p>
+      <p>Jste připraveni? Tak pojďme sebrat naše barvy a nástroje, začít s dobrou náladou a vyrazit dobývat nové kreativní vrcholy v Části třetí.</p>
+    </div>
+  </div>
+
+  <!-- OBSAH -->
+  <div class="toc">
+    <h2>📋 Obsah</h2>
+    <ul>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 1: Základy práce na obličeji — ohniskové body, symetrie</li>
+      <li style="margin-left: 20px;"><a href="#m1l1">Lekce 1: Umístění designu ve face paintingu</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l2">Lekce 2: Umístění světel a stínů ve face paintingu</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l3">Lekce 3: Ohniskové body ve face paintingu</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l4">Lekce 4: Praktické využití ohniskových bodů</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l5">Lekce 5: Tipy a triky pro symetrické designy</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 2: Vše o motýlech — geometrie, typy a techniky malování</li>
+      <li style="margin-left: 20px;"><a href="#m2l1">Lekce 1: O motýlech</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l2">Lekce 2: Jak vytvořit perfektní tvar motýla</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l3">Lekce 3: TOP 10 chyb při malování motýlů</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l4">Lekce 4: Základní motýl</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l5">Lekce 5: One stroke motýl</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 3: Světlo a stín ve face paintingu — tvorba realistických 3D objektů</li>
+      <li style="margin-left: 20px;"><a href="#m3l1">Lekce 1: Světlo a stín ve face paintingu</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l2">Lekce 2: Tvorba 3D sférických prvků</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 4: Povinné designy</li>
+      <li style="margin-left: 20px;"><a href="#m4l1">Lekce 1: Heart Princess (Srdcová princezna)</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l2">Lekce 2: Klasická kočička</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l3">Lekce 3: Klasický Spider-Man</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l4">Lekce 4: Maska Batmana</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l5">Lekce 5: Realistický tygr</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l6">Lekce 6: Alicorn</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l7">Lekce 7: T-Rex ve dvou variantách</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l8">Lekce 8: Pirátská lebka</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 5: Kroky k vytvoření vlastního designu</li>
+      <li style="margin-left: 20px;"><a href="#m5l1">Krok 1: Nápad</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l2">Krok 2: Zdroje inspirace</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l3">Krok 3: Určení umístění</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l4">Krok 4: Skica na papíře</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l5">Krok 5: „Hrubý" design na cvičné podložce a zkouška na obličeji</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l6">Krok 6: Finální design</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l7">Odkazy na inspirativní stránky a události</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== MODUL 1: ZÁKLADY PRÁCE NA OBLIČEJI ===== -->
+  <div class="module-header" id="m1">
+    <h2>Modul 1 — Základy práce na obličeji. Ohniskové body. Symetrie v designech.</h2>
+    <p style="opacity: 0.85;">Umístění designu, ohniskové body, symetrie a jak zachránit nepovedený design</p>
+  </div>
+
+  <!-- M1L1: Umístění designu -->
+  <div class="lesson" id="m1l1">
+    <div class="lesson-title"><h3>Lekce 1: Umístění designu ve face paintingu</h3></div>
+    <div class="lesson-content">
+      <p>Zkušený a talentovaný face painter to dělá tak, že to vypadá jednoduše — jako by design vznikl téměř bez námahy. Pravda je ale taková, že skvělý face painting je mnohem komplikovanější, než byste čekali. Skvělý face paintingový design se totiž silně opírá o vytvoření harmonie mezi mnoha prvky.</p>
+
+      <p>Už jsme probírali, jak výběr nástrojů (štětců a houbiček) a produktů (tedy face paintingového makeupu) může ovlivnit výsledek, stejně jako technika. Ale posledním a možná nejméně pochopeným prvkem dobrého face paintingového designu je umístění.</p>
+
+      <p>Promyšlené umístění může design dramaticky vylepšit, zatímco ignorování „pravidel" může způsobit, že design bude vypadat plochý nebo prostě ne úplně správně.</p>
+
+      <p>V tomto modulu se ponoříme do základních principů neboli pravidel, která vám pomohou pracovat se třemi rozměry lidského obličeje. Podíváme se na ohniskové body, symetrii a na to, jak zachránit designové faux pas.</p>
+
+      <h4>Pravidla — a jak je zvládnout</h4>
+
+      <p>Face painting je hraniční umění mezi malbou na plátno a makeupem. Mnoho lidí předpokládá, že talentovaný malíř na plátno zvládne face painting snadno, ale není to vždy pravda. Zřejmý rozdíl mezi plátnem a lidským obličejem je ten, že jedno je ploché a druhé ne. Face painting proto vyžaduje speciální umístění designu pro zvýraznění rysů obličeje.</p>
+
+      <p>Umělec musí respektovat určitá pravidla umístění a ohniskových bodů, jinak design nebude vyvážený. Nebude mít harmonii ani plynulost a výsledek může vypadat nevhodně.</p>
+
+      <p>Moje osobní přesvědčení je, že dobrý face painter umožní osobě za uměním prozářit; proměnit obličej modelu a vylepšit ho osobností. Pokrytí celého obličeje plochou malbou tento efekt nevytvoří a podle mého názoru bude vypadat nudně.</p>
+
+      <div class="media-gallery">
+        <img src="images/dc3807426dceb0ffbcaaaca164aa1e57.jpg" alt="Umístění designu ve face paintingu" style="max-width: 600px;">
+        <p class="media-caption">Hlavní umístění designů pro face painting</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Poznámka:</strong> Ke stažení je k dispozici přehled hlavních umístění designů pro face painting.
+      </div>
+
+      <h4>Linie nosní dírka — koutek oka</h4>
+
+      <p>Jedna důležitá poznámka se týká použití linie nosní dírka — koutek oka. Pokud jste někdy praktikovali profesionální makeup, možná víte, že tato linie se často používá pro nanášení stínů a očních linek. Proto jsem navrhla novou sérii obličejových šablon s oční linkou.</p>
+
+      <p>Linie nosní dírka — koutek oka se ve face paintingu často používá pro vytváření ženských očí, pro designy jako motýli, květinové designy, masky, kočičky, víly a všechny druhy designů umístěných kolem oblasti očí.</p>
+
+      <div class="media-gallery">
+        <img src="images/ae897071f2e5a22c40aadcf1c2168bee.jpg" alt="Linie nosní dírka — koutek oka" style="max-width: 600px;">
+        <p class="media-caption">Linie nosní dírka — koutek oka v praxi: heart princess, kitty cat a květinový motýl</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M1L2: Umístění světel a stínů -->
+  <div class="lesson" id="m1l2">
+    <div class="lesson-title"><h3>Lekce 2: Umístění světel a stínů ve face paintingu</h3></div>
+    <div class="lesson-content">
+      <h4>Hlavní pravidla ve face paintingu</h4>
+
+      <p>Lidský obličej má specifickou anatomickou strukturu a je velmi důležité ji zohlednit při face paintingu, zejména když chcete změnit rysy obličeje. Na obličeji lze identifikovat tři hlavní vyvýšeniny:</p>
+
+      <ul>
+        <li><strong>Oblast nad obočím</strong> (anatomický termín — supraciliární oblast)</li>
+        <li><strong>Oblast lícní kosti</strong> (anatomický termín — zygomatická oblast)</li>
+        <li><strong>Oblast čelisti</strong> (anatomický termín — mandibulární oblast)</li>
+      </ul>
+
+      <p>Všechny tyto vyvýšeniny jsou kostní struktury obličeje a pokud se podíváte pozorně, všimnete si, že jsou všechny nasměrovány pod úhlem 45 stupňů ve vztahu ke středu obličeje.</p>
+
+      <p>Toto pravidlo je velmi důležité si zapamatovat, protože zvýraznění těchto oblastí a přidání stínů nad a pod nimi vám pomůže pochopit, jak malovat ty nejlepší zombie, monstra, lebky nebo dokonce vytvořit efekt stáří, stejně jako budovat maskulinní, brutální face painty.</p>
+
+      <p>Podívejme se blíže na tento design lebky. Všimněte si, že nejzvýrazněnější místa jsou tři hlavní oblasti popsané výše. Stín je umístěn pod každou z nich.</p>
+
+      <div class="media-gallery">
+        <img src="images/616d36077ab1443d4469fc9218e5f1d0.jpg" alt="Úhly a zvýraznění na obličeji" style="max-width: 600px;">
+        <p class="media-caption">Tři hlavní vyvýšeniny obličeje pod úhlem 45°</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/fceaf04c1c5fe569443742174b9dfbc6.jpg" alt="Světla a stíny na obličeji — lebka" style="max-width: 600px;">
+        <p class="media-caption">Umístění světel a stínů na příkladu designu lebky</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M1L3: Ohniskové body -->
+  <div class="lesson" id="m1l3">
+    <div class="lesson-title"><h3>Lekce 3: Ohniskové body ve face paintingu</h3></div>
+    <div class="lesson-content">
+      <h4>Co myslíme ohniskovým bodem?</h4>
+
+      <p>Ohniskový bod (OB) je v podstatě „značka" na obličeji. Ohniskové body jsou místa, kam naše oči podvědomě směřují, aby rozpoznaly známé rysy. Pomáhají nám nejen identifikovat a mapovat obličej jiného člověka, ale zahrnují také matematiku symetrie, asymetrie a geometrie.</p>
+
+      <p>Může to znít komplikovaně, ale pro face paintera je podstata tato: ohniskové body nám pomáhají najít rovnováhu a harmonii v našich designech. Jsou to kotevní body společné všem obličejům a pochopení toho, kde se nacházejí, může dramaticky zlepšit naši práci.</p>
+
+      <h4>Liché ohniskové body:</h4>
+      <ul>
+        <li><strong>1. Centrální OB</strong> — umístěný na úrovni očí přesně ve středu obličeje.</li>
+        <li><strong>2. Centrální čelní OB</strong> — umístěný ve středu čela.</li>
+        <li><strong>3. Horní OB</strong> — umístěný ve středu horní části hlavy, lze ho najít pohledem přímo na obličej a vedením tečné linie přes vrchol hlavy. Bod, kde se linie dotkne hlavy, bude Horní OB.</li>
+        <li><strong>4. Bradový OB</strong> — umístěný ve středu brady.</li>
+        <li><strong>5. Variabilní (migrační) OB</strong> — umístěný ve středu kompozice, který může být vytvořen na jakémkoli místě. Například Variabilní OB může být umístěn na tváři, na čele, nad obočím atd.</li>
+      </ul>
+
+      <h4>Párové ohniskové body:</h4>
+      <ul>
+        <li><strong>6. OB vnitřních koutků očí.</strong></li>
+        <li><strong>7. Mezilehlé OB</strong> — umístěné mezi OB vnitřních koutků očí a centrálním OB.</li>
+        <li><strong>8. OB vnějších koutků očí.</strong></li>
+        <li><strong>9. OB ve středu spánkové oblasti</strong> — umístěné ve středech spánkových oblastí, na úrovni linie očí.</li>
+        <li><strong>10. OB lícních kostí</strong> — umístěné v nejvýraznějších částech lícních kostí.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/5ad6cff1f0cae773cb693305ce1343d0.jpg" alt="Ohniskové body na obličeji" style="max-width: 600px;">
+        <p class="media-caption">Přehled ohniskových bodů na obličeji</p>
+      </div>
+
+      <h4>Jak funguje teorie „ohniskových bodů"?</h4>
+
+      <p>Každý dobrý design bude obsahovat strukturu a směr neboli tok. Zatímco struktura je určena hlavně tím, co malujete a kam design umístíte, směr znamená propojení designu s ohniskovým bodem na obličeji.</p>
+
+      <p>A teď budou následovat poněkud suché a nudné vysvětlivky. Ano, vím, tohle rozhodně není typ materiálu, který byste rádi studovali, a může být trochu obtížné na pochopení. Nenechte se ale odradit, pokud to nepochopíte napoprvé. Pravidla popsaná v tomto modulu budeme prakticky aplikovat v celé Části III kurzu. Na konci vzdělávání se stanete mistry ohniskových bodů a budete schopni analyzovat jakékoli dílo pomocí získaných dovedností.</p>
+
+      <div class="note">
+        <strong>📝 Poznámka:</strong> Vytiskněte si schémata ohniskových bodů a jejich směrů a používejte je jako připomínku pro začátek. Ke stažení jsou k dispozici: „Význam OB" a „Směry pro OB".
+      </div>
+
+      <h4>A takto ohniskové body „fungují":</h4>
+
+      <ul>
+        <li>Čelo je největší vystupující oblast obličeje. Pokud se pozorně podíváte na směry k ohniskovým bodům, všimnete si, že Linie č. 1 a Linie č. 3 vytvářejí ovál. Takto by mělo být čelo orámováno ve face paintingu.</li>
+        <li>Pro designy, které rámují čelo jako korunu, si všimněte směru Linie č. 2. Mírné zakřivení této linie vytvoří přirozenější vzhled.</li>
+        <li>Linie č. 3 by měla směřovat pod úhlem 45 stupňů ve vztahu ke střední linii obličeje. Toto pravidlo platí pro stavbu motýlů, víl, křídel nebo dokonce správné umístění tygřích pruhů či kočičích uší.</li>
+        <li>Jakýkoli design umístěný na čele nebo na tvářích by měl směřovat k Centrálnímu OB, Mezilehlému OB nebo OB ve vnitřním koutku oka.</li>
+        <li>Design umístěný na spánku by měl nahoře směřovat k Centrálnímu OB, Mezilehlému OB nebo OB ve vnitřním koutku oka, rámujíc oko v zakřivené trajektorii. Směr dole by měl být k Bradovému OB nebo OB lícní kosti.</li>
+        <li>Pokud budete malovat design ze slziček na spánkové oblasti, udělejte je mírně zakřivené a nasměrované k OB ve vnějším koutku oka, jak ukazuje Linie č. 6. Tento směr linie je stejný jako v makeupu, zejména při nanášení oční linky.</li>
+        <li>Pro propojení designu z oblasti pod očima a středu obličeje použijte OB lícní kosti a Linii č. 7, která bude směřovat k jakémukoli z ohniskových bodů: centrálnímu OB, mezilehlému OB nebo OB ve vnitřním koutku oka.</li>
+        <li>Pro motýly, masky a další designy, které mohou zahrnovat malování prodloužení z OB lícní kosti dolů, nasměrujte je k Bradovému OB podle Linie č. 8.</li>
+        <li>Jakékoli cheek-art by mělo mít směr k Bradovému OB podle Linie č. 9 nebo nahoru, rámujíc obočí a sledujíc Linii č. 5.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/6e8d2945b130479857903218ba264381.jpg" alt="Směry ohniskových bodů" style="max-width: 600px;">
+        <p class="media-caption">Směry k ohniskovým bodům na obličeji</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M1L4: Praktické využití ohniskových bodů -->
+  <div class="lesson" id="m1l4">
+    <div class="lesson-title"><h3>Lekce 4: Praktické využití ohniskových bodů</h3></div>
+    <div class="lesson-content">
+      <h4>Směry k OB v designu tygra:</h4>
+      <ul>
+        <li>Všechny tygří linie směřují k centrálnímu ohniskovému bodu (centrální OB a OB ve vnitřních koutcích očí)</li>
+        <li>Tygří linie umístěná pod úhlem 45 stupňů nad okem je mírně zakřivená s pokračováním směřujícím k hornímu OB</li>
+        <li>Linie na spodní části obličeje směřují k bradovému OB</li>
+        <li>Obrys očí respektuje směr linie, která prochází dolní linií řas</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/7437d3f7c92f54e37ed3808cb1941821.jpg" alt="Ohniskové body — tygr" style="max-width: 600px;">
+        <p class="media-caption">Směry k ohniskovým bodům v designu tygra</p>
+      </div>
+
+      <h4>Směry k OB v cheek-artu kolibříka:</h4>
+      <ul>
+        <li>Střed těla kolibříka představuje migrační OB</li>
+        <li>Směr křídla kopíruje trajektorii linie zygomatické oblasti</li>
+        <li>Směr celého designu míří nahoře k centrálnímu OB a dole k bradovému OB</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/b8ec99c6aedbe2efc5ba63b4ffdd92bb.jpg" alt="Ohniskové body — kolibřík" style="max-width: 600px;">
+        <p class="media-caption">Směry k ohniskovým bodům v cheek-artu kolibříka</p>
+      </div>
+
+      <h4>Směry k OB v designu masky:</h4>
+      <ul>
+        <li>Střed růže je migrační OB, zatímco růže samotná představuje střed kompozice</li>
+        <li>Listy nastavují směr dolů k centrálnímu OB a do stran</li>
+        <li>Slzičky a spirálky na spánkové oblasti směřují k OB ve vnějších koutcích očí</li>
+        <li>Série teček na spodní části masky nastavuje směr k OB ve vnitřních koutcích očí</li>
+        <li>Podívejte se pozorně a zamyslete se, co se stane, když prodloužíme linii vycházející ze spodní spirálky? Přesně tak — bude směřovat k bradovému OB</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/db0e59cd8a2e2fc57bc71cedcade038b.jpg" alt="Ohniskové body — maska" style="max-width: 600px;">
+        <p class="media-caption">Směry k ohniskovým bodům v designu masky s růží</p>
+      </div>
+
+      <h4>Směry k OB v designu Spider-Mana:</h4>
+      <ul>
+        <li>Osa pavučiny na čele je mírně zakřivená a směřuje k hornímu OB, zatímco na spodní části obličeje míří k bradovému OB</li>
+        <li>Obrys očí je propojen uprostřed obličeje v centrálním OB</li>
+        <li>Obrys v horní části očí je umístěn pod úhlem 45 stupňů</li>
+        <li>Spodní koutky obrysu očí jsou umístěny v OB lícních kostí</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/6307af983fb9c40793ea797f824f686b.jpg" alt="Ohniskové body — Spider-Man" style="max-width: 600px;">
+        <p class="media-caption">Směry k ohniskovým bodům v designu Spider-Mana</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M1L5: Tipy a triky pro symetrické designy -->
+  <div class="lesson" id="m1l5">
+    <div class="lesson-title"><h3>Lekce 5: Tipy a triky pro symetrické designy</h3></div>
+    <div class="lesson-content">
+      <p>Symetrie může být výzvou pro mnoho face painterů. Není snadné ji dosáhnout a často je frustrující podívat se zpětně na fotku svého designu a vidět, kde nedostatek symetrie design podřadil.</p>
+
+      <p>Abych vám pomohla toto překonat, nastínila jsem několik praktických tipů, které vám pomohou rozvinout větší kontrolu nad symetrií a tím snad zlepšit vaše face paintingové designy.</p>
+
+      <h4>Procvičujte základní prvky ve všech směrech</h4>
+      <p>Při procvičování linek nezapomeňte malovat linky ve všech čtyřech směrech: zleva doprava, zprava doleva, shora dolů a zdola nahoru. Také se snažte dělat linky co nejdelší. To vytrénuje vaši ruku a pomůže vám získat stabilitu a jistotu malování v jakémkoli směru stejně krásně.</p>
+
+      <h4>Najděte si pohodlnou pozici pro malování</h4>
+      <p>Pocit pohodlí při malování je nezbytný pro dosažení nejlepších výsledků. Najděte pozici, která vám umožní dívat se přímo na osobu, nebude bolet záda, krk ani kolena. O tom jsme mluvili v Části druhé, Modulu 9 „Pohodlné pozice těla".</p>
+
+      <p>Osobně preferuji střídání pozic při face paintingu. Moji klienti sedí na vysoké židli, zatímco já maluji vestoje, pokud je můj klient vysoké dítě nebo dospělý, nebo maluji vsedě na normální židli, pokud je můj klient malé dítě. Toto střídání mi pomáhá relaxovat a poskytnout nezbytný odpočinek zádům a nohám. Takto dokážu malovat 7-8 hodin v kuse a stále se cítit dobře. Pamatujte také, že pohodlná ortopedická obuv je také důležitá.</p>
+
+      <div class="media-gallery">
+        <img src="images/f893585a0db950b7674633d074eb5d42.jpg" alt="Pohodlná pozice při malování malého dítěte" style="max-width: 500px;">
+        <p class="media-caption">Pohodlná pozice při malování malého dítěte</p>
+      </div>
+
+      <h4>Pracujte střídavě „levo-pravo"</h4>
+      <p>Malování celé poloviny obličeje a pak snažení se vytvořit symetrickou kopii na druhé straně by jen přidalo na obtížnosti. Místo toho pracujte v menších sekcích, malujte jeden detail najednou a často přepínejte z jedné strany na druhou.</p>
+
+      <p>Pokud jste praváci, budete se cítit pohodlněji při malování detailu na pravé straně klienta a pak jeho kopírování na levou stranu. Pokud jste leváci, udělejte opak — malujte detail na levé straně a kopírujte na pravou.</p>
+
+      <h4>Udělejte si skicu a stanovte ohniskové body a vodicí linie</h4>
+      <p>Pokud je design velmi náročný na symetrii, nebo se necítíte jistí, že to zvládnete, použijte hnědou nebo bílou makeupovou tužku, nebo štětec nabraný barvou v tónu pleti, k nastavení ohniskových bodů a vodicích linií na obličeji, které vám pomohou umístit všechny detaily na správná místa.</p>
+
+      <p>Je jednodušší malovat dlouhou linii složenou z menších sekcí propojených mezi sebou, než malovat celou linii najednou.</p>
+
+      <div class="media-gallery">
+        <img src="images/7616ab59b76637ebf50f0158559f6954.gif" alt="Propojování bodů — animace" style="max-width: 500px;">
+        <p class="media-caption">Propojování bodů pro vytvoření symetrického designu</p>
+      </div>
+
+      <h4>Odstupte a podívejte se na design z dálky</h4>
+      <p>Když pracujete na designu zblízka, vidíte jeho detaily, ale může vám unikat „celkový obraz". Udělejte pár kroků zpět a všimněte si symetrie a vyváženosti svého designu. Potřebuje doladění?</p>
+
+      <h4>Vyfoťte si to</h4>
+      <p>Fotka vám pravděpodobně ukáže chyby, které v reálném životě můžete přehlédnout. Vyfoťte si design, když je ještě rozpracovaný, a znovu předtím, než ho dokončíte, abyste viděli, zda nejsou nějaké chyby k opravení.</p>
+
+      <p>Toto je možná něco, co dělejte při tréninku, spíše než při práci. Poslední věc, kterou chce dítě vědět, je, že nejste spokojeni se svou prací. Pro dítě na vaší židli nikdy nedělejte povyk kvůli chybám — vždy se usmívejte a tvařte se, jako by to byl nejlepší design, jaký jste kdy udělali — i když není.</p>
+
+      <h4>Odveďte pozornost od chyb</h4>
+      <p>Někdy (často když jste začátečníci) váš design nemusí být symetrický a nevidíte způsob, jak to opravit. Řešením je odvést pozornost od chyby přidáním asymetrického prvku ve středu obličeje.</p>
+
+      <p>Tento trik obvykle funguje pro motýly, kdy asymetrické tělo s tykadly může odvést pozornost od pokažených tvarů křídel. Dalším tipem je přidání highlights, jako jsou shluky teček a jisker, linky, slzičky atd. Kontrast mezi tmavým obrysem a highlights pomůže zamaskovat vaše chyby.</p>
+
+      <div class="media-gallery">
+        <img src="images/e28a7003134b6de78cf00998c2051230.jpg" alt="Motýl technikou one stroke" style="max-width: 600px;">
+        <p class="media-caption">Motýl technikou one stroke — příklad symetrického designu</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 2: VŠE O MOTÝLECH =====  -->
+  <div class="module-header" id="m2">
+    <h2>Modul 2 — Vše o motýlech. Geometrie, typy motýlů a techniky malování.</h2>
+    <p style="opacity: 0.85;">Geometrie skutečného motýla, stavba tvaru, nejčastější chyby a konkrétní designy</p>
+  </div>
+
+  <!-- M2L1: O motýlech -->
+  <div class="lesson" id="m2l1">
+    <div class="lesson-title"><h3>Lekce 1: O motýlech</h3></div>
+    <div class="lesson-content">
+      <p>Motýlí maska je jedním z nejžádanějších face paintingových designů, zejména pro dívky. A samozřejmě existuje bezpočet adaptací, které všechny sdílejí stejnou geometrickou formu. Jakmile pochopíte pravidla malování harmonického tvaru motýla, budete moci s jistotou vytvářet mnoho dalších variací.</p>
+
+      <p>Nejprve si prostudujme geometrii skutečného motýla. Když jsem začala praktikovat face painting, analyzovala jsem stovky různých motýlích face paintingů i obrázků skutečných motýlů. Dlouho mě trápila otázka, proč některé motýly vypadaly vyváženě a harmonicky, i když byly jednoduché, zatímco jiné (navzdory tomu, že byly krásné a složité) byly nepříjemné na pohled.</p>
+
+      <p>Tehdy jsem si uvědomila, že bych měla brát originální přírodní motýly jako měřítko krásy a harmonie motýlů. A to byla odpověď — tajemství harmonického motýlího face paintingu je v jeho geometrii.</p>
+
+      <h4>Důležité aspekty geometrie motýla:</h4>
+      <ul>
+        <li><strong>Horní křídla</strong> jsou umístěna pod úhlem 45 stupňů vůči tělu motýla. Tento úhel je tvořen dvěma osami, které protínají motýla — vertikální osa prochází tělem a horizontální je umístěna na spodním obrysu horního křídla.</li>
+        <li><strong>Horní i spodní křídla</strong> se spojují v jednom bodě, což je spoj mezi hlavou a tělem motýla. Všechny žilky křídel také směřují k tomuto ohniskovému bodu.</li>
+        <li><strong>Horní křídlo</strong> má trojúhelníkový tvar.</li>
+        <li><strong>Spodní křídlo</strong> má tvar okvětního lístku.</li>
+        <li><strong>Horní a spodní křídla</strong> jsou oddělená a je mezi nimi mezera.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/1fe3cb51952e24045420acbedf7a3f71.jpg" alt="Schéma motýla 1" style="max-width: 300px;">
+        <img src="images/4124ea5f9dd17c0d2798332df35565e2.jpg" alt="Schéma motýla 2" style="max-width: 300px;">
+      </div>
+      <div class="media-gallery">
+        <img src="images/048821b99760d5aa6f85cdaa1ed405a5.jpg" alt="Schéma motýla 3" style="max-width: 300px;">
+        <img src="images/b891aae204b18b224826f1d23dee67ce.jpg" alt="Schéma motýla 4" style="max-width: 300px;">
+      </div>
+
+      <div class="note">
+        <strong>📝 Šablony motýlů:</strong> Vytvořili jsme sadu šablon motýlů, které vám pomohou zvládnout motýly okamžitě! Postup: Stáhněte šablony, vytiskněte je, položte šablonu pod průhledný plast a vyplňte tvar v rámci vyznačených okrajů.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/212e36d79a1b1e8e460a4d8f16905c18.jpg" alt="Šablony motýlů" style="max-width: 600px;">
+        <p class="media-caption">Šablony motýlů ke stažení a procvičování</p>
+      </div>
+
+      <p>Podrobnější pokyny k práci s každým typem šablony najdete v každé sekci s odpovídajícím typem motýla, který budeme v kurzu studovat.</p>
+    </div>
+  </div>
+
+  <!-- M2L2: Jak vytvořit perfektní tvar motýla -->
+  <div class="lesson" id="m2l2">
+    <div class="lesson-title"><h3>Lekce 2: Jak vytvořit perfektní tvar motýla</h3></div>
+    <div class="lesson-content">
+      <p>Po pozorném studiu skutečných motýlů se nyní podíváme, jak přenést tyto pozorování geometrie a formy na obličej a vytvořit harmoničtější motýlí masku.</p>
+
+      <h4>Pravidla stavby motýla krok za krokem:</h4>
+
+      <p><strong>1.</strong> Než začnete malovat, vyberte si centrální ohniskový bod, kde se budou křídla sbíhat. Může to být kterýkoli z těchto: centrální OB, mezilehlý OB, nebo OB vnitřního koutku oka.</p>
+
+      <p><strong>2.</strong> Vnější linie, která rámuje horní křídlo, by měla směřovat přísně vertikálně dolů a končit v ohniskovém bodu vnějšího koutku oka.</p>
+
+      <p><strong>3.</strong> Podle geometrie skutečného motýla by horní křídlo mělo směřovat pod úhlem 45 stupňů ve vztahu ke středu obličeje. Vnitřní obrys horního křídla může být rovný nebo mírně zakřivený. Pokud se rozhodnete ho zakřivit, ujistěte se, že směřuje k hornímu ohniskovému bodu.</p>
+
+      <p><strong>4.</strong> Stejně jako u skutečného motýla by horní křídlo mělo mít trojúhelníkový tvar a spodní křídlo tvar okvětního lístku.</p>
+
+      <p><strong>5.</strong> Horní a spodní křídla by měla být oddělená a spojovat se v ohniskovém bodu vnějšího koutku oka. Na lícní kosti je více prostoru než na spánku, proto doporučuji spodní křídlo mírně vysunout ven. To vám pomůže zachovat mezeru mezi křídly a přizpůsobit tvar motýla lidskému obličeji.</p>
+
+      <p><strong>6.</strong> Nejvzdálenější bod spodního křídla by měl být umístěn na OB lícní kosti. To je nejobtížnější ohniskový bod k nalezení, proto doporučuji začít stavět spodní křídlo od tohoto bodu. Pokud chcete přidat prodloužení ke spodním křídlům, ujistěte se, že směřují k bradovému OB.</p>
+
+      <p><strong>7.</strong> Lidský obličej má obvykle více prostoru v oblasti lícní kosti a méně na spánku. To naznačuje, že bychom měli malovat spodní křídlo širší než horní. Příjemnějšího efektu se však dosáhne, když je spodní křídlo kratší než horní.</p>
+
+      <p><strong>8.</strong> Ještě jeden důležitý tip — umístění spodního křídla. To je obzvláště důležité při malování motýlů na dospělé, protože špatně umístěné spodní křídlo může osobu zestařit (a vaše zákaznice bude mnohem šťastnější, když bude vypadat mladší). Věnujte pozornost vnitřnímu obrysu spodního křídla — linie spojující OB lícní kosti a centrální OB by měla tvořit úhel s linií vedenou přes nazolabiální rýhu. Pokud budou tyto dvě linie rovnoběžné, osoba bude vypadat starší.</p>
+
+      <div class="media-gallery">
+        <img src="images/8b3e00efe93693e65a06b802f3d80fa7.jpg" alt="Perfektní tvar motýla" style="max-width: 600px;">
+        <p class="media-caption">Schéma stavby perfektního tvaru motýla na obličeji</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/2c9cd0d9ebe4d1f10ff9949707601b2a.jpg" alt="Spodní křídlo — umístění" style="max-width: 600px;">
+        <p class="media-caption">Správné umístění spodního křídla — vnitřní obrys vs. nazolabiální rýha</p>
+      </div>
+
+      <h4>Doplňující vysvětlení:</h4>
+      <ul>
+        <li><strong>Proporce:</strong> estetičtěji vypadá, když horní křídlo bude větší než spodní.</li>
+        <li><strong>Struktura horního křídla:</strong> horní křídlo je složeno ze 3 trojúhelníkových sekcí. Horní a spodní jsou na stejné úrovni a stejné velikosti, zatímco mezilehlá sekce je menší a umístěna mírně hlouběji. Použijte špičku obočí jako bod, kde se mezilehlá a spodní sekce propojují.</li>
+        <li><strong>Okraj spodního křídla:</strong> spodní křídlo by nikdy nemělo přesahovat špičku nosu.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/9588097721f8e70217f0136e02674a15.jpg" alt="Doplňující vysvětlení k motýlům" style="max-width: 600px;">
+        <p class="media-caption">Doplňující vysvětlení — proporce a struktura křídel</p>
+      </div>
+
+      <h4>Příklady od profesionálů:</h4>
+
+      <p><strong>🦋 Motýl od Nurit Pilchin:</strong> Použitý centrální OB. Horní křídlo trojúhelníkové, spodní ve tvaru lístku. Horní křídlo pod úhlem 45°. Nejvzdálenější bod spodního křídla v OB lícní kosti, prodloužení směřuje k bradovému OB. Spodní křídla mírně menší než horní — přidává to vyváženost. Vnitřní obrys spodního křídla a nazolabiální rýha svírají úhel.</p>
+
+      <div class="media-gallery">
+        <img src="images/2930ed5c2bc9d923f322d059adfaefbd.jpg" alt="Motýl od Nurit Pilchin" style="max-width: 500px;">
+        <p class="media-caption">Motýl od Nurit Pilchin — analýza ohniskových bodů</p>
+      </div>
+
+      <p><strong>🦋 Motýl od Becstar Anthony:</strong> Použitý OB vnitřního koutku oka. Horní křídlo trojúhelníkové a mírně zakřivené směrem k hornímu OB. Nejvzdálenější bod spodního křídla v OB lícní kosti s prodloužením k bradovému OB.</p>
+
+      <div class="media-gallery">
+        <img src="images/de38b0bb096f6da3f0e012847dd3989c.jpg" alt="Motýl od Becstar Anthony" style="max-width: 500px;">
+        <p class="media-caption">Motýl od Becstar Anthony — analýza ohniskových bodů</p>
+      </div>
+
+      <p><strong>🦋 Motýlí maska od Ronnie Mena:</strong> Použitý centrální OB. Horní křídlo trojúhelníkové pod úhlem 45°. I přesto, že spodní křídlo je poněkud níže než OB lícní kosti, harmonie je zachována díky žilkám, které zdůrazňují tvar spodního křídla s malým zakřiveným prodloužením směřujícím k bradovému OB. Mezera mezi křídly je šikovně vytvořena žlutou sekcí mezi fialovými křídly.</p>
+
+      <div class="media-gallery">
+        <img src="images/68e5130076154e0275a3269b513cda45.jpg" alt="Motýlí maska od Ronnie Mena" style="max-width: 500px;">
+        <p class="media-caption">Motýlí maska od Ronnie Mena — analýza ohniskových bodů</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2L3: TOP 10 chyb při malování motýlů -->
+  <div class="lesson" id="m2l3">
+    <div class="lesson-title"><h3>Lekce 3: TOP 10 chyb při malování motýlů</h3></div>
+    <div class="lesson-content">
+      <p>Při malování motýlí masky existuje několik častých chyb. Pokud některé poznáváte, nenechte se odradit. Přesné vědění, co opravit, vám pomůže tyto chyby napravit a zlepšit vaši práci.</p>
+
+      <h4>1. Křídla jsou příliš velká (horní i spodní)</h4>
+      <p>Začátečník s novými barvami se snadno nechá unést touhou pokrýt celý obličej barvou. Nedělejte to — soustřeďte se na tvar a nechte část kůže odkrytou. Bude to mnohem lichotivější.</p>
+
+      <div class="media-gallery">
+        <img src="images/b02718dfee326169e1e2f085fa5715b3.jpg" alt="Chyba: příliš velká křídla" style="max-width: 500px;">
+        <p class="media-caption">Oba motýli jsou příliš velcí — pokrývají téměř celý obličej a ztrácejí tvar</p>
+      </div>
+
+      <h4>2. Křídla spojená širokým pruhem na nose</h4>
+      <p>Pamatujte, že všechna křídla by se měla spojovat v jednom centrálním ohniskovém bodu. Spojení širokým pruhem (zvláště pokud jste namalovali velké tělo motýla) bude vypadat těžkopádně.</p>
+
+      <div class="media-gallery">
+        <img src="images/968d0a8d1af93b274c8174f36496cb5e.jpg" alt="Chyba: příliš velké tělo" style="max-width: 500px;">
+        <p class="media-caption">Horní a spodní křídla spojená v dlouhém úseku přes nos — centrální OB je ztracen</p>
+      </div>
+
+      <h4>3. Pokrytí celého spánku barvou a spojení horního a spodního křídla</h4>
+      <p>Spojení horního a spodního křídla na spánku je relativní chyba — motýl bude v tomto případě vypadat spíše jako maska.</p>
+
+      <div class="media-gallery">
+        <img src="images/b2340cb3d2e5d00bda6d23e7211eccf0.jpg" alt="Chyba: chybějící mezera" style="max-width: 500px;">
+        <p class="media-caption">Horní a spodní křídla spojena — pokrývají celou spánkovou oblast</p>
+      </div>
+
+      <h4>4. Horní křídla umístěná pod vertikálním úhlem</h4>
+      <p>Toto je zřejmě druhá nejčastější chyba po příliš velkých křídlech. Pamatujte, že nejlichotivějšího efektu se dosáhne, když jsou křídla umístěna pod úhlem 45 stupňů. Pokud křídla uděláte příliš vertikální, nezbude místo pro obrys a malování těla motýla a ztratíte rovnováhu.</p>
+
+      <div class="media-gallery">
+        <img src="images/10db5d9ca9c70878909ef9c77ad07b21.jpg" alt="Chyba: příliš vertikální horní křídla" style="max-width: 500px;">
+        <p class="media-caption">Horní křídla pod úhlem cca 75° — příliš vertikální. Zelená šipka ukazuje správný úhel 45°</p>
+      </div>
+
+      <h4>5. Spodní křídla umístěná pod vertikálním úhlem</h4>
+      <p>Pamatujte na pravidlo umístění spodních křídel. Pokud jsou spodní křídla pod ostrým úhlem a téměř rovnoběžná s nazolabiální rýhou, zestárnou osobu a zničí rovnováhu motýla. Vždy se ujistěte, že nazolabiální rýha a vnitřní okraj spodního křídla svírají tupý úhel.</p>
+
+      <div class="media-gallery">
+        <img src="images/fe789978a00df90e422665b53aebad28.jpg" alt="Chyba: vertikální spodní křídla" style="max-width: 500px;">
+        <p class="media-caption">Spodní křídlo téměř v nazolabiální rýze — zelená šipka ukazuje správné umístění</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/2c9cd0d9ebe4d1f10ff9949707601b2a.jpg" alt="Opakování — umístění spodního křídla" style="max-width: 500px;">
+        <p class="media-caption">Opakování pravidla umístění spodního křídla</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/c31e91b8e3080c6c638332877aa8c6ee.jpg" alt="Obdélníkové spodní křídlo" style="max-width: 500px;">
+        <p class="media-caption">Vertikálně umístěné spodní křídlo s obdélníkovým tvarem — správný tvar vyznačen zeleně</p>
+      </div>
+
+      <h4>6. Čtvercová horní křídla</h4>
+      <p>Tato chyba je často spojena s příliš velkým horním křídlem. Kvůli špatnému tvaru pozadí můžete ukrást potřebný prostor pro obrys. Pamatujte, že horní křídlo by mělo mít trojúhelníkový tvar.</p>
+
+      <div class="media-gallery">
+        <img src="images/b4dfe6a4ec126cd85e5f4c5abb52d2c2.jpg" alt="Chyba: čtvercové horní křídlo" style="max-width: 500px;">
+        <p class="media-caption">Čtvercové horní křídlo — správný trojúhelníkový tvar vyznačen zeleně</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Použijte špičky obočí jako referenční bod pro nalezení správného umístění vnějšího obrysu.
+      </div>
+
+      <h4>7. Víčka nepokrytá barvou</h4>
+      <p>K tomu dochází, když umělec pracuje s nekvalitními materiály a bojí se pokrýt víčka, nebo má málo zkušeností. Někdy klienti žádají, aby se malovalo dál od očí. Světlé barvy jako bílá, perleťová bílá, zlatá, stříbrná a mnoho dalších pomohou vytvořit jemný přechod k tmavším barvám na vnější části křídel, snadno se smyjí a vše propojí.</p>
+
+      <div class="media-gallery">
+        <img src="images/d3b59fe2c48144e972956035bcf17300.jpg" alt="Chyba: nepokrytá víčka" style="max-width: 500px;">
+        <p class="media-caption">V obou příkladech — nepokrytá víčka kvůli nekvalitním barvám</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Metalické barvy poskytují hezčí krytí na víčkách, nepraskají a neshromažďují se v záhybu tolik jako běžné barvy.
+      </div>
+
+      <h4>8. Prodloužení spodních křídel směřující na krk nebo ke koutkům rtů</h4>
+      <p>Začátečník obvykle maluje prodloužení směřující někam na krk nebo ke koutkům rtů, ale žádné z těchto umístění nebude vypadat správně. Pamatujte, že všechna prodloužení na tváři by měla směřovat k bradovému OB.</p>
+
+      <div class="media-gallery">
+        <img src="images/cef8cca1038e0d645e9deff2043a497b.jpg" alt="Chyba: špatný směr prodloužení" style="max-width: 500px;">
+        <p class="media-caption">Prodloužení směřuje na krk — správný směr je k bradovému OB po zakřivené trajektorii</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Poznámka:</strong> Prodloužení by neměla končit v bradovém OB! Měla by končit na úrovni rtů, ale jejich virtuální prodloužení by mělo směřovat k bradovému OB.
+      </div>
+
+      <h4>9. Špičatá horní křídla</h4>
+      <p>Pamatujte, že horní křídlo by mělo mít trojúhelníkový tvar a být umístěno pod úhlem 45 stupňů. Pokud ho chcete zakřivit, nasměrujte ho k hornímu OB.</p>
+
+      <div class="media-gallery">
+        <img src="images/8a446e2e872b34ae0479f9d406f5aa0f.jpg" alt="Chyba: špičatá horní křídla" style="max-width: 500px;">
+        <p class="media-caption">Oba motýli postrádají správný tvar — je nutné prostudovat pravidla stavby</p>
+      </div>
+
+      <h4>10. Dekorační chyby</h4>
+      <ul>
+        <li><strong>Tečky umístěné podél obrysu:</strong> Pokud se rozhodnete nanést sérii teček na obrys, dodržte pár pravidel — udělejte je dokonale kulaté, umístěné ve shlucích různých velikostí a bez dotýkání se okrajů obrysu.</li>
+        <li><strong>Nepořádný obrys:</strong> Může být důsledkem nestabilní ruky, příliš krátkých tahů nebo špatně nabraného štětce. Pravidelné procvičování linek vám pomůže zlepšit dovednosti.</li>
+        <li><strong>Nepořádné blendování barev pozadí:</strong> Obvykle se stane, když se umělec snaží vyblendovat barvy pozadí štětcem, ne protože tuto dovednost ovládá, ale protože nemá split-cake. Řešením je zvládnout nanášení gradientů houbičkou.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/7601f7f1d8b93215f27c3f1b42d49a39.jpg" alt="Dekorační chyby a řešení" style="max-width: 600px;">
+        <p class="media-caption">Vlevo chyby, vpravo řešení</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2L4: Základní motýl -->
+  <div class="lesson" id="m2l4">
+    <div class="lesson-title"><h3>Lekce 4: Základní motýl</h3></div>
+    <div class="lesson-content">
+      <h4>Rozbor designu:</h4>
+      <ul>
+        <li>Použitý mezilehlý OB</li>
+        <li>Horní křídla umístěna pod úhlem 45° a mírně zakřivená směrem k hornímu OB</li>
+        <li>Horní křídla jsou trojúhelníková</li>
+        <li>Spodní křídla mají tvar lístku a jsou mírně menší než horní</li>
+        <li>Horní a spodní křídla se setkávají v OB vnějších koutků očí</li>
+        <li>Nejvzdálenější bod spodního křídla je v OB lícní kosti</li>
+        <li>Prodloužení ze spodních křídel směřují k bradovému OB</li>
+        <li>Vnitřní obrys spodního křídla a nazolabiální rýha svírají úhel</li>
+        <li>Asymetrická tykadla odvádějí pozornost od možných chyb v symetrii</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/cf774c69c3860ea737f158ec1c9e85f5.jpg" alt="Základní motýl" style="max-width: 600px;">
+        <p class="media-caption">Základní motýl — postup a výsledek</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Šablona:</strong> Použijte šablonu Basic Butterfly k procvičení tohoto designu! Nejprve procvičte obrys, pak se naučte nanášet pozadí houbičkou. Jakmile si vytrénujete svalovou paměť, zkuste design namalovat na skutečný obličej.
+      </div>
+
+      <h4>Použité materiály:</h4>
+      <ul>
+        <li>Kulatý štětec Kingart 795 č. 4 — pro linky</li>
+        <li>Zelená houba Mehron (oříznutá do tvaru lístku) — pro pozadí</li>
+        <li>Split-cake Cameleon Celebrations — barva pozadí</li>
+        <li>Cameleon Pure White — barva pro linky</li>
+        <li>TAG Pearl Red — rtěnka</li>
+        <li>Směs třpytek (holografická růžová, zlatá, stará zlatá) — pro jiskřivé pozadí</li>
+        <li>Puffer-bottle na třpytky</li>
+        <li>Magenta Sugar Glitter by Shawna Del Real — pro rty</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/uu5bfcysp6" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Základní motýl — postup krok za krokem</p>
+    </div>
+  </div>
+
+  <!-- M2L5: One stroke motýl -->
+  <div class="lesson" id="m2l5">
+    <div class="lesson-title"><h3>Lekce 5: One stroke motýl</h3></div>
+    <div class="lesson-content">
+      <h4>Rozbor designu:</h4>
+      <ul>
+        <li>Použitý mezilehlý OB</li>
+        <li>Horní křídla pod úhlem 45° a mírně zakřivená k hornímu OB</li>
+        <li>Horní křídla trojúhelníková</li>
+        <li>Spodní křídla ve tvaru lístku, mírně menší než horní</li>
+        <li>Horní a spodní křídla se setkávají v OB vnějších koutků očí</li>
+        <li>Nejvzdálenější bod spodního křídla v OB lícní kosti</li>
+        <li>Prodloužení ze spodních křídel směřují k bradovému OB</li>
+        <li>Vnitřní obrys spodního křídla a nazolabiální rýha svírají úhel</li>
+        <li>Asymetrická tykadla odvádějí pozornost od možných chyb v symetrii</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/e28a7003134b6de78cf00998c2051230.jpg" alt="One stroke motýl" style="max-width: 600px;">
+        <p class="media-caption">One stroke motýl — postup a výsledek</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Šablona:</strong> Použijte šablonu One stroke Butterfly k procvičení! Vyplňte šablonu dvěma vrstvami one stroke podle okrajů křídel. Můžete zkusit i variantu „One side one stroke Butterfly".
+      </div>
+
+      <h4>Použité materiály:</h4>
+      <ul>
+        <li>Šikmý štětec Cameleon č. 3 — pro one stroke (alternativa: jakýkoli 1-inch plochý nebo šikmý štětec TAG, Mehron, Kingart)</li>
+        <li>Kulatý štětec Mark Reid č. 2 — pro malé detaily (alternativa: Kingart 7950 č. 1; štětec Mark Reid je tužší a pružnější, což dává větší kontrolu pro dlouhé slzičky a spirálky)</li>
+        <li>Žlutá houba Wolfe — pro nanášení pozadí na víčka</li>
+        <li>TAG Pearl White — barva víček</li>
+        <li>Split-cake Cameleon Minx — pro one stroke (alternativa: jakýkoli split-cake se světlou barvou na jedné straně a tmavší na protější)</li>
+        <li>Cameleon Pure White — pro highlights</li>
+        <li>Global Metallic Magenta — pro rty</li>
+        <li>Magenta Sugar Glitter by Shawna Del Real — pro rty</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/veq2rouqmm" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: One stroke motýl — postup krok za krokem</p>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 3: SVĚTLO A STÍN ===== -->
+  <div class="module-header" id="m3">
+    <h2>Modul 3 — Světlo a stín ve face paintingu, tvorba realistických 3D objektů.</h2>
+    <p style="opacity: 0.85;">Teorie světla a stínu, sféra, kapky vody, vzduchové bubliny</p>
+  </div>
+
+  <!-- M3L1: Světlo a stín ve face paintingu -->
+  <div class="lesson" id="m3l1">
+    <div class="lesson-title"><h3>Lekce 1: Světlo a stín ve face paintingu</h3></div>
+    <div class="lesson-content">
+      <h4>Světlo a stín na pevném tělese — sféře</h4>
+
+      <p>Podívejme se, jak se světlo a stín chovají na pevném tělese — sféře. Zdroj světla je umístěn nahoře, což vede k vytvoření malé skvrny světla — odlesku (highlight). Oblast světla se nachází kolem odlesku. Stín tvaru (form shadow) rámuje sféru v půlkruhovém tvaru. Stín, který dopadá na povrch, se nazývá vržený stín (cast shadow). Světlo se částečně odráží od povrchu zpět na sféru a vytváří oblast odraženého světla na jejím spodku.</p>
+
+      <div class="media-gallery">
+        <img src="images/0b0eedfad3cbeaa8628c8ae4e87ccfa9.jpg" alt="Teorie 3D — sféra" style="max-width: 600px;">
+        <p class="media-caption">Světlo a stín na sféře — odlesk, oblast světla, stín tvaru, vržený stín, odražené světlo</p>
+      </div>
+
+      <h4>Chování světla a stínu v závislosti na typu zdroje světla:</h4>
+
+      <ul>
+        <li><strong>Bodový zdroj světla</strong> vytváří ostré kontrasty — oblast světla je zřetelně oddělena od stínu tvaru, spolu s jasně definovaným vrženým stínem.</li>
+        <li><strong>Dva bodové zdroje světla</strong> vedou k vytvoření dvou překrývajících se stínů, kde temnota stínů se může lišit v závislosti na vzdálenosti zdroje světla.</li>
+        <li><strong>Rozptýlený zdroj světla</strong> je nejběžnější situace (příklad: denní světlo). Rozptýlené světlo osvětluje objekt z různých úhlů, což vede k vytvoření jemných gradientů. Nejtmavší stín je umístěn v nejbližší blízkosti objektu.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/8adfebec2dfa0efd50094aac2fd483c5.jpg" alt="Typy zdrojů světla" style="max-width: 600px;">
+        <p class="media-caption">Bodový, dvojitý a rozptýlený zdroj světla — různé chování stínů</p>
+      </div>
+
+      <h4>Tvar vrženého stínu:</h4>
+      <p>V závislosti na umístění zdroje světla bude mít vržený stín různé tvary. Sféra vždy vrhá eliptický stín různé délky.</p>
+
+      <div class="media-gallery">
+        <img src="images/bb56181dc609060c59a3abc0f89f296d.jpg" alt="Tvary vrženého stínu" style="max-width: 600px;">
+        <p class="media-caption">Různé tvary vrženého stínu v závislosti na umístění zdroje světla</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Důležité:</strong> Stín tvaru i vržený stín vždy představují tmavší odstíny barvy povrchu. Proto ve face a body paintingu používáme pro vytvoření 3D efektu hnědé odstíny s odkazem na tón pleti.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/e69ce311b1e35191b11cf40d42f2884f.jpg" alt="Barvy stínů" style="max-width: 600px;">
+        <p class="media-caption">Stíny jsou vždy tmavší odstíny barvy povrchu</p>
+      </div>
+
+      <p>Čím blíže je objekt k povrchu, tím tmavší bude jeho vržený stín — a naopak. Toto pravidlo se ve face a body paintingu také často používá.</p>
+
+      <div class="media-gallery">
+        <img src="images/17ac24c02ed0c1842390c7746621bf5c.jpg" alt="Vzdálenost a temnota stínu" style="max-width: 600px;">
+        <p class="media-caption">Čím blíže objekt k povrchu, tím tmavší vržený stín</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M3L2: Tvorba 3D sférických prvků -->
+  <div class="lesson" id="m3l2">
+    <div class="lesson-title"><h3>Lekce 2: Tvorba 3D sférických prvků</h3></div>
+    <div class="lesson-content">
+      <h4>Světlo a stín na sféře (neprůhledný objekt)</h4>
+
+      <p>Zdroj světla je umístěn nad sférou, což vede k vytvoření malé skvrny světla — odlesku. Oblast světla je kolem odlesku. Stín tvaru rámuje sféru zdola v půlkruhu. Sféra vrhá eliptický stín na povrch. Světlo se částečně odráží od povrchu a vytváří úzkou zvýrazněnou oblast na spodku sféry — oblast odraženého světla.</p>
+
+      <p>Sféra může být jakékoli barvy, ale vržený stín by měl být nutně hnědý odstín.</p>
+
+      <div class="media-gallery">
+        <img src="images/b8156e38b253bb5c658816e9f85ce211.jpg" alt="Sféra — světlo a stín" style="max-width: 500px;">
+        <p class="media-caption">Světlo a stín na sféře — teorie a malování</p>
+      </div>
+
+      <h4>Světlo a stín na kapce vody</h4>
+
+      <p>Budeme mluvit o průhledné kapce, protože světlo se chová odlišně v barevné nebo neprůhledné kapalině. Kapky mohou mít různé tvary — statické nebo stékající.</p>
+
+      <p>U statické sférické i stékající kapky světlo proniká skrz kapku a částečně vychází z její protější strany. Proto budeme mít v tomto případě dva odlesky — v místě, kde světlo vstupuje do kapky, a na protější straně, kde z ní vychází. Vstupující světlo se láme a rozptyluje a vytváří oblast světla na spodku kapky. Stín je umístěn na protější straně oblasti světla, kolem odlesku.</p>
+
+      <p>Další důležitá poznámka: světlo vytváří světelnou cestu na povrchu poté, co vyjde z kapky.</p>
+
+      <div class="media-gallery">
+        <img src="images/28a0d8c5ce29a7575d2b9b9b78f6cfe1.jpg" alt="Kapky vody — světlo a stín" style="max-width: 600px;">
+        <p class="media-caption">Světlo a stín na statické a stékající kapce vody</p>
+      </div>
+
+      <h4>Světlo a stín na vzduchové bublině</h4>
+
+      <p>Stejně jako kapka vody je i vzduchová bublina průhledný prvek. Proto se světlo bude chovat podobně — pronikne skrz bublinu a vytvoří dva odlesky (kde světlo vstupuje a kde vychází). Při průchodu bublinou se světlo rozptyluje a vytváří oblast světla na protější straně.</p>
+
+      <p>Překrývání bublin při malování pomůže zvýraznit efekt průhlednosti.</p>
+
+      <div class="media-gallery">
+        <img src="images/302437c13bd79682f1b2f71a2649b913.jpg" alt="Vzduchové bubliny — světlo a stín" style="max-width: 600px;">
+        <p class="media-caption">Světlo a stín na vzduchových bublinách</p>
+      </div>
+
+      <h4>Jak malovat světlo a stín na těchto prvcích</h4>
+
+      <div class="media-gallery">
+        <img src="images/e7bf6a2f61ada7fe1db56921314dfedf.jpg" alt="Malování kapky technikou one stroke" style="max-width: 500px;">
+        <p class="media-caption">Malování kapky vody — postup</p>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/vpp76qkpcz" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Tvorba 3D sférických prvků — kapky, bubliny, sféry</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== MODUL 4: POVINNÉ DESIGNY ===== -->
+<div class="module-header" id="m4">
+  <h2>Modul 4 — Povinné designy</h2>
+  <p style="opacity: 0.85;">Heart Princess, kočička, Spider-Man, Batman, tygr, Alicorn, T-Rex, pirátská lebka</p>
+</div>
+
+  <!-- M4L1: Heart Princess -->
+  <div class="lesson" id="m4l1">
+    <div class="lesson-title"><h3>Lekce 1: Heart Princess (Srdcová princezna)</h3></div>
+    <div class="lesson-content">
+
+      <div class="media-gallery">
+        <img src="images/0a43ef340df72ea6c7865c193c476fff.jpg" alt="Heart Princess">
+        <p class="media-caption">Heart Princess — detail designu a rozbor</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Centrální ohniskový bod (FP) v tomto designu je posunutý mírně výš a je umístěný mezi obočí.</li>
+          <li>Špičky protáhlých okvětních lístků ve shlucích kolem srdce směřují k centrálnímu FP.</li>
+          <li>Shluky rámují srdce a směřují k hornímu FP.</li>
+          <li>Shluky okvětních lístků na spáncích směřují k FP vnějších koutků očí.</li>
+          <li>Spirály umístěné na lícních kostech směřují dvěma směry — k FP vnějších koutků očí a k FP brady.</li>
+          <li>One stroke obrys umístěný nad obočím neopakuje jeho tvar, je mírně zvednutý na vnějších okrajích, čímž otevírá pohled modelky.</li>
+          <li>Všechny prvky ve středu designu (slzičky uvnitř srdce, one stroke obrys srdce, řada teček na spodní části srdce atd.) směřují k centrálnímu FP.</li>
+          <li>Oční víčka jsou pokryta perleťově bílou barvou, čímž vzniká plynulý přechod k one stroke. Je důležité, aby na vnitřní straně one stroke obrysu očí nebyla ostrá definovaná linie.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/3tzthhopjv" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Heart Princess — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Plochý štětec TAG #12</li>
+          <li>Kulatý štětec Kingart 7950 č. 6 — na květiny</li>
+          <li>Kulatý štětec Kingart 795 č. 3 — na tečky, slzičky a spirály</li>
+          <li>Filbert štětec Art Factory 3/8 — na srdce</li>
+          <li>Žlutý houbička Wolfe — na tvářenku</li>
+          <li>Split-cake Cameleon Sunset — na one stroke prvky</li>
+          <li>Barva Paradise Mehron Light Pink — na tvářenku</li>
+          <li>Barva TAG Pearl White — na pozadí na víčkách</li>
+          <li>Barva Cameleon Pure White — na zvýraznění a linky</li>
+          <li>Barva Cameleon Bollywood Pink — na double dip</li>
+          <li>Barva Global Magenta — na srdce uprostřed</li>
+          <li>Barva Global Metallic Magenta — na rty</li>
+          <li>Jednorázový aplikátor rtěnky</li>
+          <li>Bílé holografické glitry TAG</li>
+          <li>Magenta glitry Sugar Glitter od Shawna Del Real</li>
+          <li>Zlatý glitrový gel Glitter Markz, Mehron</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L2: Klasická kočička -->
+  <div class="lesson" id="m4l2">
+    <div class="lesson-title"><h3>Lekce 2: Klasická kočička</h3></div>
+    <div class="lesson-content">
+
+      <div class="media-gallery">
+        <img src="images/052f835c1bc10c64c106df7793627deb.jpg" alt="Klasická kočička">
+        <p class="media-caption">Klasická kočička — detail designu a rozbor</p>
+      </div>
+
+      <p><strong>Charakteristické rysy kočičí masky:</strong></p>
+      <ul>
+        <li>Protáhlý tvar oka s ostrým špičatým koncem ve vnějším koutku oka.</li>
+        <li>Špičaté uši pro domácí kočky a zaoblené uši pro divoké kočky; výjimkou je rys, protože je to divoká kočka se špičatými ušima, ale má na nich také chomáčky srsti.</li>
+        <li>Nejlepší umístění uší — pod úhlem 45°, stejně jako u motýlích křídel.</li>
+        <li>Tvar nosu podobný bumerangu.</li>
+        <li>Chybějící horní ret a rozdělená tlama se střední linií, která jde od nosu do středu rtů.</li>
+        <li>Zvednuté vnější koutky rtů pro ženský vzhled (obvykle funguje pro kočičky a dívčí tygry) nebo snížené koutky rtů pro mužný vzhled (skvěle funguje pro klučičí kočky, tygry a lvy).</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Uši mají podobný tvar jako horní motýlí křídla a respektují stejná geometrická pravidla — mají trojúhelníkový tvar, jejich horní špička je mírně zakřivená tak, že směřuje k hornímu FP, a vnitřní obrys uší je umístěn pod úhlem 45° a směřuje k mezilehlým FP.</li>
+          <li>Srst uprostřed masky je tvořena prameny, které všechny směřují k centrálnímu FP.</li>
+          <li>Obrys očí začíná od FP vnitřních koutků očí, zatímco vnější špičky jsou umístěny podél dolní linie řas.</li>
+          <li>Řady vousových teček všechny směřují ke středu linie, která rozděluje tlamu na dvě poloviny.</li>
+          <li>Srst na uších směřuje nahoru pod úhlem 45°, čímž ještě více zvedá pohled, zatímco srst na tvářích směřuje dolů a rámuje masku zespodu.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/xbwl3a4b5z" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Klasická kočička — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Kulatý štětec Kingart 7950 č. 3 — na linky</li>
+          <li>Blending štětec Cameleon č. 2</li>
+          <li>Barva Superstar White — na pozadí</li>
+          <li>Žlutá houbička Wolfe — na pozadí</li>
+          <li>Barva Cameleon Bollywood Pink — na pozadí (alternativa — Global Regular Magenta)</li>
+          <li>Barva Global Metallic Magenta — na rty</li>
+          <li>Jednorázový aplikátor rtěnky</li>
+          <li>Magenta Sugar Glitter od Shawna Del Real</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L3: Klasický Spider-Man -->
+  <div class="lesson" id="m4l3">
+    <div class="lesson-title"><h3>Lekce 3: Klasický Spider-Man</h3></div>
+    <div class="lesson-content">
+
+      <p><strong>Úvod</strong></p>
+      <p>Existují desítky různých superhrdinů, ale Batman a Spider-Man zůstávají nejžádanějšími designy na akcích. Proto vám doporučuji oba tyto designy perfektně zvládnout a dokonce si vytvořit několik variant pro každý z nich — to se může hodit, když několik kluků na stejné akci požádá o stejný superhrdinský design.</p>
+
+      <p>Způsob, jak své designy obměňovat, je používat inspirační sady jako ty níže, které vám pomohou obměnit staré designy a vymyslet nové.</p>
+
+      <div class="media-gallery">
+        <img src="images/2ee356db7b625ff54aaea225da4ad538.jpg" alt="Příklady tvarů a umístění Batmanových křídel">
+        <p class="media-caption">Příklady tvarů a umístění Batmanových křídel</p>
+      </div>
+
+      <p><strong>Vymýšlení nového designu</strong></p>
+      <p>Doporučuji vám přemýšlet o super rychlé a jednoduché verzi, kterou zvládnete za méně než dvě minuty, klasické středně náročné verzi a propracovaném designu, který by se hodil pro starší dítě nebo dospělého. Nikdy nevíte, kdo bude váš příští klient — malé neklidné dítě nebo dospělý, připravený na experiment.</p>
+
+      <div class="media-gallery">
+        <img src="images/0824625218a5e40ffd2c39161ee7f948.jpg" alt="Příklady tvarů očí a stylů pavučin Spider-Mana">
+        <p class="media-caption">Příklady tvarů očí a stylů pavučin Spider-Mana</p>
+      </div>
+
+      <p>Dále si s vámi prostudujeme dva klasické designy Spider-Mana a Batmana. Správné zvládnutí základů vám pomůže mnohem snáze diverzifikovat vaše superhrdinské designy! V sekci Volitelné designy najdete ještě dva další působivé designy na toto téma. Nyní začněme s klasickým Spider-Manem!</p>
+
+      <div class="media-gallery">
+        <img src="images/45852d8bc623adc62758cf4f90b4d3ae.jpg" alt="Klasický Spider-Man">
+        <p class="media-caption">Klasický Spider-Man — detail designu a rozbor</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Obrys očí směřuje pod úhlem 45° a je mírně zakřivený tak, že špičky „brýlí" směřují k hornímu FP.</li>
+          <li>„Brýle" začínají od mezilehlých FP.</li>
+          <li>Všechna vlákna pavučiny, bez ohledu na to, kde jsou umístěna, směřují k centrálnímu FP.</li>
+          <li>Spodek designu je umístěn na úrovni FP tváří, zatímco směr šablonového vzoru a pavučiny tam směřuje k FP brady.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/mzffemz0en" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Klasický Spider-Man — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na linky</li>
+          <li>Filbert štětec Cameleon č. 2 — na oči</li>
+          <li>Žlutá houbička Wolfe — na červené pozadí</li>
+          <li>Barva Superstar White — na oči</li>
+          <li>Barva Global Red — na pozadí</li>
+          <li>Barva TAG Gold — na texturu na pozadí</li>
+          <li>Barva Cameleon Strong Black — na linky</li>
+          <li>Šablona z kitu Graffiti Eyes Stencils od Lea Selley — na šablonový vzor na okrajích masky</li>
+          <li>BAMS šablona č. 4011 — na texturu na pozadí</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L4: Maska Batmana -->
+  <div class="lesson" id="m4l4">
+    <div class="lesson-title"><h3>Lekce 4: Maska Batmana</h3></div>
+    <div class="lesson-content">
+
+      <div class="media-gallery">
+        <img src="images/713415d75e9fa909c76d4b20e94704bd.jpg" alt="Maska Batmana">
+        <p class="media-caption">Maska Batmana — detail designu a rozbor</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Batmanova křídla jsou umístěna pod úhlem 45°, zatímco jejich špičky jsou na vrchu mírně zakřivené a směřují k hornímu FP.</li>
+          <li>Spodní vnější výběžek je nejdelší a směřuje k FP brady, zatímco „tělo" masky končí v FP tváře.</li>
+          <li>Drsný vzhled je dosažen díky tvaru obočí (vyznačeno zeleně) — překříží se s přirozeným obočím (vyznačeno červenou čárkovanou čarou) uprostřed, přičemž jeho vnitřní část rámuje obočí zespodu a vnější část je zvednutá nad obočí.</li>
+          <li>Dodatečná dimenze a stín v masce je dosažena díky umístění světel a stínů — oblasti nad obočím, lícní kosti, hřbet nosu a hlava netopýra jsou zvýrazněny, zatímco vnitřní koutky očí, oblast kolem očí a okraje masky jsou ztmaveny.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/lygtuf40m6" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Maska Batmana — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Šikmý štětec Cameleon č. 1 — na one stroke pozadí (alternativa — 1" plochý nebo šikmý štětec Kingart, Marcela Bustamante, Nat's Fancy Faces, Prima Barton, Art Factory, Mehron nebo TAG)</li>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na obrys</li>
+          <li>Černá houbička Kryvaline — na světla a šablonovou texturu</li>
+          <li>Ručně vyrobený split-cake z barev: Superstar č. 213 a TAG Pearl Blue — na one stroke pozadí</li>
+          <li>Barva Superstar White — na světla a šablonovou texturu</li>
+          <li>Barva Cameleon Strong Black — na namáčení špičky šikmého štětce do one stroke</li>
+          <li>HAS šablona #5004 z kitu Mechanical (od stejného výrobce jako BAM šablony)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L5: Realistický tygr -->
+  <div class="lesson" id="m4l5">
+    <div class="lesson-title"><h3>Lekce 5: Realistický tygr</h3></div>
+    <div class="lesson-content">
+
+      <div class="media-gallery">
+        <img src="images/08002ab2a6f3e29b61f37f9c9a8b222f.jpg" alt="Realistický tygr">
+        <p class="media-caption">Realistický tygr — detail designu a rozbor</p>
+      </div>
+
+      <p><strong>Specifika tygřích linek a leopardích skvrn</strong></p>
+      <p>Nejprve si připomeňme techniku malování tygřích linek a leopardích skvrn. Odkážeme se na Část druhou, Modul 2 „Technika práce s kulatým štětcem", abychom si připomněli pravidla malování tygřích linek, a aplikujeme tyto dovednosti s technikou malování leopardích skvrn a blendování, kterou jsme prozkoumali v Modulu 5 „Práce s filbert a blending štětci".</p>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Jako referenci pro tento design jsem použila obrázek skutečného tygra a vypůjčila si z něj umístění linek. Horní FP tak změnil svou pozici na nižší, na úroveň linie vlasů — místo, odkud všechny linky z horní části obličeje začínají a poté radiálně rámují obličej.</li>
+          <li>Všechny linky směřují k centrálnímu FP a k FP vnitřních koutků očí.</li>
+          <li>Všechny linky umístěné na spodní části obličeje směřují k FP vnitřních koutků očí, zatímco jejich spodní špičky směřují k migračním FP umístěným v koutcích rtů.</li>
+          <li>Obrys očí sleduje dolní linii řas.</li>
+          <li>Vousy se sbíhají na spodní části nosu.</li>
+          <li>Blendování je zde velmi lehké a je umístěno radiálně — sleduje směr linek a je umístěno pouze na jedné straně každé linky.</li>
+          <li>Tygří designy s chlupatou bradou vypadají mnohem lépe na klucích než na holkách.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/r7wxk585tf" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Realistický tygr — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na linky</li>
+          <li>Kulatý štětec Kingart 7950 č. 6 — na růžový nos (alternativa — jakýkoli štětec velikosti č. 4 až č. 6)</li>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na bílý obrys pod očima</li>
+          <li>Blending štětec Cameleon č. 2 — na blendování</li>
+          <li>Žlutá houbička Wolfe — na pozadí</li>
+          <li>Barva Superstar White — na tlamičku, skvrny nad očima a srst rámující obličej</li>
+          <li>Barva Cameleon Tiger — na pozadí</li>
+          <li>Barva Global Orange — na pozadí</li>
+          <li>Barva Paradise Light Pink — na nos</li>
+          <li>Barva Cameleon Strong Black — na linky</li>
+          <li>Barva Cameleon Pure White — na bílý obrys pod očima</li>
+          <li>Vlhký ubrousek — na blendování</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L6: Alicorn -->
+  <div class="lesson" id="m4l6">
+    <div class="lesson-title"><h3>Lekce 6: Alicorn</h3></div>
+    <div class="lesson-content">
+
+      <p><strong>Úvod</strong></p>
+      <p>Jedním z nejžádanějších designů u dívek jsou všechny variace poníků a koní, včetně mytických tvorů jako Pegas, Jednorožec a Alicorn. Zde jsou rozdíly mezi nimi:</p>
+      <ul>
+        <li>Základní design je kůň.</li>
+        <li>Poníci mají kratší čumáček.</li>
+        <li>Jednorožec má roh.</li>
+        <li>Pegas má křídla.</li>
+        <li>Alicorn je mix předchozích dvou — má roh i křídla.</li>
+      </ul>
+      <p>Poslední design je obvykle ten nejžádanější ve face paintingu. V tomto modulu prostudujeme čtyři variace koní, z nichž každý je namalován svým vlastním stylem. Všimněte si, ve kterém stylu jste se cítili nejpohodlněji. To je nápověda pro váš vývoj jako umělce. Doporučuji nejprve rozvíjet své silné stránky a postupně přidávat nové techniky a styly do svých designů, až když se budete cítit sebejistě v tom, co děláte.</p>
+      <p>Všechny čtyři tyto designy jsou zahrnuty v sekci Volitelné designy. Nyní si prostudujme ten nejžádanější design — Alicorna.</p>
+
+      <div class="media-gallery">
+        <img src="images/545a4db84fa99ae8a7c1c1b3a92be2bf.jpg" alt="Koně, poníci, jednorožci — schéma">
+        <p class="media-caption">Koně, poníci, jednorožci, Pegas a Alicorn — rozdíly</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/f26a4d84f88fd3394ef32445e58d0d4b.jpg" alt="Alicorn">
+        <p class="media-caption">Alicorn — detail designu a rozbor</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Křídlo Alicorna respektuje stejná pravidla jako motýlí křídla — začíná od FP vnitřního koutku oka, směřuje pod úhlem 45° a končí v FP vnějšího koutku oka.</li>
+          <li>Virtuální prodloužení směru hřívy a ocasu rámuje obličej nahoře a dole, zatímco ocas je zakřivený tak, že směřuje k FP brady.</li>
+          <li>Prameny hřívy směřují k FP vnitřního koutku oka.</li>
+          <li>Rovnováha v tomto designu je dosažena kombinací malých prvků různých velikostí (hvězdy), které rámují velký centrální prvek (Alicorna).</li>
+          <li>K tomuto designu jsem přidala více objemu stínováním hlavy a křídla Alicorna světle modrými tahy, bez blendování.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/ieoj5uq759" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Alicorn — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Kulatý štětec Kingart 7950 č. 6 — na hlavu, tělo a křídlo (alternativa — jakýkoli jiný kulatý štětec velikosti č. 5 až č. 6)</li>
+          <li>Kulatý štětec Diamond FX č. 4 — na hřívu</li>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na světle modrou barvu</li>
+          <li>Kulatý štětec Kingart 7950 č. 3 — na obrys</li>
+          <li>Okvětní lístková houbička — na změkčení pozadí na víčku</li>
+          <li>Černá houbička Kryvaline — na šablonové hvězdy</li>
+          <li>Barva Cameleon Bollywood Pink — na hřívu (alternativa — Global Magenta)</li>
+          <li>Barva Paradise Light Blue — na stíny na těle a křídle Alicorna</li>
+          <li>Barva Global Yellow — na hvězdy</li>
+          <li>Barva TAG Pearl Black — na obrys</li>
+          <li>Barva Cameleon Pure White — na hlavu a křídlo Alicorna a na zvýraznění</li>
+          <li>Barva TAG Yellow — na hvězdy</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L7: T-Rex ve dvou variantách -->
+  <div class="lesson" id="m4l7">
+    <div class="lesson-title"><h3>Lekce 7: T-Rex ve dvou variantách</h3></div>
+    <div class="lesson-content">
+
+      <div class="media-gallery">
+        <img src="images/a8a324510bada20f35dd3b87a8e48ed3.jpg" alt="T-Rex">
+        <p class="media-caption">T-Rex — detail designu a rozbor</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Střed těla T-Rexe představuje migrační FP pro tento design.</li>
+          <li>Ocas je zakřivený tak, že směřuje k centrálnímu FP, zatímco spodní čelist směřuje k FP brady.</li>
+          <li>Spodek designu je umístěn na úrovni dolní linie čelisti.</li>
+        </ul>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/3f711da456b87b20aa667aad209e58f8.jpg" alt="T-Rex Zombie">
+        <p class="media-caption">T-Rex — zombie varianta</p>
+      </div>
+
+      <div class="tip">
+        <strong>Jak „zombifikovat" design:</strong>
+        <ul>
+          <li><strong>Oči</strong> — bílé oční bělmo s chybějící duhovkou a zornicí.</li>
+          <li><strong>Rány a chybějící končetiny</strong> — zde jsem roztrhla hrudní koš a odhalila žebra, stejně jako odtrhla špičku ocasu.</li>
+          <li><strong>Krev</strong> — zombie je stará mrtvola, což znamená, že jeho krev prošla oxidací a ztmavla oproti čerstvé krvi; proto v tomto případě použijte tmavší odstíny červené a vytvářejte různé textury (stříkance, kapky, louže, modřiny, skvrny atd.) prostřednictvím různých typů aplikace barvy.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/2n93o4n4y1" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: T-Rex — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Šikmý štětec Cameleon č. 2 — na základ dinosaura</li>
+          <li>Kulatý štětec Kingart 7950 č. 3 — na obrys</li>
+          <li>Kulatý štětec Kingart 7950 č. 1 — na bílou</li>
+          <li>Kulatý štětec Diamond FX č. 4 — na krev</li>
+          <li>Černá houbička Kryvaline — na šablonování</li>
+          <li>Ručně vyrobený split-cake z Cameleon Wicked Green a Global Dark Green — na základ dinosaura</li>
+          <li>Barva Global Dark Green — na šablonový vzor</li>
+          <li>Barva Cameleon Pure White — na zvýraznění</li>
+          <li>Barva Cameleon Strong Black — na obrys</li>
+          <li>Barva Paradise Red — na krev</li>
+          <li>BAMS šablona č. 1005</li>
+          <li>Vizitka — na stříkání krevních stříkanců</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M4L8: Pirátská lebka -->
+  <div class="lesson" id="m4l8">
+    <div class="lesson-title"><h3>Lekce 8: Pirátská lebka</h3></div>
+    <div class="lesson-content">
+
+      <div class="media-gallery">
+        <img src="images/c85cd0b17e72446a3930f36fe8878d94.jpg" alt="Pirátská lebka">
+        <p class="media-caption">Pirátská lebka — detail designu a rozbor</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Umístění světla a stínu odpovídá klasické struktuře lebky — zvýrazněné oblasti jsou: nadočnicová oblast, lícní kost a oblast čelisti.</li>
+          <li>Drsný vzhled je dosažen díky tvaru obočí (vyznačeno zeleně) — překříží se s přirozeným obočím (vyznačeno červenou čárkovanou čarou) uprostřed, přičemž jeho vnitřní část rámuje obočí zespodu a vnější část je zvednutá nad obočí.</li>
+          <li>Praskliny představují rovné nebo lomené čáry, nikoli zakřivené.</li>
+          <li>Úlomky jsou soustředěny v jedné oblasti, odkud se rozbíhají delší praskliny.</li>
+          <li>Uzel šátku je umístěn uprostřed spánkové oblasti.</li>
+          <li>Není to povinné, ale design vypadá ještě vyváženěji, když kusy látky visící z šátku směřují k FP brady.</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>📄 Šablona k vytištění:</strong> Vytiskněte si šablonu a procvičujte design co nejefektivněji! Položte šablonu pod průhlednou fólii a sledujte nakreslené vodítka. Pak zkuste design namalovat na čistou tvářovou desku, poté na skutečný obličej — uvidíte, o kolik snazší bude dosáhnout správných proporcí!
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/vwixj5en71" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Pirátská lebka — postup malování</p>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Plochý štětec Cameleon č. 2 — na šátek</li>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na obrys</li>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na bílou</li>
+          <li>Kulatý štětec Diamond FX č. 4 — na efekt oteklé kůže</li>
+          <li>Blending štětec Cameleon č. 2</li>
+          <li>Žlutá houbička Wolfe FX — na pozadí</li>
+          <li>Split-cake Cameleon Gypsy — na šátek (alternativa — jakákoli jiná kombinace červené a černé)</li>
+          <li>Barva TAG Gold — na šablonový vzor na šátku</li>
+          <li>Barva Paradise Red — na efekt oteklé kůže</li>
+          <li>Barva Superstar Black — na tmavé detaily</li>
+          <li>Barva Cameleon Strong Black — na obrys</li>
+          <li>Barva Superstar White — na bílé pozadí lebky</li>
+          <li>Barva Cameleon Pure White — na zvýraznění</li>
+          <li>BAMS šablona č. 2012</li>
+          <li>Zlatý glitrový gel Mehron Glitter Markz</li>
+          <li>Vlhký ubrousek — na blendování</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+<!-- ===== MODUL 5: KROKY K VYTVOŘENÍ VLASTNÍHO DESIGNU ===== -->
+<div class="module-header" id="m5">
+  <h2>Modul 5 — Kroky k vytvoření vlastního designu</h2>
+  <p style="opacity: 0.85;">Algoritmus tvorby originálního designu krok za krokem — od nápadu po finální malbu</p>
+</div>
+
+  <!-- M5L1: Krok 1 — Nápad -->
+  <div class="lesson" id="m5l1">
+    <div class="lesson-title"><h3>Krok 1: Nápad</h3></div>
+    <div class="lesson-content">
+
+      <p>Jednou z nejčastějších otázek začínajících face painterů je, odkud brát inspiraci a jak vytvářet vlastní originální designy.</p>
+
+      <p>Je velký rozdíl mezi kopírováním designu a čerpáním inspirace z práce jiného umělce. V první řadě je velmi běžné, že nový umělec se pokusí zkopírovat design, který se mu líbí. Je to skvělý způsob, jak si vybudovat portfolio a rozvíjet dovednosti. Navíc face paintery často klienti žádají, aby zkopírovali design z internetu.</p>
+
+      <p>Kopírování je skvělý způsob, jak si osvojit naučené techniky. Doporučuji, aby každý začínající umělec zkopíroval co nejvíce designů profesionálních umělců — pro trénink ruky, vnímání proporcí a postupný rozvoj vlastního stylu.</p>
+
+      <p>Co byste tedy měli dělat, když jste zvládli techniky a chcete vytvářet vlastní originální designy, ale nevíte, kde začít? Tento modul je věnován algoritmu tvorby nového designu, který jsem vyvinula za roky praxe a který mi pomohl najít můj styl a vytvářet originální designy. Doufám, že pomůže i vám.</p>
+
+      <p><strong>Krok 1: Nápad</strong></p>
+      <p>Rozhodla jsem se vytvořit nový design Batmana. Toto je finální výsledek.</p>
+
+      <div class="media-gallery">
+        <img src="images/56eade5f42ff3bc37c7371c17e350d1d.jpg" alt="Tvorba designu — finální fotografie">
+        <p class="media-caption">Finální výsledek nového designu Batmana</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M5L2: Krok 2 — Zdroje inspirace -->
+  <div class="lesson" id="m5l2">
+    <div class="lesson-title"><h3>Krok 2: Zdroje inspirace</h3></div>
+    <div class="lesson-content">
+
+      <p>Je důležité zmínit, že nejlepší výsledky získáte hledáním v angličtině. Hlavní vyhledávací systémy, které doporučuji používat, jsou: Google, Pinterest, Instagram, YouTube.</p>
+
+      <div class="media-gallery">
+        <img src="images/8464e17eda87cdc2148911b3ef546395.jpg" alt="Batman clipart — vyhledávání Google">
+        <p class="media-caption">Výsledky hledání „Batman clipart" přes Google</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/a345420b363d972bded388fdb52d8655.jpg" alt="Batman art — vyhledávání Google">
+        <p class="media-caption">Výsledky hledání „Batman art" přes Google</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/0caff338faa04fa235278404c0f55f86.jpg" alt="Batman face paint — Pinterest">
+        <p class="media-caption">Možnosti na Pinterestu pro dotaz „Batman face paint"</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/092cbde58dc21a901f71ddabd8c78b29.jpg" alt="#batmanfacepaint — Instagram">
+        <p class="media-caption">Instagram — hashtag #batmanfacepaint</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/a01ff58260e1cc4c8743d22d7ccb2dfe.jpg" alt="Batman face paint — YouTube">
+        <p class="media-caption">Video-tutoriály na YouTube pro dotaz „Batman face paint"</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/73797d47b04099f69241d4b4fdb00474.jpg" alt="Výsledek hledání inspirace">
+        <p class="media-caption">Vybrané inspirační obrázky</p>
+      </div>
+
+      <p>Už jsem se rozhodla vytvořit asymetrický design, takže jsem potřebovala příklady, kde je Batmanova hlava umístěna v poloprofilu. Všechny potřebné obrázky jsem tentokrát našla přes Google.</p>
+
+      <p>Také jsem se rozhodla, že můj Batman bude lépe vypadat v černé a modré barvě, takže jsem čerpala inspiraci z výsledků hledání „Batman clipart". Líbil se mi styl několika designů nalezených pod dotazem „Batman art", kde jsou použity stříkance a kapky. Myslela jsem si, že budou vypadat skvěle ve face painting designu.</p>
+
+      <p>Abych design vyvážila drobnými detaily, rozhodla jsem se do něj zapracovat netopýry, podobně jako je to na obrázku vpravo nahoře.</p>
+
+    </div>
+  </div>
+
+  <!-- M5L3: Krok 3 — Určení umístění -->
+  <div class="lesson" id="m5l3">
+    <div class="lesson-title"><h3>Krok 3: Určení umístění</h3></div>
+    <div class="lesson-content">
+
+      <p>Zde se hodí koláž, kterou jsme vytvořili. Rozhodla jsem se umístit svůj nový design asymetricky, což znamená, že vhodné bude umístění rámující jedno oko. Ale zároveň chci design stáhnout dolů na tvář a dokonce na krk, takže je třeba kombinovat dvě umístění.</p>
+
+      <div class="media-gallery">
+        <img src="images/3ce9169223f8f3e4dcac05acd8df947d.jpg" alt="Určení umístění designu">
+        <p class="media-caption">Určení umístění designu na obličeji</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M5L4: Krok 4 — Skica na papíře -->
+  <div class="lesson" id="m5l4">
+    <div class="lesson-title"><h3>Krok 4: Skica na papíře</h3></div>
+    <div class="lesson-content">
+
+      <p>Po sebrání inspiračních obrázků a rozhodnutí o umístění designu mohu vytvořit skicu na papíře. Pomůže mi naučit se hlavní tvary a proporce designu, čímž se proces tvorby finálního designu stane rychlejším a efektivnějším.</p>
+
+      <div class="media-gallery">
+        <img src="images/eafd5892d962a4cab3b66a3ee904b46d.jpg" alt="Skica na papíře">
+        <p class="media-caption">Skica nového Batmana na papíře</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M5L5: Krok 5 — „Hrubý" design na cvičné podložce -->
+  <div class="lesson" id="m5l5">
+    <div class="lesson-title"><h3>Krok 5: „Hrubý" design na cvičné podložce a zkouška na obličeji</h3></div>
+    <div class="lesson-content">
+
+      <p>Jakmile je vaše skica hotová, můžete přejít k malování designu barvami. Ideální způsob je namalovat ho na modelku nebo na vlastní obličej, což vám pomůže pochopit proporce a to, jak se design uspořádá na trojrozměrném povrchu. Další skvělou možností je namalovat ho na cvičnou podložku.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Doporučuji na modelku namalovat pouze skicu, protože dítě nemusí být ochotné modelovat dvakrát pro stejný design. Udělejte z face paintingu příjemný zážitek pro své modelky a budou vám vždy rády nabízet své tváře.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/687c420d010a93ba253208c4dc823893.jpg" alt="Hrubý design">
+        <p class="media-caption">„Hrubý" design na cvičné podložce</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M5L6: Krok 6 — Finální design -->
+  <div class="lesson" id="m5l6">
+    <div class="lesson-title"><h3>Krok 6: Finální design</h3></div>
+    <div class="lesson-content">
+
+      <p>A teď konečně máme vše potřebné k namalování finálního designu na modelku. Tady je to, s čím jsem přišla.</p>
+
+      <div class="media-gallery">
+        <img src="images/02803857505a0fa5da5faea30e22b166.jpg" alt="Finální design">
+        <p class="media-caption">Finální design — rozbor a výsledek</p>
+      </div>
+
+      <div class="tip">
+        <strong>Doplňující vysvětlení:</strong>
+        <ul>
+          <li>Střed Batmanova těla je středem kompozice, proto je tam umístěn migrační FP.</li>
+          <li>Batmanovo tělo je umístěno na víčku, směřující k mezilehlému FP na vnitřní straně, zatímco rameno je umístěno nad obočím na vnější straně, čímž vzniká drsný efekt.</li>
+          <li>Drobné detaily jako netopýři a stříkance směřují radiálně z migračního FP ven, vyvažují kompozici a přidávají designu více dynamiky.</li>
+          <li>Plášť rámuje tvář, přičemž jeho nejdelší výběžek směřuje k FP brady.</li>
+          <li>Všechny kapky stékají vertikálně dolů — více kapek je ve spodní části designu, ale pro vyvážení kompozice jsem také přidala několik do vnitřního koutku oka.</li>
+        </ul>
+      </div>
+
+      <div class="tip">
+        <strong>Použité materiály:</strong>
+        <ul>
+          <li>Kulatý štětec Kingart 7950 č. 4 — na skicu a zvýraznění</li>
+          <li>Kulatý štětec Kingart 7950 č. 1 — na nejmenší černé detaily</li>
+          <li>Šikmý štětec Loew Cornell Angled 793 3/8" — na plášť (alternativa — šikmý štětec TAG č. 6)</li>
+          <li>Plochý štětec Cameleon č. 2 — na masku a kostým</li>
+          <li>Blending štětec Cameleon č. 2</li>
+          <li>Barva TAG Pearl Black — na masku a kostým</li>
+          <li>Split-cake TAG Ocean — na plášť</li>
+          <li>Barva TAG Beige — na skicu a obličej</li>
+          <li>Barva Paradise Baby Blue — na první zvýraznění</li>
+          <li>Barva Cameleon Strong Black — na nejtmavší detaily a netopýry</li>
+          <li>Barva Cameleon Pure White — na oči a zvýraznění</li>
+          <li>Šablona z kitu Graffiti Eyes Stencils od Lea Selley</li>
+          <li>Vizitka — na stříkance</li>
+        </ul>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ POZNÁMKA:</strong> Není povinné malovat tento design. Povzbuzuji vás, abyste vytvořili vlastní design podle kroků představených v tomto modulu.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M5L7: Odkazy na inspirativní stránky a události -->
+  <div class="lesson" id="m5l7">
+    <div class="lesson-title"><h3>Odkazy na inspirativní stránky a události</h3></div>
+    <div class="lesson-content">
+
+      <p><strong>Inspirativní stránky:</strong></p>
+      <ul>
+        <li><a href="https://www.facebook.com/FairiesDragonsAndOtherMythologicalCreatures" target="_blank">Fairies, Dragons, and Other Mythological Creatures</a> — pohádkové bytosti, draci a další mytologické tvory</li>
+        <li><a href="https://www.facebook.com/Illustrations-Art" target="_blank">Illustrations Art</a></li>
+      </ul>
+
+      <p><strong>Face painting skupiny:</strong></p>
+      <ul>
+        <li><a href="https://www.facebook.com/groups/faceandbodypainters" target="_blank">Face and Body Painters</a></li>
+        <li><a href="https://www.facebook.com/groups/onestrokefacepainting" target="_blank">ONE STROKE FACE PAINTING</a></li>
+        <li><a href="https://www.facebook.com/groups/fabaicforum" target="_blank">FABAIC Forum</a></li>
+        <li><a href="https://www.facebook.com/groups/1573292389603876" target="_blank">Makeup, Special Effects, Body Paint Artists and Aspiring Professionals</a></li>
+      </ul>
+
+      <p><strong>Kanály s bezplatnými YouTube tutoriály:</strong></p>
+      <ul>
+        <li><a href="https://www.youtube.com/InternationalFacePaintingSchool" target="_blank">International Face Painting School</a></li>
+        <li><a href="https://www.youtube.com/user/lisajoyyoung" target="_blank">Lisa Joy Young</a></li>
+        <li><a href="https://www.youtube.com/channel/UCvdoPtL8XIOMB9mrfIOONNA" target="_blank">SophiesTips</a></li>
+        <li><a href="https://www.youtube.com/user/MimicksTV" target="_blank">Ashlea Henson</a></li>
+      </ul>
+
+      <p><strong>Odkazy na stránky lídrů oboru:</strong></p>
+      <ul>
+        <li>Nick Wolfe</li>
+        <li>Lisa Joy Young</li>
+        <li>Marcela Bustamante</li>
+        <li>Christina Kerr Davison</li>
+        <li>Daizy Design Face Painting — umělkyně Christy Lewis</li>
+        <li>Pixie Face Painting — umělkyně Jenny Saunders</li>
+        <li>Matteo Arfanotti</li>
+        <li>Ronnie Mena</li>
+        <li>Dutch Bihary</li>
+        <li>Jocelyn Casdorph</li>
+        <li>Olga Murasev</li>
+        <li>International Face Painting School</li>
+      </ul>
+
+      <p><strong>Vzdělávací zdroje vyžadující platbu:</strong></p>
+      <ul>
+        <li><a href="https://www.fabatv.com" target="_blank">FABA TV</a> — video-tutoriály od nejlepších face painterů</li>
+        <li><a href="https://www.paintertainment.com" target="_blank">Paintertainment</a> — Wet Paint je nový americký časopis od Gretchen Fleener</li>
+        <li><a href="https://www.skinmarkzmagazine.com" target="_blank">Skin Markz Magazine</a> — americký body painting časopis, vychází každý měsíc</li>
+      </ul>
+
+      <p><strong>Události, konvence, festivaly, mistrovství, workshopy atd.:</strong></p>
+      <ul>
+        <li><a href="https://www.fabaic.com" target="_blank">FABAIC</a> — Face and Body Art International Convention, USA</li>
+        <li><a href="https://www.efabe.eu" target="_blank">EFABE</a> — European Face and Body Art Convention, Nizozemsko</li>
+        <li><a href="https://www.jamvention.eu" target="_blank">Jamvention</a> — European Face and Body Art Convention and Jam, Belgie</li>
+        <li><a href="https://www.facepaintingconvention.com" target="_blank">UK Face and Body Art Convention</a> — Velká Británie</li>
+        <li><a href="https://www.bodypainting-festival.com" target="_blank">World Bodypainting Championship</a> — Rakousko</li>
+        <li><a href="https://www.australianbodyart.com.au" target="_blank">Australian Body Art Festival</a> — Austrálie</li>
+      </ul>
+
+      <p><em>Budujme historii face paintingu společně!</em></p>
+
+    </div>
+  </div>
+
+<div class="footer">
+  <p>🎨 IFPS Professional Course — Část třetí: Designy — Překlad do češtiny</p>
+  <p>Kompletní překlad — Modul 1-5</p>
+</div>
+
+</body>
+</html>
