@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFPS Professional Course — Část druhá: Techniky</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f0eb; color: #333; line-height: 1.7; }
+    .header { background: linear-gradient(135deg, #1565c0, #e91e63); color: white; padding: 40px 20px; text-align: center; }
+    .header h1 { font-size: 2em; margin-bottom: 8px; }
+    .header p { font-size: 1.1em; opacity: 0.9; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .toc { background: white; border-radius: 12px; padding: 24px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .toc h2 { color: #1565c0; margin-bottom: 12px; font-size: 1.3em; }
+    .toc ul { list-style: none; padding: 0; }
+    .toc li { padding: 6px 0; }
+    .toc a { color: #e91e63; text-decoration: none; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+    .module-header { background: linear-gradient(135deg, #1565c0, #1976d2); color: white; padding: 20px 24px; border-radius: 12px 12px 0 0; margin-top: 36px; }
+    .module-header h2 { font-size: 1.4em; }
+    .lesson { background: white; border-radius: 0 0 12px 12px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
+    .lesson-title { background: #e3f2fd; padding: 16px 24px; border-bottom: 2px solid #90caf9; }
+    .lesson-title h3 { color: #1565c0; font-size: 1.2em; }
+    .lesson-content { padding: 20px 24px; }
+    .lesson-content p { margin-bottom: 14px; font-size: 0.95em; }
+    .lesson-content h4 { color: #1565c0; margin: 18px 0 10px 0; font-size: 1.05em; }
+    .lesson-content ul { margin: 8px 0 14px 20px; }
+    .lesson-content li { margin-bottom: 6px; font-size: 0.93em; }
+    .tip { background: #fff3e0; border-left: 4px solid #ff9800; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .tip strong { color: #e65100; }
+    .note { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .warning { background: #fce4ec; border-left: 4px solid #c62828; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .warning strong { color: #c62828; }
+    .media-gallery { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; justify-content: center; }
+    .media-gallery img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    .media-caption { text-align: center; color: #777; font-size: 0.8em; margin-top: 4px; font-style: italic; }
+    .footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; margin-top: 40px; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 16px 0; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+    @media (max-width: 700px) { .media-gallery .half { width: 100%; } .header h1 { font-size: 1.4em; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎨 IFPS Professional Course — Část druhá: Techniky</h1>
+  <p style="font-size: 0.85em; margin-top: 8px;">International Face Painting School — Překlad do češtiny</p>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h2>📋 Obsah kurzu</h2>
+    <ul>
+      <li><a href="#welcome">Úvod — Důležité informace než začnete</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 1: Práce s barvami — aktivace, nabírání, konzistence.</li>
+      <li style="margin-left: 20px;"><a href="#m1l1">Lekce 1: Aktivace barvy a nabírání štětcem</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l2">Lekce 2: Nabírání barvy houbičkou</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l3">Lekce 3: Konzistence barvy</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 2: Práce s kulatým štětcem — linky a design</li>
+      <li style="margin-left: 20px;"><a href="#m2l1">Lekce 1: Nabírání barvy kulatým štětcem</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l2">Lekce 2: Zvládnutí linek</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l3">Lekce 3: Vyvážená kompozice</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l4">Lekce 4: Úkol — Design ze spirálek a slziček</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l5">Lekce 5: Rozbor častých chyb</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 3: Technika Double Dip</li>
+      <li style="margin-left: 20px;"><a href="#m3l1">Lekce 1: Materiály</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l2">Lekce 2: Zvládnutí technik double dip a triple dip</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l3">Lekce 3: Úkol — Design z double dip okvětních lístků</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l4">Lekce 4: Rozbor častých chyb</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l5">Lekce 5: Webinář — Konzistence barvy a Double Dip</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 4: Technika One Stroke — Práce se split-cakey</li>
+      <li style="margin-left: 20px;"><a href="#m4l1">Lekce 1: O technice one stroke</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l2">Lekce 2: Práce s velkým split-cakem</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l3">Lekce 3: Práce s malým split-cakem</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l4">Lekce 4: Hlavní tahy v technice one stroke</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l5">Lekce 5: Růže technikou one stroke</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l6">Lekce 6: Úkol — Design růží one stroke</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 5: Práce s filbert a blending štětci</li>
+      <li style="margin-left: 20px;"><a href="#m5l1">Lekce 1: O filbert a blending štětcích</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l2">Lekce 2: O barvách pro blendování a technika blendování štětcem</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l3">Lekce 3: Dry brushing (suché kartáčování)</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l4">Lekce 4: Technika blendování houbičkou</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 6: Práce s houbičkami. Kabuki štětec.</li>
+      <li style="margin-left: 20px;"><a href="#m6l1">Lekce 1: O face paintingových houbičkách</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l2">Lekce 2: Práce s houbičkami</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l3">Lekce 3: Vytváření textury a objemu houbičkami</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l4">Lekce 4: Nanášení světla a stínu houbičkami</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l5">Lekce 5: Kabuki štětec a texturová SFX houbička</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 7: Techniky používání šablon</li>
+      <li style="margin-left: 20px;"><a href="#m7l1">Lekce 1: O šablonách</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l2">Lekce 2: Práce se šablonami</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 8: Techniky nanášení třpytek</li>
+      <li style="margin-left: 20px;"><a href="#m8l1">Lekce 1: O kosmetických třpytkách</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l2">Lekce 2: Nanášení třpytek prsty</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l3">Lekce 3: Nanášení třpytek aplikátorem</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l4">Lekce 4: Nanášení třpytek štětcem</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l5">Lekce 5: Nanášení třpytek puffer lahvičkou</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l6">Lekce 6: Nanášení třpytek se šablonou</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l7">Lekce 7: Nanášení hrubých třpytek</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 9: Sestavení vlastního setupu</li>
+      <li style="margin-left: 20px;"><a href="#m9l1">Lekce 1: Hlavní setup a ergonomická organizace stolu</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l2">Lekce 2: Přepravní systémy</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l3">Lekce 3: Zobrazování designů na akcích</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l4">Lekce 4: Rozšířený kit pro festivaly</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l5">Lekce 5: Pohodlné pozice těla při face paintingu</a></li>
+    </ul>
+  </div>
+
+  <!-- WELCOME SECTION -->
+  <div class="lesson" id="welcome">
+    <div class="lesson-title">
+      <h3>Úvod — Důležité informace než začnete</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Gratulujeme, dokončili jste Část první! Odvedli jste skvělou práci a jsem na vás hrdá. 🎉</p>
+
+      <p>Než začneme Část druhou, pojďme si na chvíli zopakovat, co jsme se již naučili v Části první:</p>
+
+      <ul>
+        <li>✔️ Základy face paintingu — produkty a nástroje, kde je najít a na co si dát pozor</li>
+        <li>✔️ Jak si sestavit face paintingový kit podle vašich potřeb</li>
+        <li>✔️ Úvod do hygieny, ochrany zdraví a bezpečnosti práce</li>
+        <li>✔️ Podívali jsme se na různé typy barev na obličej a tělo — voskové vs. glycerinové</li>
+        <li>✔️ Prozkoumali jsme černé a bílé barvy: které jsou nejlepší na pozadí a blendování a které jsou perfektní na linky, a také jak správně využít metalické prášky</li>
+        <li>✔️ Zkoumali jsme teorii barev a podívali se na neonové barvy a označování</li>
+        <li>✔️ Diskutovali jsme o tom, jak efektivně řešit konfliktní situace</li>
+        <li>✔️ A ta zábavná část — naučili jste se vyrobit si vlastní split-cakey a bling-clustery!</li>
+      </ul>
+
+      <p>Doufám, že souhlasíte, že máme skvělý začátek. Jsem na vás hrdá, protože jste se věnovali dokončení Části první kurzu, která je solidním základem pro vaši novou kariéru profesionálního face paintera.</p>
+
+      <p>Teď je čas pustit se do Části druhé.</p>
+
+      <p>Většina materiálu v této sekci je věnována face paintingovým technikám, které jsou nezbytné v každodenní praxi face paintera. Proto doporučuji, abyste si každý den vyhradili čas na trénink a splnění každého domácího úkolu. Vaše odhodlání se v budoucnu vyplatí, slibuji!</p>
+
+      <p>Přeji vám hodně štěstí a pamatujte, že se vždy můžete spolehnout na naši a podporu svých spolužáků. 😘</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Pokud vás studium na International Face Painting School opravdu baví, nejlepší věcí, kterou můžete pro její rozvoj udělat, je šířit informace — sdílejte své práce na sociálních sítích s hashtagy #ifps a #facepaintingschool. Je to také skvělý způsob, jak ukázat svůj profesionální růst přátelům, kolegům a klientům.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 1 ============ -->
+  <div class="module-header" id="module1">
+    <h2>Modul 1 — Práce s barvami. Aktivace, nabírání a konzistence barvy.</h2>
+    <p style="opacity: 0.85;">Aktivace barvy, nabírání štětcem a houbičkou, konzistence pro různé typy práce</p>
+  </div>
+
+  <!-- Lekce 1 -->
+  <div class="lesson" id="m1l1">
+    <div class="lesson-title"><h3>Lekce 1: Aktivace barvy a nabírání štětcem</h3></div>
+    <div class="lesson-content">
+      <p>Paleta kvalitních barev na obličej je krásná věc! Plná potenciálu a schopnosti vytvářet úsměvy... tady začíná ta zábava 😊 Ale dosažení skvělých výsledků z vašich produktů vyžaduje základní znalosti a dovednosti, a právě tady začínáme zkoumat, jak na to.</p>
+
+      <p>Většina kvalitních barev na obličej, jak víte, přichází ve formě suchého koláčku... k aktivaci stačí přidat vodu!</p>
+
+      <p>Nejjednodušší a nejčistší způsob aktivace barvy je postříkat ji velmi malým množstvím vody z rozprašovací „mlhové" lahvičky — ale pamatujte, přidávejte vždy jen trochu, dokud nenajdete perfektní konzistenci.</p>
+
+      <p>Pokud se barva stane příliš mokrou, nebude se s ní snadno pracovat a může trvat několik hodin, než dostatečně vyschne na použití. Pokud je příliš suchá, jednoduše přidejte trochu více vody. Takže vždy buďte raději opatrní.</p>
+
+      <p>Vodu můžete přidat také tak, že namočíte štětec do vody na oplachování a nakápnete pár kapek na barvu. V tomto případě ale voda může obsahovat pigmenty z jiných barev a případně bakterie z předchozího oplachování štětce. Také zjišťuji, že postřikování aktivuje větší plochu barvy ve srovnání s pár kapkami ze štětce.</p>
+
+      <p>Můžete si všimnout, že nové barvy mohou potřebovat trochu více vody k aktivaci, než budete v budoucnu používat se stejnou barvou. Takže novou barvu jednoduše postříkejte čistou vodou párkrát a nechte ji aktivovat 5–10 sekund.</p>
+
+      <p>Při nabírání barvy štětcem jej otáčejte na povrchu barvy a naberte barvu až k objímce (ferrule). Snažte se udržovat úhel 45° a buďte k štětinám šetrní, aby se nerozevřely do tvaru vějíře.</p>
+
+      <div class="media-gallery">
+        <img src="images/f096cfe71618761cbfc7358eb9595f58.gif" alt="Aktivace barvy a nabírání štětcem" style="max-width: 400px;">
+        <p class="media-caption">Animace: Aktivace barvy a nabírání štětcem</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Preferuji vytvářet krátery ve všech svých barvách. To mi umožňuje nasbírat potřebnou aktivovanou barvu a používat ji během práce, aniž bych ztrácela čas opětovnou aktivací.
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 2 -->
+  <div class="lesson" id="m1l2">
+    <div class="lesson-title"><h3>Lekce 2: Nabírání barvy houbičkou</h3></div>
+    <div class="lesson-content">
+      <p><strong>1.</strong> Postříkejte barvu vodou.</p>
+
+      <p><strong>2.</strong> Postříkejte houbičku. Otáčejte houbičkou mezi dlaněmi, aby se vlhkost rovnoměrně rozložila. Houbička by měla být vlhká, ale když ji stisknete, neměla by z ní vytékat žádná voda.</p>
+
+      <p><strong>3.</strong> Ponořte jeden konec houbičky do barvy a posouvejte houbičku po celém povrchu, dokud barva v nádobce nevyschne. Vaše pohyby by měly být sebevědomé.</p>
+
+      <ul>
+        <li>Houbička by měla klouzat po barvě, ale odpor ke konci nabírání znamená, že jste dosáhli správné konzistence.</li>
+        <li>Pokud bude barva v nádobce stále mokrá, když houbičku sundáte, znamená to, že máte na houbičce také příliš mokrou barvu.</li>
+        <li>Pokud cítíte odpor během nabírání, znamená to, že v barvě nemáte dostatek vody.</li>
+      </ul>
+
+      <p><strong>4.</strong> V případě potřeby postup opakujte.</p>
+
+      <div class="media-gallery">
+        <img src="images/3d308e353477e73d23b0d0d075480194.gif" alt="Nabírání barvy houbičkou" style="max-width: 400px;">
+        <p class="media-caption">Animace: Nabírání barvy houbičkou</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 3 -->
+  <div class="lesson" id="m1l3">
+    <div class="lesson-title"><h3>Lekce 3: Konzistence barvy</h3></div>
+    <div class="lesson-content">
+      <p>Pro dosažení nejlepších výsledků ve face paintingu je důležité rozumět tomu, jak se barva chová a jaké efekty lze s ní vytvořit v závislosti na použité konzistenci. Informace a dovednosti získané v tomto modulu vám pomohou porozumět podstatě různých designů v budoucnu.</p>
+
+      <h4>Vodová konzistence</h4>
+      <p>Tato konzistence barvy skvěle funguje pro vytváření stříkanců, kapek a potékaní, které se většinou používají pro vytváření stříkající a tekoucí krve. Pokud tuto konzistenci ještě více zředíte, můžete s ní také malovat stíny.</p>
+
+      <h4>Inkoustová konzistence</h4>
+      <p>Funguje perfektně pro linky s černou nebo jakoukoli jinou tmavou barvou. Tato konzistence umožňuje táhnout barvu na dlouhou vzdálenost a mít na koncích linek pěkné ostré špičky. Hustota barvy by měla být mírně vodovější než krémová konzistence.</p>
+
+      <h4>Krémová konzistence</h4>
+      <p>Toto je nejpoužívanější konzistence barvy, protože uvolňuje z barvy celou její živost. Je obzvláště důležitá pro linky s bílou voskovou barvou, stejně jako pro případy, které vyžadují silné krytí jinými barvami.</p>
+
+      <h4>Lepivá konzistence</h4>
+      <p>Charakteristická pro voskové barvy díky vosku, který dává ten lepivý efekt. Hustota barvy je mírně sušší než krémová konzistence a skvěle funguje pro tažení jedné barvy přes druhou (ne úplně blendování, ale vypadá podobně) a také pro práci se šablonami.</p>
+
+      <h4>Suchá konzistence</h4>
+      <p>Tato konzistence je mírně sušší než lepivá a je charakteristická pro glycerinové barvy (protože nemají lepivou voskovou složku). Tato konzistence je perfektní pro blendování a lze ji použít i pro práci se šablonami. Pokud se necítíte pohodlně při práci v takzvané technice „suchého štětce" s barvami na obličej, zkuste použít lisované pudry nebo oční stíny.</p>
+
+      <p>Suchou konzistenci lze také získat z krémové — jak je ukázáno v příkladu výše s blendovaným obrysem křídla. Nejprve jsem nanesla krémovou barvu, nechala ji trochu zaschnout a pak vytáhla trochu barvy blendovacím štětcem. Tato technika se nazývá „dry brushing" (suchý štětec).</p>
+
+      <div class="media-gallery">
+        <img src="images/5e91b8dce1274db02a31c39881d05136.jpg" alt="Konzistence barvy" style="max-width: 600px;">
+        <p class="media-caption">Přehled konzistencí barvy — od vodové po suchou</p>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/p7o8a6l94u" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Práce s různými konzistencemi barvy</p>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí:</strong> Konzistence barvy se může velmi lišit — dva hlavní faktory jsou typ základu (vosk vs. glycerin) a množství přidané vody. Obecně nechceme, aby barva byla příliš mokrá nebo příliš suchá, i když existují výjimky. Experimentování a praxe jsou klíčem k seznámení se s možnostmi a omezeními.
+      </div>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Teď, když dobře rozumíme teorii, je čas procvičovat. Podívejte se na video z tohoto modulu a procvičte tyto úkoly: kapky a stříkance krve; shluk slziček a spirálek černou barvou; slzičky a spirálky krémovou bílou barvou; vzor vytvořený šablonou; blendování dvou barev filbert štětcem; nanesení stínu suchou barvou pod dříve namalované bílé spirálky a slzičky.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 2 ============ -->
+  <div class="module-header" id="module2">
+    <h2>Modul 2 — Technika kulatého štětce. Hlavní typy linek ve face a body paintingu.</h2>
+    <p style="opacity: 0.85;">Nabírání kulatého štětce, zvládnutí linek, vyvážené rozmístění, úkol a rozbor chyb</p>
+  </div>
+
+  <!-- Lekce 1 -->
+  <div class="lesson" id="m2l1">
+    <div class="lesson-title"><h3>Lekce 1: Nabírání kulatého štětce</h3></div>
+    <div class="lesson-content">
+      <p>Linky jsou základní dovedností, kterou by se face painter měl pokusit zvládnout. Ostré, přesné linky vytvořené snadno a rychle vyžadují spoustu praxe a bude vám nějaký čas trvat, než jich dosáhnete. Ale nic není nemožné, zvláště pokud přesně víte, co dělat a jak to dělat.</p>
+
+      <p>V tomto modulu vás naučím, jak procvičovat linky nejefektivnějším způsobem a dosáhnout výsledků rychle. Doporučuji procvičovat linky každý den — všimnete si, jak rychle se zlepšíte.</p>
+
+      <p>Pro jasné a ostré bílé linky je velmi důležité používat krémovou konzistenci barvy a voskové barvy. Nejlepší značky bílé jsou podle mého názoru: Wolfe FX, Diamond FX, Kryvaline, PartyXplosion, Face Paints Australia.</p>
+
+      <p>Pokud už máte nějaké zkušenosti s face paintingem, pravděpodobně víte, že bílá se může někdy stát lepivou. To se obvykle stává v podmínkách vysoké vlhkosti a vysoké teploty. Ale mám trik, jak se tomu vyhnout a mít vždy krásně fungující bílou.</p>
+
+      <p>V podstatě potřebujete <strong>kráter uprostřed barvy</strong>. Když budete barvu postřikovat vodou a pak ji aktivovat rotačními pohyby kolem kráteru, získáte potřebnou aktivovanou barvu shromážděnou v malé kalužince v kráteru. Změnou množství přidané vody můžete dosáhnout různé konzistence barvy.</p>
+
+      <p>Proč je to tak důležité? Protože veškerá voda, kterou budete k barvě přidávat, se shromáždí v tom kráteru, na povrchu plastu. Plast nepohltí žádnou vodu z vaší aktivované barvy a budete moci pracovat déle bez opětovné aktivace pokaždé, když potřebujete nabrat štětec.</p>
+
+      <p>Naopak, pokud budete pracovat z rovného povrchu barvy, pokaždé když ji postříkáte, vezmete aktivované množství shora, ale přebytečná voda proteče dolů do vnitřní části barvy. Ta voda se nebude moci odpařit a bude barvu zvlhčovat, dokud se nepřemění v tu lepivou hmotu, kterou nikdo z nás nemá rád.</p>
+
+      <p>Proto si vždy udělejte kráter uprostřed nové bílé barvy, než začnete malovat. K tomu obvykle skvěle funguje konec rukojeti štětce.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Pokud máte 90g bílou, doporučuji odříznout jednu polovinu a mít jednu stranu kelímku prázdnou pro aktivaci barvy, protože udělat díru v 90g nádobce může být trochu obtížné. A když spotřebujete první polovinu, jednoduše ji nahradíte novou.
+      </div>
+
+      <p>Když máte požadovanou konzistenci barvy, naberte štětec rotací (otáčením štětin) na barvě. Ujistěte se, že celé štětiny jsou potaženy barvou až k objímce.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/h3nb43qhvf" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Nabírání kulatého štětce a aktivace barvy</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 2 -->
+  <div class="lesson" id="m2l2">
+    <div class="lesson-title"><h3>Lekce 2: Zvládnutí linek</h3></div>
+    <div class="lesson-content">
+      <p>Podívejme se, co byste měli dělat pro dosažení pěkných, ostrých a jasných linek. Zaměříme se více na práci s bílou, protože to je nejčastěji používaná barva pro linky ve face paintingu a je také nejlepší barvou pro procvičování na kůži.</p>
+
+      <h4>Tečky</h4>
+      <p>Pro malování shluku teček musíte kulatý štětec silně nabrat barvou a držet ho přísně kolmo k pokožce, jemně přitlačit na štětiny. Změnou tlaku můžete dosáhnout různých velikostí teček. Pokud vaše tečky nemají zaoblené okraje, znamená to, že úhel není přísně kolmý, štětec není dostatečně nabraný, nebo tlačíte příliš silně.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Bez ohledu na to, jaký druh linek děláte, vždy držte štětec přísně kolmo k pokožce.
+      </div>
+
+      <div class="media-gallery" style="gap: 16px;">
+        <div>
+          <img src="images/94ef94318f84de14f6dfe8f3759b12ff.gif" alt="Správné držení štětce" style="max-width: 300px;">
+          <p class="media-caption">Správné držení — kolmo k pokožce</p>
+        </div>
+        <div>
+          <img src="images/410df4d2e3a09de8ba9a6658ae54a33f.gif" alt="Špatné držení štětce" style="max-width: 300px;">
+          <p class="media-caption">Špatné držení — šikmý úhel</p>
+        </div>
+      </div>
+
+      <h4>Slzičky a spirálky</h4>
+      <p>Pro slzičky a spirálky musí být váš štětec také přísně kolmý k pokožce. Nejpříjemnější efekt ve face paintingu je dosažen, když vaše linky mají ostré konce (nebo alespoň jeden konec) a silná tělíčka.</p>
+
+      <p><strong>Klasická slzička:</strong> Přitlačte štětec na pokožku, táhněte, postupně zvedejte během tažení a uvolněte. Váš koncový pohyb musí napodobovat letadlo, které vzlétá.</p>
+
+      <p><strong>Obrácená slzička:</strong> Očistěte špičku štětce několika švihy, pak začněte pohybem, který napodobuje přistávající letadlo. Postupně přidávejte tlak při tažení štětce a zakončete položením celých štětin na pokožku, přitlačte a zastavte.</p>
+
+      <p><strong>Spirálky:</strong> Začněte z vnější zaoblené strany spirály, držte štětec kolmo, táhněte ho a malujte půlkruh, pak postupně uvolněte tlak a zakončete ostrou špičkou stejným pohybem jako u klasické slzičky.</p>
+
+      <p><strong>Linka tenká-tlustá-tenká:</strong> Začněte malováním klasické slzičky, postupně uvolněte tlak, pak znovu přidejte tlak a udělejte tlustou linku, pak opět uvolněte a opět přitlačte. To je skvělé cvičení pro trénink schopnosti ovládat ruku.</p>
+
+      <div class="media-gallery">
+        <img src="images/5c3371a4da88e272e32ebd6a3b44e36b.jpg" alt="Hlavní typy linek" style="max-width: 600px;">
+        <p class="media-caption">Hlavní linky: klasická slzička, obrácená slzička, tenká-tlustá-tenká, spirálka, dvojitá spirálka, tygří linka</p>
+      </div>
+
+      <p>Doporučuji dělat linky co nejdelší. Pokud procvičujete na předloktí, použijte jeho dlouhou stranu a dělejte linky od zápěstí až k loktu. To vám pomůže procvičit stabilitu ruky.</p>
+
+      <p>Jednou ze zvláštností face paintingu je nutnost malovat na svislé plochy. A to není tak snadné, pokud jste předtím neměli žádnou zkušenost s vertikálním malováním. Proto doporučuji procvičovat vertikální malování co nejvíce.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Připevněte list papíru A4 na lednici a procvičujte na něm linky. Můžete použít ředěný kvaš nebo akvarely, ale povinně používejte své profesionální štětce. Další možností je připevnit cvičnou desku na malířský stojan.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/4bc9c314aa56b3ca5100c9d32c12e924.jpg" alt="Stojan na procvičování" style="max-width: 400px;">
+        <p class="media-caption">Cvičná deska na stojanu — nápad studentky Carly Schwind</p>
+      </div>
+
+      <p>Pokud chcete dosáhnout ohromujících výsledků v krátkém čase, podívejte se na sadu šablon pro linky (Linework Templates), kterou jsem vyvinula speciálně pro studenty International Face Painting School. Vytiskněte šablony, vložte je pod průhlednou cvičnou desku a kopírujte linky ze šablony kulatým štětcem č. 5 s bílou barvou.</p>
+
+      <div class="media-gallery">
+        <img src="images/76a92e4b0a2db4818a83498dc24cdb05.jpg" alt="Šablony pro procvičování linek" style="max-width: 500px;">
+        <p class="media-caption">Šablony pro procvičování linek od IFPS</p>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/l5awkb74kn" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Praktická ukázka — zvládnutí linek</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 3 -->
+  <div class="lesson" id="m2l3">
+    <div class="lesson-title"><h3>Lekce 3: Vyvážené rozmístění linek na obličeji</h3></div>
+    <div class="lesson-content">
+      <p>Zde je několik tipů, které vám pomohou dosáhnout vyváženého rozmístění linek na obličeji:</p>
+
+      <ul>
+        <li><strong>Shluky slziček vypadají nejlépe v lichém počtu</strong> (obvykle 3, 5 a někdy 7).</li>
+        <li><strong>Každá linka musí směřovat k ohniskovému bodu (focal point).</strong></li>
+        <li><strong>Velikost záleží!</strong> V symetrických kompozicích udělejte největší linku uprostřed a postupně zmenšujte velikost doplňkových linek. Pro asymetrické designy začněte největší slzičkou a zmenšujte velikost ostatních linek v měřítku.</li>
+        <li><strong>Pro dosažení vyvážené symetrické kompozice</strong> malujte linky střídavě — vlevo, pak vpravo. To vám pomůže lépe cítit proporce.</li>
+        <li><strong>Udržujte stejnou šířku negativního prostoru</strong> mezi linkami.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/c01a210a2d2630fb01d93befe6216012.jpg" alt="Rozmístění linek na obličeji" style="max-width: 600px;">
+        <p class="media-caption">Vyvážené rozmístění linek na obličeji — směr k ohniskovým bodům</p>
+      </div>
+
+      <p>Sada šablon „Linework on the Face Templates" vám pomůže trénovat svalovou paměť pro umisťování a směrování linek k ohniskovým bodům. Vytiskněte šablony, vložte pod průhlednou cvičnou desku a kopírujte linky kulatým štětcem č. 5 s bílou barvou.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/0912x7ijwx" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Rozmístění linek na obličeji — praktická ukázka</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 4 -->
+  <div class="lesson" id="m2l4">
+    <div class="lesson-title"><h3>Lekce 4: Úkol — Design ze spirálek a slziček</h3></div>
+    <div class="lesson-content">
+      <p>Teď, když rozumíte základům krásných linek, je čas je použít v praxi zkopírováním tohoto jednoduchého designu.</p>
+
+      <div class="media-gallery">
+        <img src="images/890c236e7b830f68d434f0ff84ae69f4.jpg" alt="Design ze spirálek a slziček" style="max-width: 500px;">
+        <p class="media-caption">Ukázkový design ze spirálek a slziček</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/27f06a364703e786869736590e079b9a.jpg" alt="Tipy pro rozmístění designu" style="max-width: 500px;">
+        <p class="media-caption">Tipy pro vyvážené proporce vašeho designu</p>
+      </div>
+
+      <h4>Použité materiály:</h4>
+      <ul>
+        <li>Kulatý štětec Kingart 7950 č. 3</li>
+        <li>Žlutá houbička</li>
+        <li>Barva Wolfe</li>
+        <li>Barva Cameleon Oscar Gold</li>
+        <li>Barva TAG Old Gold</li>
+        <li>Barva Cameleon Pure White</li>
+        <li>TAG holografický glitr</li>
+        <li>Puffer-lahvička na glitr</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/9l5v8s3vde" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Krok za krokem — design ze spirálek a slziček</p>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> V tomto modulu jsme probrali základní techniky pro dosažení ostrých, čistých linek, slziček a spirálek. Nyní byste již měli tyto tahy štětcem mnohokrát procvičit. Vidíte zlepšení? Vraťte se a porovnejte své první pokusy s nejnovějšími. Pokud jste spokojeni, je čas slavit! Pokud ne, podívejte se pozorně na všechny prvky a zkuste najít příčinu. Používáte kvalitní kulatý štětec podle doporučení? Má vaše barva pěknou krémovou konzistenci? Jak je na tom vaše technika? Podívejte se znovu na videa a zkuste to znovu!
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 5 -->
+  <div class="lesson" id="m2l5">
+    <div class="lesson-title"><h3>Lekce 5: Rozbor hlavních chyb</h3></div>
+    <div class="lesson-content">
+      <p>V této sekci probereme nejčastější chyby při práci s kulatými štětci. Pečlivě analyzujte každou z nich a přemýšlejte o tom, jaké chyby jste udělali vy a jak je můžete opravit.</p>
+
+      <h4>Technika</h4>
+
+      <p><strong>Čím delší, tím lepší. Žádní krátcí červíci!</strong> 😜 Pokud procvičujete slzičky na předloktí nebo stehně, umisťujte je podélně, ne napříč. Vyhněte se krátkým švihům — ty vám nepomohou natrénovat nic. Je důležité trénovat stabilitu ruky, abyste byli schopni malovat dlouhé, rovné slzičky s tlustými začátky a ostrými špičkami.</p>
+
+      <div class="media-gallery">
+        <img src="images/86d9d0d19a11e5b0f8b40b7d59fd4acd.jpg" alt="Délka linek" style="max-width: 500px;">
+        <p class="media-caption">Delší linky = lepší trénink stability ruky</p>
+      </div>
+
+      <p><strong>Správný štětec a konzistence barvy.</strong> Profesionální kvalitní štětce učiní procvičování linek radostí. Využijte doporučení z tohoto modulu a vybavte svůj kit nejlepšími kulatými štětci. Voskové barvy fungují nejlépe pro bílé linky.</p>
+
+      <div class="media-gallery">
+        <img src="images/767b34d44d90342da687bff5db1ec494.jpg" alt="Konzistence barvy" style="max-width: 500px;">
+        <p class="media-caption">Pokud jsou špičky slziček suché a vybledlé — barva je příliš suchá nebo neotáčíte štětec dostatečně</p>
+      </div>
+
+      <p><strong>Trénujte spirálky ve shlucích tvořících sigmoidální linku.</strong> Spojujte spirálky v souvislou sigmoidální linku a vyhněte se přerušeným linkám, které protínají shluk a narušují harmonii.</p>
+
+      <div class="media-gallery">
+        <img src="images/ac675a0a389113ce22ae1b199ca1f722.jpg" alt="Spirálky v sigmoidální lince" style="max-width: 500px;">
+        <p class="media-caption">Spirálky spojené v souvislou sigmoidální linku</p>
+      </div>
+
+      <p><strong>Měňte tlak na štětec.</strong> Vaše linky budou vypadat jemně a pěkně, pokud budou kombinovat tlusté a tenké čáry spolu s ostrými špičkami. Aplikujte větší tlak na střední část spirálek pro tlustší čáry a menší tlak na začátku a na konci pro ostré špičky.</p>
+
+      <div class="media-gallery">
+        <img src="images/de0bb98dc8974ee6b495bd1707d542a2.jpg" alt="Variace tlaku" style="max-width: 500px;">
+        <p class="media-caption">Kombinace tlustých a tenkých čar s ostrými špičkami</p>
+      </div>
+
+      <h4>Analýza designů</h4>
+
+      <p><strong>Efektivní procvičování!</strong> Před malováním designu na obličej ho procvičte na rovné ploše. Pomůže vám to zvládnout tahy, naučit se design a cítit proporce.</p>
+
+      <div class="media-gallery">
+        <img src="images/8de666aaf868c6154fb32673b27a3dad.png" alt="Procvičování na rovné ploše" style="max-width: 500px;">
+        <p class="media-caption">Procvičujte design na rovné ploše před malováním na obličej</p>
+      </div>
+
+      <p><strong>Měňte tlak a udržujte všechny špičky ostré.</strong> Tupé špičky nikdy nevypadají dobře. Pamatujte, že každá vaše linka — ať už slzička nebo spirálka — by měla mít tlusté tělíčko a ostrou špičku.</p>
+
+      <div class="media-gallery">
+        <img src="images/771c75c36fb2b88009653d54386dfdae.jpg" alt="Ostré špičky" style="max-width: 500px;">
+        <p class="media-caption">Všechny špičky musí být ostré — tupé nikdy nevypadají dobře</p>
+      </div>
+
+      <p><strong>Blíže k oku, ale soustředěné na jeho vnější část.</strong> Malování velkých designů rozložených po celém obličeji je častá chyba mnoha začátečníků. Její příčinou je nedostatek smyslu pro proporce. Menší oční design bude vypadat femininněji a jemněji. Proto doporučuji nejprve procvičovat designy na rovné ploše. Oční designy vypadají na obličeji vyváženě, když rámují oblast spánku a vnější část oka, aniž by šly příliš blízko k vnitřní části.</p>
+
+      <div class="media-gallery">
+        <img src="images/d05c41ac81f7d59e7b54d972f5edcf81.jpg" alt="Umístění designu u oka" style="max-width: 500px;">
+        <p class="media-caption">Oční design — rámujte spánek a vnější část oka</p>
+      </div>
+
+      <p><strong>Začněte od největšího tahu a postupně zmenšujte.</strong> Je důležité měnit jak velikost tahů, tak velikost negativního prostoru v asymetrických designech. Začněte největším tahem (spirálka, slzička, smyčka atd.) a přidávejte další tahy, postupně je zmenšujte a zužujte negativní prostor.</p>
+
+      <div class="media-gallery">
+        <img src="images/03e1ade0741de7f9095a538a73e6a68a.jpg" alt="Postupné zmenšování tahů" style="max-width: 500px;">
+        <p class="media-caption">Od největšího tahu postupně zmenšujte velikost i negativní prostor</p>
+      </div>
+
+      <p><strong>Zvolte správný směr ke správným ohniskovým bodům.</strong> V tomto konkrétním designu se směr smyček postupně přesouvá od ohniskového bodu vnějšího koutku oka k ohniskovému bodu vnitřního koutku. Obrácené slzičky dole také míří k ohniskovému bodu vnějšího koutku oka. Další ohniskový bod by zničil kompozici — proto doporučuji vyhnout se jeho vytváření.</p>
+
+      <div class="media-gallery">
+        <img src="images/480f0c47b1e71d13a9e144461aec2031.jpg" alt="Směr k ohniskovým bodům" style="max-width: 500px;">
+        <p class="media-caption">Správný směr linek ke správným ohniskovým bodům</p>
+      </div>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Procvičujte hlavní face paintingové linky. Malujte každý prvek 10 až 30krát, dokud nebudete spokojeni s výsledkem. Pamatujte, že linky jsou nezbytné pro krásný face painting a vyžadují spoustu praxe. Procvičujte: shluk teček a hvězdiček; klasická slzička; obrácená slzička; linka tenká-tlustá-tenká; spirálka a shluk spirálek; tygří linka.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 3: TECHNIKA DOUBLE DIP ===== -->
+  <div class="module-header" id="m3">
+    <h2>Modul 3: Technika Double Dip</h2>
+  </div>
+
+  <!-- M3L1: Materiály -->
+  <div class="lesson" id="m3l1">
+    <div class="lesson-title"><h3>Lekce 1: Materiály</h3></div>
+    <div class="lesson-content">
+      <p>V tomto modulu se naučíte techniku Double Dip (dvojité namočení), která umožňuje vytvářet dvoubarevné okvětní lístky a další prvky na jeden tah štětce. Tato technika je oblíbená pro svou rychlost a efektní výsledky.</p>
+
+      <h4>🖌️ Štětec Flora</h4>
+      <p>Pro techniku double dip doporučuji používat štětce Flora od značky Loew Cornell. Tyto štětce mají silné, pevně elastické štětiny střední délky a ideální tvar pro tuto techniku. Další vhodnou volbou jsou štětce Cameleon s podobnými vlastnostmi.</p>
+
+      <p>Doporučené štětce:</p>
+      <ul>
+        <li><strong>Loew Cornell 795 №6</strong> — hlavní štětec pro květiny a okvětní lístky</li>
+        <li><strong>Loew Cornell 795 №3</strong> — pro shluky teček a menší prvky</li>
+        <li><strong>Cameleon №4</strong> — alternativní volba pro listy a okvětní lístky</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/51a3616064d5446180b4dade397bd5ef.jpg" alt="Flora štětec pro double dip" style="max-width: 500px;">
+        <p class="media-caption">Porovnání velikostí okvětních lístků s různými štětci Flora</p>
+      </div>
+
+      <h4>🎨 Barvy</h4>
+      <p>Pro double dip techniku potřebujete dva typy barev:</p>
+      <ul>
+        <li><strong>Základní barva (bílá)</strong> — Cameleon Pure White — nejprve naberete na celý štětec</li>
+        <li><strong>Druhá barva (barevná)</strong> — nanáší se pouze na špičku štětce</li>
+      </ul>
+      <p>Obě barvy musí mít krémovou konzistenci. Barvy nesmí být příliš řídké ani příliš suché. Krémová konzistence je klíčem k úspěšné double dip technice.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Používejte výhradně profesionální barvy na face painting. Neprofesionální barvy nemají správnou konzistenci a ztíží vám osvojení techniky.
+      </div>
+    </div>
+  </div>
+
+  <!-- M3L2: Zvládnutí techniky double dip a triple dip -->
+  <div class="lesson" id="m3l2">
+    <div class="lesson-title"><h3>Lekce 2: Zvládnutí technik double dip a triple dip</h3></div>
+    <div class="lesson-content">
+      <h4>1. Nabrání barvy na štětec</h4>
+      <p>Nejprve namočte štětec do bílé barvy a dobře ho naberte — otáčejte štětcem v barvě, abyste pokryli všechny štětiny rovnoměrně. Poté špičku štětce ponořte do druhé (barevné) barvy. Musíte špičku téměř „zabořit" do barvy, abyste získali dostatečné množství pigmentu na špičce.</p>
+
+      <div class="media-gallery">
+        <img src="images/f47aa03d8201eb353a9fe99e27605764.gif" alt="Správné nabrání barvy pro double dip" style="max-width: 400px;">
+        <p class="media-caption">Správné nabrání barvy — nejprve bílá, pak barevná špička</p>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Důležité:</strong> Nikdy nečistěte a nesušte štětec mezi nabíráním bílé a barevné barvy. Štětec musí zůstat vlhký od bílé barvy, když nabíráte druhou barvu na špičku.
+      </div>
+
+      <h4>2. Okvětní lístky květin</h4>
+      <p>Držte štětec kolmo k pokožce a přitlačte na štětiny. Štětiny by se měly rozevřít do vějířovitého tvaru. Položte pouze polovinu štětce a pomalu jej zvedněte, abyste vytvořili hladký okvětní lístek s barevnou špičkou a bílou základnou.</p>
+
+      <p><strong>Dva typy okvětních lístků:</strong></p>
+      <ul>
+        <li><strong>Tučné (široké) lístky</strong> — štětec držte kolmo, pevně přitlačte a položte jen polovinu. Vytvoří široký lístek s plochým koncem.</li>
+        <li><strong>Dlouhé (úzké) lístky</strong> — štětec přitlačte a táhněte, postupně zvedejte. Vytvoří protáhlý elegantní lístek.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/714eb28166b5765fad49f65ac802d232.jpg" alt="Typy okvětních lístků" style="max-width: 600px;">
+        <p class="media-caption">Různé typy okvětních lístků vytvořených technikou double dip</p>
+      </div>
+
+      <h4>3. Srdcové okvětní lístky</h4>
+      <p>Pro srdcové tvary vytvořte dva tučné lístky vedle sebe tak, aby se špičkami dotýkaly. Nakloňte štětec mírně do strany pro každý lístek, aby vznikl tvar srdce. Tato variace je skvělá pro květiny s pěti lístky.</p>
+
+      <h4>4. Shluky okvětních lístků</h4>
+      <p>Shluky se skládají z dlouhých úzkých lístků uspořádaných v řadě. Začněte největším lístkem a postupně zmenšujte, až skončíte jedním nejmenším lístkem. Lístky umísťujte do šachovnicového vzoru, kde každý mírně vyčnívá nad předchozí.</p>
+
+      <div class="media-gallery">
+        <img src="images/be9d1baf70f5ea89f38849de2f1bd8c7.jpg" alt="Shluky okvětních lístků s tečkami" style="max-width: 600px;">
+        <p class="media-caption">Shluky lístků doplněné tečkami a hvězdičkami</p>
+      </div>
+
+      <h4>5. Obrácené slzičky</h4>
+      <p>Obrácené slzičky v technice double dip vytvoříte stejným způsobem jako klasické slzičky, ale začínáte tlustým koncem (plným přítlakem) a končíte tenkou špičkou. Barva na špičce štětce se tak objeví na širokém konci slzičky.</p>
+
+      <h4>6. Triple dip (trojité namočení)</h4>
+      <p>Triple dip je pokročilá variace, kde na štětec naberete tři barvy. Postup: naberte první barvu na celý štětec, druhou barvu na horní dvě třetiny a třetí barvu pouze na špičku. Výsledkem jsou okvětní lístky s třemi barevnými přechody.</p>
+
+      <div class="media-gallery">
+        <img src="images/fe976d125b5b7704ac9e3ebb6e4708b0.gif" alt="Technika triple dip" style="max-width: 400px;">
+        <p class="media-caption">Triple dip — tři barvy na jednom štětci</p>
+      </div>
+
+      <h4>7. Dobíjení štětce</h4>
+      <p>Když vám dojde barva, nemusíte začínat celý proces od začátku. Stačí znovu nabrat bílou barvu a poté druhou barvu na špičku. Štětec mezi tím nečistěte ani nesušte. Čím více budete malovat, tím rychlejší bude vaše dobíjení.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/7sbobumamy" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Demonstrace techniky double dip</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/iiaj2cpzzs" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Double dip v praxi</p>
+    </div>
+  </div>
+
+  <!-- M3L3: Úkol — Design z double dip okvětních lístků -->
+  <div class="lesson" id="m3l3">
+    <div class="lesson-title"><h3>Lekce 3: Úkol — Design z double dip okvětních lístků</h3></div>
+    <div class="lesson-content">
+      <h4>🎨 Design z double dip okvětních lístků</h4>
+      <p>Zde je příklad, jak lze techniku double dip využít k vytvoření celého designu. Tento konkrétní design je tak rychlý a jednoduchý, že ho zvládnete namalovat do 2 minut. Výsledek ale rozhodně udělá dojem na vaše klienty!</p>
+
+      <div class="media-gallery">
+        <img src="images/25e52e2466f9fd0fdda0d6cc473260c9.png" alt="Design z double dip okvětních lístků" style="max-width: 500px;">
+        <p class="media-caption">Kompletní design vytvořený technikou double dip</p>
+      </div>
+
+      <h4>🚩 Materiály:</h4>
+      <ul>
+        <li><strong>Kulatý štětec Loew Cornell 795 №6</strong> — pro květiny</li>
+        <li><strong>Kulatý štětec Loew Cornell 795 №3</strong> — pro shluky teček a hvězdiček</li>
+        <li><strong>Kulatý štětec Cameleon №4</strong> — pro listy (nebo jakýkoli jiný tuhý štětec s krátkými štětinami a ostrou špičkou)</li>
+        <li>Barva Cameleon Pure White</li>
+        <li>Barva Global Magenta — pro středy květin</li>
+        <li>Barva Global Light Green — pro listy</li>
+        <li>Barva TAG Green — pro listy</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/vntiegavfl" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Krok za krokem — kompletní design z double dip okvětních lístků</p>
+
+      <h4>Shrnutí</h4>
+      <p>Technika double dip je snadná na zvládnutí, když znáte správné postupy, a je jednou z prvních lekcí, které učím studenty na osobních workshopech. Jakmile si tuto dovednost osvojíte, budete ji rádi používat velmi často. Rychlé a krásné květiny potěší téměř každého, takže postupujte podle kroků, které jsem vám poskytla, a užijte si výsledek!</p>
+    </div>
+  </div>
+
+  <!-- M3L4: Rozbor častých chyb -->
+  <div class="lesson" id="m3l4">
+    <div class="lesson-title"><h3>Lekce 4: Rozbor častých chyb</h3></div>
+    <div class="lesson-content">
+      <p>V této části si rozebereme nejčastější chyby, které se při malování technikou double dip objevují, a také si povíme, jak je opravit a jak se jim vyhnout. Pozorně analyzujte informace níže a porovnejte je se svou prací. Jaké chyby jste udělali a jak je můžete napravit?</p>
+
+      <h4>1. Správný štětec a konzistence barvy</h4>
+      <p>Double dip téměř jako žádná jiná technika vyžaduje správné nástroje a jejich správné používání. Doporučuji používat štětce a barvy doporučené v tomto modulu a vyhýbat se jiným materiálům, zejména neprofesionálním, protože vás to může stát spoustu úsilí, ale výsledek bude stále neuspokojivý.</p>
+      <ul>
+        <li>Používejte štětce s tlustými, pevně elastickými štětinami střední až krátké délky.</li>
+        <li>Štětce s tenkými a dlouhými štětinami budou na kůži „tancovat" a neumožní vám vytvořit výrazné lístky.</li>
+        <li>Používejte krémovou konzistenci barvy jak pro bílou (první barvu), tak pro druhou barvu.</li>
+        <li>Špičku štětce musíte téměř „zabořit" do druhé barvy, abyste získali dostatečné množství pigmentu.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/de02170ff3d1bb3b5cce87bc2edda446.jpg" alt="Správný štětec a konzistence" style="max-width: 500px;">
+        <p class="media-caption">Správný štětec a konzistence barvy pro double dip</p>
+      </div>
+
+      <h4>2. Tučný lístek je hlavním cílem praxe</h4>
+      <p>Většina face painterů snadno zvládne dlouhé lístky. Záludná část přichází, když je třeba namalovat tučné (široké) lístky. Pamatujte, že budete potřebovat oba typy lístků — vyvážené kompozice se často dosahuje kombinací těchto dvou typů. Tučné lístky se používají v květinách, dlouhé ve shlucích.</p>
+      <p>Pro tučný lístek: držte štětec přísně kolmo k pokožce, pevně přitlačte na štětiny a položte jen polovinu. Střed štětin by se měl rozevřít do vějířovitého tvaru a lístek by měl mít spíše plochý konec než zaoblený.</p>
+
+      <div class="media-gallery">
+        <img src="images/3e6f4203adfbd8f3971968b037baacba.jpg" alt="Tučný vs. dlouhý lístek" style="max-width: 500px;">
+        <p class="media-caption">Rozdíl mezi tučným a dlouhým okvětním lístkem</p>
+      </div>
+
+      <h4>3. Zvolte správnou velikost</h4>
+      <p>Vyhněte se malování příliš velkých nebo příliš malých kompozic. Kulatý štětec №6 obvykle funguje nejlépe pro dosažení kompozice správné velikosti.</p>
+
+      <div class="media-gallery">
+        <img src="images/cc4e2b1d12cd30ede76123e62198e761.jpg" alt="Správná velikost kompozice" style="max-width: 500px;">
+        <p class="media-caption">Správná velikost kompozice</p>
+      </div>
+
+      <h4>4. Přizpůsobte tok květin pomocí listů</h4>
+      <p>Mějte na paměti, že vyvážené kompozice dosáhnete pouze tehdy, když bude v designu plynulost (tok). Tokem myslíme umísťování prvků stejným směrem nebo jemné změny směru, když je to potřeba, bez ostrých prvků.</p>
+
+      <div class="media-gallery">
+        <img src="images/7e79af08e6a20527d0d5f8aa7c07156d.jpg" alt="Tok kompozice s listy" style="max-width: 500px;">
+        <p class="media-caption">Plynulý tok kompozice s listy</p>
+      </div>
+
+      <h4>5. Najděte střed kompozice a zarámujte ho menšími prvky</h4>
+      <p>Každá kompozice by měla mít svůj střed. To je největší prvek — v našem případě největší květina umístěná uprostřed spánkové oblasti. Všechny ostatní prvky by měly postupně zmenšovat svou velikost od středu a končit jedním malým detailem (lístek, list, shluk teček).</p>
+
+      <div class="media-gallery">
+        <img src="images/d2da7e53fd90c8254f1239e4dcb85bb0.jpg" alt="Střed kompozice" style="max-width: 500px;">
+        <p class="media-caption">Střed kompozice zarámovaný menšími prvky</p>
+      </div>
+
+      <h4>6. Zvládněte shluky</h4>
+      <p>Shluky vypadají nejlépe, když jsou lístky umístěny v šachovnicovém vzoru, kde jeden prvek mírně vyčnívá oproti předchozímu. Je také zásadní, jak propojíte shluky s květinami: najděte mezeru mezi dvěma lístky a začněte první lístky shluku z ní. Začněte většími lístky a postupně zmenšujte jejich velikost, shluk zakončete jedním nejmenším lístkem.</p>
+
+      <div class="media-gallery">
+        <img src="images/0b470adbbf17eb7db87dd9f175b995e6.jpg" alt="Shluky okvětních lístků" style="max-width: 500px;">
+        <p class="media-caption">Správné uspořádání shluků</p>
+      </div>
+
+      <h4>7. Vyhněte se zhušťování lístků</h4>
+      <p>Nestavte lístky příliš blízko k sobě, protože jinak se vaše květina může proměnit v neuspořádaný kruh. Nechte mezi lístky dostatek prostoru.</p>
+
+      <div class="media-gallery">
+        <img src="images/7c308d1a4050a3a8335f41f740c68d13.jpg" alt="Nežhušťovat lístky" style="max-width: 500px;">
+        <p class="media-caption">Nenechte lístky příliš blízko u sebe</p>
+      </div>
+
+      <h4>8. Umístěte kompozici podle ohniskových bodů</h4>
+      <p>O teorii ohniskových bodů budeme podrobně mluvit ve třetí části kurzu. Nicméně považuji za nutné zmínit pár slov již zde, abyste měli základní představu o správném umístění designu.</p>
+      <p>Při malování designu na spánek se ujistěte, že směřujete ke dvěma hlavním ohniskovým bodům: centrálnímu a bradovému. Střed kompozice v tomto konkrétním designu je umístěn v ohniskovém bodě spánku.</p>
+
+      <div class="media-gallery">
+        <img src="images/945cdfb32447082d0e772711e9d83c87.jpg" alt="Ohniskové body" style="max-width: 500px;">
+        <p class="media-caption">Umístění kompozice podle ohniskových bodů</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/06f8a82ecbb821bbb8979ae99f76277e.jpg" alt="Ohniskové body na obličeji" style="max-width: 500px;">
+        <p class="media-caption">Ohniskové body na obličeji</p>
+      </div>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Je čas aplikovat své znalosti do praxe. Zde jsou prvky, které chci, abyste procvičovali. Pamatujte, že můžete strávit praxí tolik času, kolik potřebujete, dokud nedosáhnete uspokojivého výsledku. Procvičujte: klasická květina s tučnými lístky; velká květina se srdcovými lístky; symetrický prvek z dlouhých lístků; shluk dlouhých lístků; asymetrický prvek z dlouhých lístků.
+      </div>
+    </div>
+  </div>
+
+  <!-- M3L5: Webinář — Konzistence barvy a Double Dip -->
+  <div class="lesson" id="m3l5">
+    <div class="lesson-title"><h3>Lekce 5: Webinář — Konzistence barvy a Double Dip</h3></div>
+    <div class="lesson-content">
+      <h4>🎥 Webinář: Konzistence barvy a Double Dip</h4>
+      <p>V tomto webináři se probírají následující otázky:</p>
+
+      <h4>Konzistence barvy:</h4>
+      <ul>
+        <li>Jak pracovat s bílou barvou na akcích po celé hodiny, aby nezaschla?</li>
+        <li>Co dělat se starou zaschlou barvou, zejména pokud potřebujete dosáhnout krémové konzistence?</li>
+        <li>Jak aktivovat split-cake, abyste získali rovnoměrné barvy (ne suché a ne příliš vodové)?</li>
+      </ul>
+
+      <h4>Double Dip:</h4>
+      <ul>
+        <li>Jak zvládnout tučné okvětní lístky?</li>
+        <li>Srdcové lístky a květiny s pěti lístky — jak je všechny vměstnat do květiny a vyhnout se prázdnému místu uprostřed?</li>
+        <li>Je možné vytvořit double dip s perleťovými barvami?</li>
+        <li>Jak rychleji dobíjet štětec?</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/ju3u5phlch" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Webinář: Konzistence barvy a Double Dip</p>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 4: TECHNIKA ONE STROKE ===== -->
+  <div class="module-header" id="m4">
+    <h2>Modul 4: Technika One Stroke — Práce se split-cakey</h2>
+  </div>
+
+  <!-- M4L1: O technice one stroke -->
+  <div class="lesson" id="m4l1">
+    <div class="lesson-title"><h3>Lekce 1: O technice one stroke</h3></div>
+    <div class="lesson-content">
+      <p>One stroke je speciální technika, při které umělec používá plochý štětec nabraný dvěma nebo více barvami. Efekt je okamžitý a velmi působivý. Tato technika byla původně používána v akrylové dekorativní malbě, například na nehtových dekotacích a v lidovém umění.</p>
+
+      <p>Můžeme říci, že face painteři tuto myšlenku převzali a vytvořili speciální split-cakey, které představují pruhy různých barev uspořádané v nádobce a navržené tak, aby se současně nabíraly na plochý štětec (běžný plochý, šikmý nebo i filbert štětec).</p>
+
+      <p>O této technice jsme poprvé hovořili v Části první, Modulu 3. Split-cakey jsou kostky barvy, které obsahují více než jednu barvu, což umožňuje nabrat více barev na jeden štětec nebo houbičku a nanést je technikou „one stroke".</p>
+
+      <p>Split-cakey se vyrábějí:</p>
+      <ul>
+        <li><strong>Ve velkých nádobkách</strong> (čtvercových, obdélníkových nebo kulatých) — pro práci s houbičkou i štětcem</li>
+        <li><strong>V malých úzkých nádobkách</strong> — pro práci se štětcem</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/3f73c130673ea0bffd7de38ef91cdb70.jpg" alt="Příklady malých split-caků" style="max-width: 600px;">
+        <p class="media-caption">Příklady malých split-caků</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/6f1e7016013bbdefbd777a4b073bd54d.jpg" alt="Příklady velkých split-caků" style="max-width: 600px;">
+        <p class="media-caption">Příklady velkých split-caků různých značek</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M4L2: Práce s velkým split-cakem -->
+  <div class="lesson" id="m4l2">
+    <div class="lesson-title"><h3>Lekce 2: Práce s velkým split-cakem</h3></div>
+    <div class="lesson-content">
+      <p>Pomocí houbičky a velkého split-caku lze během několika sekund vytvořit různé působivé barevné přechody. Tato technika se často používá na motýlí křídla, různé masky, tygry, kočičky a mnoho dalšího. Jakýkoli velký split-cake bude fungovat, nicméně doporučuji věnovat pozornost houbičce, kterou budete používat. Podle mého názoru zde nejlépe fungují houbičky střední hustoty s malými póry (o tom jsme mluvili v Části první, Modulu 6).</p>
+
+      <div class="media-gallery">
+        <img src="images/c1a7fc645b31a59d4eef46f8ea9abd1f.jpg" alt="Příklady prací s houbičkou a split-cakem" style="max-width: 600px;">
+        <p class="media-caption">Příklady designů vytvořených houbičkou se split-cakem</p>
+      </div>
+
+      <h4>Postup krok za krokem:</h4>
+
+      <p><strong>1. Aktivace barvy:</strong> Postříkejte split-cake několika dávkami vody ze sprejové lahvičky. Povrch se zvlhčí, což znamená, že barva je aktivovaná. Některé barvy, zejména nové, vyžadují více vody k aktivaci. Ale přidání příliš mnoha vody najednou může způsobit vytékání a míchání barev. Proto doporučuji nový split-cake postříkat jednou, nechat minutu aktivovat a poté postříkat znovu.</p>
+
+      <p><strong>2. Příprava houbičky:</strong> Navlhčete houbičku postříkáním vodou a pak ji proválajte mezi dlaněmi, aby se vlhkost rovnoměrně rozprostřela. Pozor — když houbičku stisknete, nesmí z ní nic kapat!</p>
+
+      <p><strong>3. Nabrání barvy:</strong> Položte houbičku přes barvy na jednom konci split-caku a pak ji táhněte tam a zpět po povrchu. Houbička by měla po barvě klouzat. Pokud cítíte odpor, znamená to, že nemáte dostatek vody v barvě — postříkejte ji znovu.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Po nabrání barvy musí povrch split-caku zůstat suchý. Pokud stále vidíte aktivovanou barvu nebo vodu na povrchu, máte přebytek vody jak v barvě, tak na houbičce. V takovém případě houbičkou více třete po barvě, dokud ji neosušíte.
+      </div>
+
+      <p><strong>4. Nanášení:</strong> Položte houbičku na kůži a nanášejte barvu tečkovacími pohyby. Tvar a barvy nanášené na kůži můžete měnit částečným zvedáním a stlačováním houbičky.</p>
+
+      <div class="note">
+        <strong>📝 Důležité:</strong> Okraje houbičky musí být dobře pokryty barvou — měl by být 2–3 mm proužek barvy, který pokrývá boky houbičky. To zajistí čisté okraje při nanášení.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/cd139c4d494214561b93114d48196f4f.gif" alt="Práce s houbičkou a split-cakem" style="max-width: 400px;">
+        <p class="media-caption">Demonstrace práce s houbičkou a velkým split-cakem</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M4L3: Práce s malým split-cakem -->
+  <div class="lesson" id="m4l3">
+    <div class="lesson-title"><h3>Lekce 3: Práce s malým split-cakem</h3></div>
+    <div class="lesson-content">
+      <h4>Materiály</h4>
+      <p>Nejširší plochý štětec ve face paintingu má šířku 1 palec (2,5 cm). Tento štětec nabere všechny barvy z běžného one stroke split-caku. Štětec ¾ palce nabere ¾ barev, ½ palce nabere polovinu barev atd.</p>
+
+      <h4>Výběr split-caků</h4>
+      <p>Při nákupu split-caků věnujte pozornost kombinacím barev. Ačkoli výrobci obvykle vytvářejí krásné kombinace, občas narazíte na nevhodnou kombinaci. Viděla jsem například split-cake, který měl pruh žluté hned vedle pruhu fialové. Tyto barvy jsou komplementární a jsou na opačných stranách barevného kola — vedle sebe vytvářejí krásný kontrast, ale při smíchání vznikne nepořádek.</p>
+
+      <p>Důležitý je také počet pruhů ve split-caku. Nejlépe fungují split-cakey se 3 až 4 barvami, kde je dostatek prostoru pro jemný přechod. Nedoporučuji používat split-cakey s více než 4 barvami, protože je velmi obtížné nabrat štětec tak, aby se všechny barvy nanesly rovnoměrně.</p>
+
+      <div class="media-gallery">
+        <img src="images/400623a27906246be05dc4f29773445f.jpg" alt="Správné a špatné split-cakey" style="max-width: 500px;">
+        <p class="media-caption">Správné vs. špatné kombinace barev ve split-caku</p>
+      </div>
+
+      <h4>Štětce pro one stroke</h4>
+      <p>Jakýkoli kvalitní plochý štětec bude fungovat skvěle. Může to být běžný plochý štětec, šikmý (angled) štětec nebo dokonce filbert štětec. Plochý štětec potřebujete pro klasickou techniku one stroke, zatímco šikmé a filbert štětce lze použít pro dosažení speciálních efektů.</p>
+
+      <p>Osobně ráda používám šikmé štětce pro většinu svých one stroke prací, protože ostrý hrot mi umožňuje snadněji manipulovat se štětcem a vytvářet detailní tvary. Nicméně plochý štětec také používám, když potřebuji klasické tahy.</p>
+
+      <div class="media-gallery">
+        <img src="images/cf520d5f8e4cecb956f56db9e2bc933b.jpg" alt="Ploché štětce" style="max-width: 500px;">
+        <p class="media-caption">Ploché štětce pro one stroke</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/543c1e076b8f70f0c2bbff7c8501683a.jpg" alt="Šikmé štětce" style="max-width: 500px;">
+        <p class="media-caption">Šikmé (angled) štětce pro one stroke</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip na výběr štětce:</strong> Profesionální značka (Loew Cornell, Mehron, TAG), relativně krátké štětiny a ostrý tvar štětin, který ve vlhkém stavu vypadá jako ostří.
+      </div>
+
+      <h4>Nabírání barvy a malování</h4>
+      <p><strong>1.</strong> Postříkejte split-cake vodou. Buďte velmi přesní s množstvím vody! Obvykle stačí jedno až dvě postříkání k navlhčení povrchu barvy, který musí být lesklý, ale nesmí na něm být přebytečná voda.</p>
+
+      <p>Pokud jste přidali příliš vody, zvedněte stranu split-caku s světlejším pruhem na okraji a nechte přebytečnou vodu stéci na opačný okraj. Tmavší barvy z protější strany překryjí světlejší aktivovanou barvu. Nebo jednoduše otřete split-cake vlhčeným ubrouskem po délce.</p>
+
+      <p><strong>2.</strong> Ponořte štětec do vody a přejeďte jím po okraji nádobky, abyste vytlačili přebytečnou vodu. Položte štětec přes pruhy barvy a poté ho posouvejte po celém povrchu split-caku tam a zpět. Snažte se nabrat štětec co nejvýše — alespoň polovina délky štětin by měla být pokryta barvou. To vám umožní malovat déle bez dobíjení.</p>
+
+      <p>Štětec by měl po povrchu snadno klouzat. Pokud cítíte odpor, znamená to, že potřebujete přidat více vody. Pokud se všechny barvy smíchají v jednu hmotu, přidali jste příliš vody nebo musíte štětec nabírat opatrněji.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/ggwbmlgxlh" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Nabírání barvy z malého split-caku a technika one stroke</p>
+    </div>
+  </div>
+
+  <!-- M4L4: Hlavní tahy v technice one stroke -->
+  <div class="lesson" id="m4l4">
+    <div class="lesson-title"><h3>Lekce 4: Hlavní tahy v technice one stroke</h3></div>
+    <div class="lesson-content">
+      <p>Pro zvládnutí techniky one stroke se nejprve musíte naučit základní tahy. Teprve poté, co se budete cítit jistě při vytváření každého z nich, budete připraveni tyto dovednosti aplikovat při tvorbě celých one stroke designů.</p>
+
+      <h4>Hlavní tahy v technice one stroke:</h4>
+      <ul>
+        <li><strong>Duha (Rainbow)</strong></li>
+        <li><strong>Stuha (Ribbon)</strong></li>
+        <li><strong>Slzička (Teardrop)</strong></li>
+        <li><strong>Úzká barevná linka (Narrow colorful line)</strong></li>
+        <li><strong>Lístek ve tvaru V (V shape petal)</strong></li>
+        <li><strong>Zvlněný lístek ve tvaru V (Corrugated V shape petal)</strong></li>
+        <li><strong>Ostrý list ve tvaru V (Sharp V shape leaf)</strong></li>
+        <li><strong>Zvlněný list ve tvaru V (Corrugated V shape leaf)</strong></li>
+        <li><strong>Ostrý lístek na základu V (Sharp petal on V shape basis)</strong></li>
+        <li><strong>Jednoduchá květina (Simple flower)</strong></li>
+        <li><strong>Základ poupěte růže</strong> — tah ve tvaru „n" a tah ve tvaru „u"</li>
+        <li><strong>Další lístky růže (Additional rose petals)</strong></li>
+        <li><strong>Celé poupě růže (Entire rose bud)</strong></li>
+        <li><strong>Rozkvetlá růže (Blooming rose)</strong></li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/2bcbc6d25c6e138ea1cdbaf4b78ff220.jpg" alt="Hlavní tahy one stroke" style="max-width: 600px;">
+        <p class="media-caption">Přehled hlavních tahů v technice one stroke</p>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/tj77uynfef" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Demonstrace všech hlavních tahů one stroke</p>
+    </div>
+  </div>
+
+  <!-- M4L5: Růže technikou one stroke -->
+  <div class="lesson" id="m4l5">
+    <div class="lesson-title"><h3>Lekce 5: Růže technikou one stroke</h3></div>
+    <div class="lesson-content">
+      <p>Toto téma vyžaduje samostatný popis a instrukce. Nejprve si zopakujme prvky, ze kterých se skládá one stroke růže:</p>
+      <ul>
+        <li><strong>Základ poupěte růže</strong> — tah ve tvaru „n" a tah ve tvaru „u"</li>
+        <li><strong>Další lístky růže</strong></li>
+        <li><strong>Celé poupě růže</strong></li>
+      </ul>
+
+      <p>Existuje mnoho různých stylů a technik malování one stroke růží. Téměř každý umělec má svůj vlastní přístup. Ukážu vám techniku, kterou jsem vyvinula po více než 3 letech praxe. Podle mého názoru se snadno učí a výsledek je velmi působivý.</p>
+
+      <h4>Uspořádání listů</h4>
+      <p>Všimněte si, jak jsou listy uspořádány. Protože rostou ze stonku, při pohledu na růži shora vidíte jen jejich špičky nebo alespoň polovinu jejich délky. To znamená, že při malování byste měli vytvářet velké základy a ostré špičky.</p>
+
+      <div class="media-gallery">
+        <img src="images/f5f58c94bfa14552db48ac0355d00077.jpg" alt="Tahy pro one stroke růže" style="max-width: 600px;">
+        <p class="media-caption">Přehled tahů pro vytvoření one stroke růže</p>
+      </div>
+
+      <h4>Materiály</h4>
+      <p>Budete potřebovat střední šikmý štětec, běžnou bílou barvu a dva split-cakey — jeden pro lístky a druhý pro listy.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Doporučuji zkontrolovat si seznam materiálů v následující lekci — Úkol: Design růží one stroke.
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/8bhst89u7f" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Malování růží technikou one stroke krok za krokem</p>
+    </div>
+  </div>
+
+  <!-- M4L6: Úkol — Design růží one stroke -->
+  <div class="lesson" id="m4l6">
+    <div class="lesson-title"><h3>Lekce 6: Úkol — Design růží one stroke</h3></div>
+    <div class="lesson-content">
+      <p>Než začnete vytvářet tento design, doporučuji procvičit tyto hlavní tahy, dokud se nebudete cítit jistě u každého z nich:</p>
+      <ul>
+        <li>Základ poupěte růže — tah ve tvaru „n", tah ve tvaru „u"</li>
+        <li>Vnitřní lístky</li>
+        <li>Celé poupě růže — základ + dva vnitřní lístky</li>
+        <li>Rozkvetlá růže — základ + dva vnitřní lístky + 2–3 vnější lístky</li>
+        <li>Listy</li>
+        <li>Rozkvetlá růže s listy</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/915ce99640f6c5d56c2c5bea8d7f79c5.jpg" alt="Design růží one stroke" style="max-width: 500px;">
+        <p class="media-caption">Kompletní design růží technikou one stroke</p>
+      </div>
+
+      <h4>🚩 Materiály:</h4>
+      <ul>
+        <li><strong>Šikmý štětec Loew Cornell Angled 793 3/8</strong> — pro lístky (alternativa — šikmý štětec TAG №6)</li>
+        <li><strong>Šikmý štětec Loew Cornell Angled 793 1/2</strong> — pro listy (alternativa — šikmý štětec TAG №4)</li>
+        <li><strong>Split-cake Cameleon Gypsy</strong> — pro červené růže</li>
+        <li>Barva Global Yellow — pro žluté růže</li>
+        <li>Barva TAG Old Gold — pro žluté růže</li>
+        <li>Barva Cameleon Pure White — pro namočení špičky šikmého štětce</li>
+        <li><strong>Split-cake Cameleon Peacock</strong> — pro listy (alternativa — kombinace zlaté, neonově zelené a černé)</li>
+        <li>Barva TAG Neon Green — pro listy</li>
+        <li>Barva TAG Pearl Red — pro rty</li>
+        <li>Třpytkový gel Glitter Mark Mehron — použit jako lepidlo pro nalepení hrubých třpytek (alternativa — jakýkoli kosmetický gel, např. gel na vlasy)</li>
+        <li>Zlaté hrubé třpytky Sugar Glitter od Shawna Del Real</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/vneupcbkgx" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Kompletní design růží one stroke — krok za krokem</p>
+
+      <h4>Shrnutí</h4>
+      <p>Split-cakey a one stroke techniky bezpochyby výrazně usnadnily práci face paintera. Krásné designy lze vytvořit za krátký čas s významným efektem. Jako každá technika, kterou jsme se dříve naučili, i tyto barvy vyžadují určitou zručnost a praxi pro dosažení nejlepších výsledků.</p>
+
+      <p>Možná vám přišly náročné při prvním pokusu. Pokud ano, nezoufejte. Prostě postupujte podle mých instrukcí a zkoušejte dál. Čím více zkušeností budete mít s prací s nimi, tím snadnější proces bude. Existuje tolik kreativních způsobů, jak zahrnout split-cakey do vašich designů, že se rozhodně vyplatí vytrvat!</p>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 5: FILBERT A BLENDING ŠTĚTCE ===== -->
+  <div class="module-header" id="m5">
+    <h2>Modul 5: Práce s filbert a blending štětci</h2>
+  </div>
+
+  <!-- M5L1: O filbert a blending štětcích -->
+  <div class="lesson" id="m5l1">
+    <div class="lesson-title"><h3>Lekce 1: O filbert a blending štětcích</h3></div>
+    <div class="lesson-content">
+      <p>Filbert a chisel (plochý zkosený) štětce se dodávají v různých velikostech a typech štětin. Jak si možná vzpomínáte, v Části první, Modulu 6 jsme zdůrazňovali, jak důležité je vybrat si kvalitní profesionální štětce pro dosažení nejlepších výsledků. Za roky praxe jsem vyzkoušela mnoho různých filbert a chisel štětců a ráda doporučuji značky: TAG, Loew Cornell, Mehron a Cameleon.</p>
+
+      <p>Chisel štětce mají kratší štětiny a to je v podstatě jediný rozdíl mezi nimi a filbert štětci.</p>
+
+      <p>Blending štětce vyrábí značka Cameleon ve dvou velikostech — malý a velký blending štětec. Tyto štětce jsou perfektní, když potřebujete:</p>
+
+      <ul>
+        <li><strong>Rychle vyplnit plochu</strong> — velmi snadné s velkými štětci, použitelné jak ve face paintingu, tak v body paintingu</li>
+        <li><strong>Vybudovat tvar</strong>, zejména se zaoblenými okraji (kruh, ovál, srdce, mrak atd.)</li>
+        <li><strong>Malovat velké slzičky</strong> — snadno dosáhnete ostré špičky na konci otočením štětce a zakončením na jeho ostré straně</li>
+        <li><strong>Blendovat a vytvářet objem</strong> — provádí se s krémovou a lepkavou konzistencí barvy</li>
+        <li><strong>Dry brushing (suché kartáčování)</strong> — technika podobná blendování, ale pigmenty se nemíchají, pouze se vrství přes sebe nebo přes kůži</li>
+        <li><strong>One stroke</strong> — protože filbert štětce jsou ploché, lze je použít i pro one stroke tahy. Skvěle fungují pro dvoubarevné slzičky nebo budování tvarů</li>
+        <li><strong>Double dip</strong> — filbert štětce lze použít i pro double dip, všimněte si rozdílu ve tvaru okvětních lístků</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/7395892554e69e3a524d2a4c612feeb0.jpg" alt="Filbert a blending štětce" style="max-width: 600px;">
+        <p class="media-caption">Přehled filbert a blending štětců</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/3b5850b443b3d0f7fa9e08f5923e7275.jpg" alt="Tahy filbert štětcem" style="max-width: 600px;">
+        <p class="media-caption">Různé tahy vytvořené filbert štětcem</p>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/y7zfn0nchu" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Demonstrace práce s filbert a blending štětci</p>
+    </div>
+  </div>
+
+  <!-- M5L2: O barvách pro blendování a technika blendování štětcem -->
+  <div class="lesson" id="m5l2">
+    <div class="lesson-title"><h3>Lekce 2: O barvách pro blendování a technika blendování štětcem</h3></div>
+    <div class="lesson-content">
+      <p>Definice blendování říká, že jde o plynulý přechod mezi dvěma barvami, kde obě lze na okrajích identifikovat. Pokud jste tedy začali blendovat například červenou do žluté a skončili s oranžovou, blendování bylo neúspěšné.</p>
+
+      <h4>Které barvy se blendují nejlépe?</h4>
+      <p>Nejlépe se blendují barvy s měkkou texturou — glycerinové barvy a voskové metalické barvy. Můj trik pro snazší blendování běžných voskových barev je kombinovat je v designu s měkkou barvou. Smíchání běžné voskové barvy a voskové metalické barvy může také zjednodušit blendování.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Například ráda míchám běžnou oranžovou se zlatou na houbičce, abych získala pěknou blendovatelnou barvu pro základ tygra. Běžná barva mi dá sytý pigment, zatímco metalická — měkkou texturu.
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Pozor:</strong> Voda je nejhorší nepřítel blendování! Pro nejlepší výsledky pracujte s krémovou, lepkavou a suchou konzistencí.
+      </div>
+
+      <h4>Dva typy blendování:</h4>
+      <ul>
+        <li><strong>Klasické blendování</strong> — barvy se míchají mezi sebou a vytvářejí přechodové odstíny</li>
+        <li><strong>Dry brushing (suché kartáčování)</strong> — jedna barva se přetahuje přes druhou nebo přes kůži</li>
+      </ul>
+
+      <h4>Klasické blendování</h4>
+      <p>Pokud chcete blendovat dvě nebo více barev, existuje několik způsobů:</p>
+
+      <p><strong>Blendování čistým štětcem:</strong> Ponořte čistý štětec do vody, pak odstraňte přebytečnou vlhkost přitlačením štětin na ubrousek. Když vidíte, že se štětiny rozvětvují, váš štětec je připraven k blendování.</p>
+
+      <div class="media-gallery">
+        <img src="images/34888625fe1e16036dd1bd4d8b5f5778.jpg" alt="Štětec připravený k blendování" style="max-width: 400px;">
+        <p class="media-caption">Štětec připravený k blendování — štětiny se rozvětvují</p>
+      </div>
+
+      <p><strong>Blendování s barvou:</strong> Naberte štětec krémovou nebo lepkavou barvou. Můžete ho použít přímo k blendování (to obvykle dělají zkušení umělci, protože rychle cítí konzistenci barvy). Pokud se blendování teprve učíte, doporučuji otřít vnější vrstvu barvy a ujistit se, že se štětiny rozvětvují stejně jako v prvním případě.</p>
+
+      <div class="media-gallery">
+        <img src="images/068b9697f4e1474abe23c1cd97b3d0c3.gif" alt="Blendování dvou barev štětcem" style="max-width: 400px;">
+        <p class="media-caption">Blendování dvou barev štětcem</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Důležité:</strong> Při blendování na konkrétním tvaru by měl směr sledovat tento tvar. Například při blendování na kouli by měl být směr vždy zaoblený. Při práci na celých face designech je také důležité blendovat barvu směrem k ohniskovým bodům.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/9674c57f66447163fd34098164e1b5d5.jpg" alt="Směr blendování na leopardu" style="max-width: 500px;">
+        <p class="media-caption">Směr blendování sleduje tvar — příklad leoparda</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M5L3: Dry brushing (suché kartáčování) -->
+  <div class="lesson" id="m5l3">
+    <div class="lesson-title"><h3>Lekce 3: Dry brushing (suché kartáčování)</h3></div>
+    <div class="lesson-content">
+      <p>Dry brushing lze provádět buď filbert (chisel) štětci, nebo blending štětci. V tomto případě se pigmenty nemíchají, ale vrství se přes sebe nebo přes kůži.</p>
+
+      <h4>Jak to funguje</h4>
+      <p>Jednu barvu přetáhnete přes druhou. Mějte na paměti, že konzistence barvy musí být buď krémová, nebo lepkavá!</p>
+
+      <div class="media-gallery">
+        <img src="images/13f7f9dab8491fe5a9178933ece4b4b6.gif" alt="Dry brushing správně" style="max-width: 400px;">
+        <p class="media-caption">Správné dry brushing — jedna barva přetažená přes druhou</p>
+      </div>
+
+      <h4>Častá chyba</h4>
+      <p>Zde je jedna z častých chyb, kterou lidé dělají při dry brushingu:</p>
+
+      <div class="media-gallery">
+        <img src="images/2858b0742a0ea3311c05f362cee392f4.gif" alt="Dry brushing špatně" style="max-width: 400px;">
+        <p class="media-caption">Častá chyba při dry brushingu</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Důležité pravidlo:</strong> Blending štětce používejte pouze suché a čisté! Pro aktivaci barvy a čištění štětce od přebytečné barvy používejte vlhčený ubrousek po celou dobu procesu dry brushingu.
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/ow1udx4fsq" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Dry brushing pro blendování zvířecích vzorů a obrysů motýlů</p>
+    </div>
+  </div>
+
+  <!-- M5L4: Technika blendování houbičkou -->
+  <div class="lesson" id="m5l4">
+    <div class="lesson-title"><h3>Lekce 4: Technika blendování houbičkou</h3></div>
+    <div class="lesson-content">
+      <p>Při blendování houbičkou je zásadní používat malé množství vody. Naneste dvě barvy vedle sebe na kůži a tečkujte okraj mezi nimi, dokud nedosáhnete pěkného jemného přechodu.</p>
+
+      <div class="media-gallery">
+        <img src="images/e6d789138e26cb2e0d470c32b8a6b4e0.gif" alt="Blendování houbičkou" style="max-width: 400px;">
+        <p class="media-caption">Blendování dvou barev houbičkou</p>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Důležité:</strong> Blendování musíte provést ihned po nanesení barev, dokud jsou stále vlhké. Pokud barvy zaschnou, budete je muset nanést znovu, jinak bude blendování neúčinné.
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tipy:</strong>
+        <ul>
+          <li>Blendujte okraj světlejší barvou z vybraného barevného páru, protože tmavší barva může překrýt světlejší a ztížit blendování.</li>
+          <li>Zkuste také použít zadní stranu houbičky — funguje skvěle zejména když jsou barvy příliš vlhké. Čistá a suchá zadní strana houbičky dokáže absorbovat přebytečnou vodu a pomoci blendovat barvy.</li>
+        </ul>
+      </div>
+
+      <h4>Shrnutí</h4>
+      <p>Blendování lze dosáhnout štětcem nebo houbičkou. Nejčastěji se používá k vytvoření objemu a také k hladkému přechodu z jedné barvy do druhé. Pro dosažení příjemného výsledku se ujistěte, že vaše barva má správnou konzistenci — a pamatujte, že praxe dělá mistra!</p>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Zvládněte následující prvky, dokud nebudete spokojeni s výsledkem: slzička; vertikální blendování dvou barev; přetažení jedné barvy přes druhou; dry brushing pro leopardí skvrny, tygří pruhy a obrys motýla.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 6: PRÁCE S HOUBIČKAMI ===== -->
+  <div class="module-header" id="m6">
+    <h2>Modul 6: Práce s houbičkami. Kabuki štětec.</h2>
+  </div>
+
+  <!-- M6L1: O face paintingových houbičkách -->
+  <div class="lesson" id="m6l1">
+    <div class="lesson-title"><h3>Lekce 1: O face paintingových houbičkách</h3></div>
+    <div class="lesson-content">
+      <p>Stejně jako štětce jsou i houbičky na face painting dostupné v různých tvarech a velikostech. Typ pěny, její hustota a pórovitost jsou také faktory ovlivňující výsledný efekt. Technika práce s houbičkami se liší podle stylu umělce.</p>
+
+      <h4>Klasifikace podle hustoty:</h4>
+      <ul>
+        <li><strong>Měkké houbičky</strong> — osobně je nerada používám, protože si pokaždé ušpiním prsty, když houbičku s barvou stlačím.</li>
+        <li><strong>Houbičky střední hustoty</strong> — nejběžnější typ, vyrábí je TAG, Mehron, Diamond FX a další značky. Mám zelené houbičky Mehron a jsou mé №1 oblíbené.</li>
+        <li><strong>Husté houbičky</strong> — znám zatím pouze jednu značku, která vyrábí vysoce husté houbičky — černé houbičky Kryvaline.</li>
+      </ul>
+
+      <h4>Klasifikace podle pórovitosti:</h4>
+      <ul>
+        <li><strong>S malými póry</strong> — husté houbičky Kryvaline, perfektní pro šablonování.</li>
+        <li><strong>Se středními póry</strong> — obvykle střední hustoty, skvělé pro nabírání barvy ze split-caku.</li>
+        <li><strong>Pórovité houbičky</strong> — žluté houbičky od Wolfe FX, Diamond FX, Mehron a Cameleon. Mají střední hustotu, pojmou hodně barvy najednou a pokryjí velké plochy kůže jedním nabitím. Nicméně práce s pórovitými houbičkami na split-cacích může být záludná, protože se barvy mají tendenci příliš míchat. Místo toho je používejte pro vytváření textury, objemu nebo pro nanášení světel a stínů. Tyto houbičky jsou mé №2 oblíbené.</li>
+      </ul>
+
+      <h4>Klasifikace podle tvaru:</h4>
+      <ul>
+        <li><strong>Půlkruhové houbičky</strong> — nejběžnější tvar. Výrobci je prodávají jako kruhy, které rozříznete na dva půlkruhy, nebo již rozříznuté. Snadno se drží a používají a mají různé strany pro různé účely.</li>
+        <li><strong>Okvětní (petal) houbičky</strong> — mají tvar okvětního lístku, vyrábí je Paint Pal, AWA, Ruby Red a další. Skvělé pro vytvarování motýlích nebo pohádkových křídel. Pro začátečníky je vřele doporučuji — pomohou vám přizpůsobit správnou velikost křídel na dětský obličej. Mé №3 oblíbené houbičky.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/47a9ed83ae290f5a0c9294cf72f9aebd.jpg" alt="Houbičky na face painting" style="max-width: 500px;">
+        <p class="media-caption">Různé typy houbičet na face painting</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/22103b19a700f7e90a3806568aa7ec8f.jpg" alt="Popis houbičet" style="max-width: 600px;">
+        <p class="media-caption">Detailní popis houbičet a jejich vlastností</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M6L2: Práce s houbičkami -->
+  <div class="lesson" id="m6l2">
+    <div class="lesson-title"><h3>Lekce 2: Práce s houbičkami</h3></div>
+    <div class="lesson-content">
+      <h4>Nabrání barvy na houbičku</h4>
+      <p><strong>1.</strong> Postříkejte barvu vodou.</p>
+      <p><strong>2.</strong> Postříkejte houbičku vodou. Otáčejte houbičkou mezi dlaněmi pro rovnoměrné rozprostření vlhkosti. Houbička by měla být vlhká, ale když ji stisknete, nesmí z ní vytékat žádná voda.</p>
+      <p><strong>3.</strong> Ponořte jeden hrot houbičky do barvy a posouvejte ji po celém povrchu, dokud barva v nádobce nebude suchá. Vaše pohyby by měly být sebevědomé. Houbička by měla po barvě klouzat, ale odpor na konci nabírání znamená, že jste dosáhli správné konzistence.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Pokud je barva v nádobce stále mokrá, když houbičku odstraníte, znamená to, že máte na houbičce příliš mokrou barvu. Pokud cítíte odpor při nabírání, nemáte v barvě dostatek vody.
+      </div>
+
+      <p><strong>4.</strong> Opakujte postup, pokud je to nutné.</p>
+
+      <h4>Nanášení barvy na kůži</h4>
+      <p>Houbičky se ve face paintingu nejčastěji používají pro rychlé pokrytí velkých ploch kůže, vytváření textury a blendování barev pozadí. Běžné barvy se lépe nanášejí tečkovacími pohyby na kůži. Můžete si nejprve obrysovat požadovaný tvar, ale doporučuji dokončit tečkovacími pohyby pro rovnoměrný nátěr.</p>
+
+      <div class="warning">
+        <strong>⚠️ Pozor:</strong> Pokud budete houbičku po povrchu táhnout místo tečkování, získáte pruhy. Pro sytý vibrující nátěr musíte houbičku velmi dobře nabrat barvou, ujistit se, že barva není příliš mokrá, a tečkovat na povrch.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/c6d288647927b67ea2559f7a75c7e694.jpg" alt="Nanášení barvy houbičkou" style="max-width: 600px;">
+        <p class="media-caption">Techniky nanášení barvy houbičkou</p>
+      </div>
+
+      <h4>Průsvitné vs. syté pozadí</h4>
+      <p>Pro průsvitné pozadí zkuste používat světlejší barvy a míchejte běžné barvy s metalickými nebo nanášejte metalické samostatně. Světlé barvy jako zlatá, metalická žlutá, metalická modrozelená a metalická světle zelená lze použít jak pro syté, tak průsvitné pozadí — obojí vypadá skvěle, záleží na požadovaném efektu.</p>
+      <p>Tmavé barvy jako modrá, zelená a fialová se hůře nanášejí v rovnoměrných průsvitných vrstvách.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/jks6u34ghg" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Nejběžnější techniky práce s houbičkami ve face a body paintingu</p>
+    </div>
+  </div>
+
+  <!-- M6L3: Vytváření textury a objemu houbičkami -->
+  <div class="lesson" id="m6l3">
+    <div class="lesson-title"><h3>Lekce 3: Vytváření textury a objemu houbičkami</h3></div>
+    <div class="lesson-content">
+      <p>Pomocí houbičet lze vytvořit různé textury jako srst, strniště, zombí kůži, modřiny, stékající krev, korodovaný kov a mnoho dalšího.</p>
+
+      <p>Nejlepší houbičky pro tento účel jsou ty s velkými póry — žluté houbičky a stipple houbičky pro speciální efekty. O praktickém využití každé z těchto technik budeme podrobněji hovořit ve Třetí části kurzu.</p>
+
+      <h4>Dvě hlavní textury k procvičení:</h4>
+      <ul>
+        <li><strong>Efekt strniště</strong> — vytvoříte pomocí pórovité houbičky tečkovacími pohyby</li>
+        <li><strong>Efekt modřiny</strong> — vrstvením tmavých barev pomocí houbičky</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/3164d965888453d44481a8f1d3f8be8a.jpg" alt="Textury vytvořené houbičkami" style="max-width: 600px;">
+        <p class="media-caption">Příklady textur vytvořených houbičkami</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Poznámka:</strong> Pro naučení těchto technik si prohlédněte video tutoriál v předchozí lekci.
+      </div>
+    </div>
+  </div>
+
+  <!-- M6L4: Nanášení světla a stínu houbičkami -->
+  <div class="lesson" id="m6l4">
+    <div class="lesson-title"><h3>Lekce 4: Nanášení světla a stínu houbičkami</h3></div>
+    <div class="lesson-content">
+      <h4>Jakou barvu použít pro pozadí, světlo a stín?</h4>
+      <p>Výběr barvy pozadí je zásadní. Doporučuji používat barvy střední intenzity (červená, oranžová, světle zelená, světle modrá), abyste mohli stínovat ve dvou krocích.</p>
+
+      <p><strong>Příklad dvoustupňového stínování:</strong> Chcete-li vytvořit trojrozměrný vzhled modré koule — použijte světle modrou jako pozadí, přidejte běžnou modrou jako první stín a černou jako hlavní stín. Přidejte bílou jako odlesk.</p>
+
+      <p><strong>Jednokrokové stínování:</strong> Jednoduše použijte modrou jako pozadí, černou jako stín a bílou jako odlesk.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Pouze stínování lze provádět ve dvou krocích. Překrývání tmavší barvy světlejší (kromě bílé) může být problematické a obvykle nevypadá dobře. Bílá bude vaše hlavní barva pro odlesky. Na černém pozadí použijte metalickou černou a stíny nanášejte voskovou černou.
+      </div>
+
+      <h4>Jaká by měla být konzistence barvy?</h4>
+      <ul>
+        <li><strong>Pozadí:</strong> inkoustová nebo krémová konzistence</li>
+        <li><strong>Bílé odlesky:</strong> krémová konzistence</li>
+        <li><strong>Stínování:</strong> lepkavá až suchá konzistence</li>
+      </ul>
+
+      <p>Práce s mírně vlhčí konzistencí je u světlých barev snadnější než u tmavých. Tmavé barvy vyžadují velmi přesnou pozornost konzistenci a snáze se používají se sušší konzistencí.</p>
+
+      <h4>Kde je zdroj světla?</h4>
+      <p>Trik pro lepší pochopení: představte si každý tvar jako geometrické těleso. Ve face a body paintingu hlavní tvary, se kterými budete pracovat, jsou: koule, válec a kužel. Každé z těchto těles má zaoblený povrch, což znamená, že světlo a stín se obvykle nanášejí v plynulém přechodu.</p>
+
+      <div class="media-gallery">
+        <img src="images/7b1cf1f46337a0074c1c4b3af776e4ab.jpg" alt="Světlo a stín na kouli" style="max-width: 500px;">
+        <p class="media-caption">Jak se světlo a stín chovají na kouli</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Poznámka:</strong> Podívejte se na video tutoriál o vytvoření koule v druhé lekci tohoto modulu.
+      </div>
+    </div>
+  </div>
+
+  <!-- M6L5: Kabuki štětec a texturová SFX houbička -->
+  <div class="lesson" id="m6l5">
+    <div class="lesson-title"><h3>Lekce 5: Kabuki štětec a texturová SFX houbička</h3></div>
+    <div class="lesson-content">
+      <h4>Kabuki štětec</h4>
+      <p>Kabuki štětec je make-up štětec kulatého tvaru s krátkými, hustými a tlustými štětinami. Jeho hlavním účelem je nanášení barvy (nebo make-upu) v tenké a rovnoměrné vrstvě na velké plochy. Tento štětec je obzvláště skvělý pro jemné průsvitné, ale rovnoměrné pokrytí celé kůže obličeje, dekoltu a dokonce celého těla. Díky němu můžete kůži vypadat bledě nebo s nazelenalým nádechem.</p>
+
+      <div class="media-gallery">
+        <img src="images/7d123bf6a52024c17683083af242eab5.jpg" alt="Kabuki štětec" style="max-width: 400px;">
+        <p class="media-caption">Kabuki štětec</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/765e8f65693800ad371eff8c12589496.gif" alt="Práce s kabuki štětcem" style="max-width: 400px;">
+        <p class="media-caption">Demonstrace práce s kabuki štětcem</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Měkké barvy jako glycerinové a voskové metalické fungují pro tuto techniku nejlépe.
+      </div>
+
+      <h4>Texturová SFX houbička (stipple houbička)</h4>
+      <p>Texturová SFX houbička (také nazývaná stipple houbička) je nástroj používaný pro vytváření speciálních efektů jako modřiny, strniště a všechny druhy zranění. Face painter ji obvykle potřebuje pouze jednou za rok — na Halloween.</p>
+
+      <div class="media-gallery">
+        <img src="images/1ba971ef3452947dcde55f3ecfe32fbb.jpg" alt="Efekt strniště stipple houbičkou" style="max-width: 400px;">
+        <p class="media-caption">Efekt strniště vytvořený stipple houbičkou</p>
+      </div>
+
+      <h4>Shrnutí</h4>
+      <p>V tomto modulu jsme se podívali na face paintingovou houbičku — skromný nástroj, přesto všestrannější, než byste na první pohled čekali. S praxí a znalostmi dokáže houbička vytvořit širokou škálu výsledků — mnohem více než pouhé pokrytí velkých ploch barvou. Houbička může vytvořit spoustu různých textur, objemů a přechodů.</p>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Procvičujte následující prvky: nanášení rovnoměrného nátěru houbičkou; nanášení průsvitného nátěru houbičkou; efekt strniště; efekt modřiny; koule (světlo a stín); nanášení barvy ze split-caku.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 7: TECHNIKY POUŽÍVÁNÍ ŠABLON ===== -->
+  <div class="module-header" id="m7">
+    <h2>Modul 7: Techniky používání šablon</h2>
+  </div>
+
+  <!-- M7L1: O šablonách -->
+  <div class="lesson" id="m7l1">
+    <div class="lesson-title"><h3>Lekce 1: O šablonách</h3></div>
+    <div class="lesson-content">
+      <p>Šablony jsou vyrobeny z tenkého plastového listu (mylar) s vyřezanými vzory. Stávají se stále populárnějšími a vyrábí je všechny možné značky a face paintingové obchody. Nejpopulárnější jsou šablony BAMS od Andrey O'Donell a Graffiti Eyes Stencils od Ley Selley. Existují také šablony od Jest Paint, Planet Body Art, Terri Connoli a mnoha dalších.</p>
+
+      <h4>Tři hlavní skupiny šablon:</h4>
+      <ul>
+        <li><strong>Šablony se zvířecím vzorem</strong> — leopardí skvrny, tygří pruhy apod.</li>
+        <li><strong>Ornamentální šablony</strong> — dekorativní vzory a ornamenty</li>
+        <li><strong>Šablony s finálním obrázkem</strong> — vločky, hvězdy, motýli apod.</li>
+      </ul>
+
+      <p>Mnoho začínajících face painterů si myslí, že šablony mohou na začátku kariéry zjednodušit jejich práci, což není úplně pravda. Šablony mohou přidat WOW faktor mnoha designům, ale budete potřebovat speciální dovednosti práce s houbičkami a neklidnými dětmi, stejně jako dostatek času na dokončení designu.</p>
+
+      <div class="media-gallery">
+        <img src="images/521e451baa6dc2296ab1951888e94eaf.jpg" alt="Typy šablon" style="max-width: 600px;">
+        <p class="media-caption">Přehled typů šablon pro face painting</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M7L2: Práce se šablonami -->
+  <div class="lesson" id="m7l2">
+    <div class="lesson-title"><h3>Lekce 2: Práce se šablonami</h3></div>
+    <div class="lesson-content">
+      <h4>Materiály</h4>
+      <p><strong>Houbičky:</strong> Pro šablony nejlépe fungují husté houbičky s malými póry (jako černé Kryvaline), protože příliš neabsorbují barvu a drží ji na povrchu houbičky. To také pomáhá dávkovat množství použité vody. Fungují i petal houbičky od PaintPal a Mehron. Další možností jsou finger daubers (prstové aplikátory) s hladkým povrchem. Hustota houbičky je velmi důležitá — můžete dokonce použít beauty blender, protože splňuje všechny požadavky.</p>
+
+      <p><strong>Barva:</strong> Základní barvy nebo split-cake.</p>
+
+      <h4>Tipy pro nejlepší výsledky se šablonami:</h4>
+      <ul>
+        <li>Přitlačte šablonu pevně na kůži a nehýbejte s ní, dokud neskončíte s nanášením barvy.</li>
+        <li>Nejlepší konzistence barvy pro šablonování je lepkavá (pro voskové barvy) a suchá (pro glycerinové barvy).</li>
+        <li>Houbičku důkladně nabijte barvou otáčením na povrchu, pak dokončete několika tečkovacími pohyby. Barva v nádobce by měla být již suchá — když zvednete houbičku, uvidíte drobné špičky na barvě, což znamená správnou konzistenci.</li>
+        <li>Používejte tečkovací pohyby pro nanášení barvy přes šablonu — zabráníte tím zatékání pod šablonu.</li>
+        <li>Tahovací pohyby lze použít pro suchou konzistenci barvy a mohou vytvořit průsvitný efekt, ale vyžadují více praxe.</li>
+        <li>Pro vícebarevné pozadí nabijte houbičku one stroke kombinací z velkého split-caku.</li>
+        <li>Držte šablonu na místě, naneste třpytky na vlhkou barvu a získáte třpytivý ornament.</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/lbgp25n9hw" allowfullscreen></iframe>
+      </div>
+      <p class="media-caption">Video: Demonstrace technik práce se šablonami</p>
+
+      <h4>Shrnutí</h4>
+      <p>Šablony mají face painterovi hodně co nabídnout. Můžete je použít k úspoře času (rychlé logo) nebo k okamžitému nanesení vzoru (gepardí skvrny). Ale nenechte se zmást — šablony nejsou vždy nejsnadnější volbou, zejména pro začátečníky. Jako u každé jiné techniky budete muset trénovat, abyste dosáhli nejlepších výsledků.</p>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Procvičujte: vytvoření třpytivého šablonového obrazu (vločka, hvězda apod.); vytvoření šablonového vzoru s vybledlými okraji.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 8: TECHNIKY NANÁŠENÍ TŘPYTEK ===== -->
+  <div class="module-header" id="m8">
+    <h2>Modul 8: Techniky nanášení třpytek</h2>
+  </div>
+
+  <!-- M8L1: O kosmetických třpytkách -->
+  <div class="lesson" id="m8l1">
+    <div class="lesson-title"><h3>Lekce 1: O kosmetických třpytkách</h3></div>
+    <div class="lesson-content">
+      <p>Třpytky přicházejí ve všech možných tvarech, velikostech, barvách a stupních lesku. Je na vás, které si vyberete, jen se ujistěte, že používáte výhradně kosmetické třpytky (cosmetic grade). Řemeslné třpytky (craft glitter) mohou být levnější a vypadat podobně, ale pokud se dostanou do očí, mohou poškrábat rohovku, způsobit vředy na rohovce a dokonce oslepení. Mohou také zabarvit kůži nebo vyvolat alergickou reakci.</p>
+
+      <h4>Formy třpytek:</h4>
+      <ul>
+        <li><strong>Třpytkový prach (glitter dust)</strong> — v kelímcích nebo puffer lahvičkách</li>
+        <li><strong>Hrubé třpytky (coarse glitter)</strong> — velké částice všech tvarů (šestiúhelníky, kulaté, hvězdičky atd.)</li>
+        <li><strong>Třpytkový gel (glitter gel)</strong> — v kelímcích a lahvičkách</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/b83c33f5aaf9e6d8e48094273b29641e.jpg" alt="Typy třpytek" style="max-width: 600px;">
+        <p class="media-caption">Přehled typů kosmetických třpytek</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Používejte průsvitné (holografické) třpytky pro lesklý efekt, který nepřekryje design. Tmavé barevné třpytky fungují lépe na konkrétní přesně definované oblasti (např. lesklé červené rty).
+      </div>
+
+      <h4>Estetická pravidla používání třpytek:</h4>
+      <ul>
+        <li><strong>Třpytky nanášejte jen na pozadí</strong> — vyhněte se nanášení přes linky, příliš lesku může překrýt veškerou vaši krásnou práci.</li>
+        <li><strong>Nejprve třpytky, pak obrys</strong> — pro super lesklé pozadí posypte třpytky z puffer lahvičky na pozadí a pak začněte obrysovat. Pomůže to i rychlejšímu zaschnutí.</li>
+        <li><strong>Třpytky jako součást designu</strong> — velké částice hrubých třpytek mohou přidat extra WOW faktor, ale buďte opatrní, je snadné se nechat unést.</li>
+        <li><strong>Barva třpytek musí odpovídat pozadí</strong> — tmavé třpytky na světlém pozadí mohou vypadat jako nečistoty.</li>
+        <li><strong>Nikdy třpytky na blendování!</strong> — pokud jste pracovali na 3D efektu, třpytky ho zničí.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M8L2: Nanášení třpytek prsty -->
+  <div class="lesson" id="m8l2">
+    <div class="lesson-title"><h3>Lekce 2: Nanášení třpytek prsty</h3></div>
+    <div class="lesson-content">
+      <p>Toto je můj oblíbený způsob nanášení třpytek. Dává potřebnou kontrolu a umožňuje nanášet třpytky na malé i velké plochy.</p>
+      <p>Ťukněte ukazováčkem nebo prostředníčkem na vlhčený ubrousek, abyste získali trochu vlhkosti, pak ho namočte do třpytek — ty se přilepí na prst díky vlhkosti. Poté jemně přitlačte prst na povrch, který chcete pokrýt třpytkami.</p>
+      <p>Tato metoda je šikovná, i když je povrch suchý — vlhkost z prstu stačí k přilepení třpytek. Osobně ráda nanáším třpytky tímto způsobem na oční víčka a rty.</p>
+
+      <div class="media-gallery">
+        <img src="images/21db7bfb4ee131290d1ec5580e27d1bf.gif" alt="Nanášení třpytek prstem" style="max-width: 400px;">
+        <p class="media-caption">Nanášení třpytek prstem</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M8L3: Nanášení třpytek aplikátorem -->
+  <div class="lesson" id="m8l3">
+    <div class="lesson-title"><h3>Lekce 3: Nanášení třpytek aplikátorem</h3></div>
+    <div class="lesson-content">
+      <p>Pro tuto techniku se používá speciální aplikátor-štětec podobný smoothie blenderu. Postup je stejný jako u nanášení třpytek prsty. Osobně tuto techniku ve svých pracích nepoužívám, ale viděla jsem jiné umělkyně, jako Vanessa Mendoza, jak ji používají.</p>
+
+      <div class="media-gallery">
+        <img src="images/a57692f8714c51f5b46eef9df3ab1f63.gif" alt="Nanášení třpytek aplikátorem" style="max-width: 400px;">
+        <p class="media-caption">Nanášení třpytek aplikátorem</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M8L4: Nanášení třpytek štětcem -->
+  <div class="lesson" id="m8l4">
+    <div class="lesson-title"><h3>Lekce 4: Nanášení třpytek štětcem</h3></div>
+    <div class="lesson-content">
+      <p>Tuto techniku lze použít, když se třpytky nanášejí na malou plochu kůže. Třpytky se přilepí pouze na povrch, který by měl být mírně vlhký (čerstvě nanesená barva nebo navlhčená kůže).</p>
+
+      <p>Pokud barva zaschla, můžete stále nanést třpytky štětcem tak, že ho namočíte do vody, pak do třpytek a přitlačíte na povrch. Někdy se třpytky nepřilepí okamžitě a budete muset štětcem po povrchu přejet.</p>
+
+      <div class="tip">
+        <strong>💡 Trik pro velké plochy:</strong> Namočte rukojeť štětce do vody, pak do třpytek, položte ji naplocho na kůži a otáčejte. Množství vody je důležité — štětec by měl být jen mírně vlhký, jinak můžete zničit malbu.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/30f3e5dc216c6b3259fdc5d4dd97ae98.gif" alt="Nanášení třpytek štětcem" style="max-width: 400px;">
+        <p class="media-caption">Nanášení třpytek štětcem</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M8L5: Nanášení třpytek puffer lahvičkou -->
+  <div class="lesson" id="m8l5">
+    <div class="lesson-title"><h3>Lekce 5: Nanášení třpytek puffer lahvičkou</h3></div>
+    <div class="lesson-content">
+      <p>Tato metoda vám umožní nanášet třpytkový prach na velké plochy kůže. Hlavní rozdíl je, že se nemusíte dotýkat kůže — třpytky se vyfouknou z puffer lahvičky. Přilepí se s menší hustotou než u předchozích metod, ale tento způsob je nejrychlejší.</p>
+
+      <h4>Příprava puffer lahvičky:</h4>
+      <p>Při otevírání nové zapečetěné lahvičky použijte ostrou jehlu a propíchněte úplnou špičku trysky. Naplňte polovinu lahvičky třpytkami, nakloňte ji vodorovně a stlačte boky. Z lahvičky by se měl uvolnit obláček třpytek nesený proudem vzduchu.</p>
+
+      <div class="warning">
+        <strong>⚠️ Pozor:</strong> Nikdy nepoužívejte nůžky na vytvoření otvoru v puffer lahvičce! Pokud by byl otvor příliš velký, bude z lahvičky pokaždé vypadávat příliš mnoho třpytek a bude obtížné kontrolovat množství.
+      </div>
+
+      <p>Třpytky se přilepí na kůži pouze pokud je barva stále vlhká — dejte designu pár puffnutí ihned po namalování pozadí. Pokud barva zaschla, můžete ji znovu navlhčit postříkáním vodou ze vzdálenosti 50 cm, ale buďte opatrní s jemností rozprašovače.</p>
+
+      <div class="media-gallery">
+        <img src="images/f2b1282f373fe4f75c91e01bfa51a11a.gif" alt="Nanášení třpytek puffer lahvičkou" style="max-width: 400px;">
+        <p class="media-caption">Nanášení třpytek puffer lahvičkou</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M8L6: Nanášení třpytek se šablonou -->
+  <div class="lesson" id="m8l6">
+    <div class="lesson-title"><h3>Lekce 6: Nanášení třpytek se šablonou</h3></div>
+    <div class="lesson-content">
+      <p>Touto technikou můžete vytvořit přesné tvary a vzory z třpytek. Vytvořte vzor jako obvykle pomocí šablony a houbičky s barvou. Držte šablonu na povrchu a dokud je barva stále vlhká, naneste třpytky na vzor.</p>
+
+      <p>Houbička i prst fungují skvěle. Pokud dáváte přednost houbičce, doporučuji použít stejnou houbičku jako pro šablonování — namočte ji do třpytek a přeneste je na vzor. Pokud má ale houbička velké póry, třpytky se v nich mohou zaseknut navždy, takže raději použijte prst.</p>
+
+      <p>Tato technika vypadá obzvláště krásně na finálních šablonových obrazech jako vločky a hvězdy.</p>
+
+      <div class="media-gallery">
+        <img src="images/c81be07099efb256dc40ae700e78afeb.gif" alt="Třpytky se šablonou" style="max-width: 400px;">
+        <p class="media-caption">Nanášení třpytek přes šablonu</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M8L7: Nanášení hrubých třpytek (práškových nebo gelových) -->
+  <div class="lesson" id="m8l7">
+    <div class="lesson-title"><h3>Lekce 7: Nanášení hrubých třpytek (práškových nebo gelových)</h3></div>
+    <div class="lesson-content">
+      <p>Jedním z trendových způsobů použití třpytek je nanášení hrubých částic jako součásti designu. Pro přilepení velkých částic na kůži budete potřebovat nějaké lepidlo. Jednoduchý zvlhčovač jako voda nebo gel bude fungovat, ale pokud chcete zajistit, že třpytky nespadnou z kůže po několika hodinách, použijte kosmetické třpytkové lepidlo.</p>
+
+      <div class="warning">
+        <strong>⚠️ Pozor:</strong> Ujistěte se, že lepidlo je povolené pro nanášení na rty a oční víčka a smývá se mýdlovou vodou. Tento typ lepidla NENÍ stejný jako třpytkové lepidlo pro třpytkové tetování!
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/c792efa2a090ba0eceda7002f6838cd4.jpg" alt="Třpytková lepidla" style="max-width: 500px;">
+        <p class="media-caption">Příklady kosmetických třpytkových lepidel</p>
+      </div>
+
+      <p>V ostatních případech, kdy nepotřebujete super dlouhotrvající efekt, použijte běžný kosmetický gel — gel na vlasy, třpytkový gel nebo dokonce lubrikant. Jen se ujistěte, že nemá vůni a přísady vyvolávající pocity na kůži (brnění, chlad).</p>
+
+      <p><strong>Technika:</strong> Rozetřete tenkou vrstvu gelu/lepidla na oblast, kterou chcete pokrýt třpytkami, a tečkovacími pohyby prstem naneste třpytky na povrch. Můžete také nanášet předem připravenou směs gel-třpytky přímo na kůži. Tuto směs si můžete vyrobit sami smícháním třpytek s kosmetickým gelem a uložením v malém plastovém kelímku.</p>
+
+      <div class="media-gallery">
+        <img src="images/36660a3309464ce1cf0850cbf77e15b4.gif" alt="Nanášení hrubých třpytek" style="max-width: 400px;">
+        <p class="media-caption">Nanášení hrubých třpytek</p>
+      </div>
+
+      <h4>Shrnutí</h4>
+      <p>Třpytky jsou nádherným doplňkem face paintingu — většina z nás jich nemůže mít dost. Nejdůležitější věc k zapamatování je vždy, VŽDY a POUZE používat kosmetické třpytky. Bezpečnost vašich klientů na tom závisí. V tomto modulu jsme probrali různé metody nanášení třpytek a tipy, jak je udržet na místě.</p>
+    </div>
+  </div>
+
+  <!-- ===== MODUL 9: SESTAVENÍ VLASTNÍHO SETUPU ===== -->
+  <div class="module-header" id="m9">
+    <h2>Modul 9: Sestavení vlastního setupu. Vybavení pro outdoorové akce.</h2>
+  </div>
+
+  <!-- M9L1: Hlavní setup a ergonomická organizace stolu -->
+  <div class="lesson" id="m9l1">
+    <div class="lesson-title"><h3>Lekce 1: Hlavní setup a ergonomická organizace stolu</h3></div>
+    <div class="lesson-content">
+      <p>Ergonomická organizace stolu je zásadní pro udržení čistého a uklizeného pracoviště, stejně jako pro rychlejší a efektivnější práci. Organizovaný stůl navíc vypadá profesionálně. Za roky zkušeností jako aktivní face painter jsem pochopila, jak organizovat pracoviště co nejefektivněji.</p>
+
+      <h4>Barvy</h4>
+      <p>Pokud jsou vaše barvy v originálních nádobkách, jedním z řešení pro úsporu místa je kombinace dvou barev rozříznutých napůl v jedné nádobce. Jednou z nejlepších možností pro skladování a přepravu barev jsou speciální kufříky od TAG, Mehron, Kryvaline apod.</p>
+
+      <div class="media-gallery">
+        <img src="images/10b450e0bd06466e4e3e4616c7e55b54.jpg" alt="Kufříky na barvy" style="max-width: 600px;">
+        <p class="media-caption">Kufříky na face paintingové barvy</p>
+      </div>
+
+      <p>Další možností skladování je přesypání barev do speciálních plastových vložek (inserts). Černé plastové vložky jsou nejpohodlnějším řešením a vypadají uklizeněji. Mají perfektní hloubku a dodávají se ve dvou velikostech — s velkými a malými přihrádkami. Barva 32 g se perfektně vejde do velké přihrádky.</p>
+
+      <div class="media-gallery">
+        <img src="images/bff922622601e5073fe6d20c79ec1d29.jpg" alt="Přesypané barvy" style="max-width: 500px;">
+        <p class="media-caption">Barvy přesypané do plastových vložek</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/ef027ceec94c7e7d5d2c2cd94d845001.jpg" alt="Setup Olgy Frolovové" style="max-width: 500px;">
+        <p class="media-caption">Alternativní řešení — barvy fixované oboustrannou páskou na víčkách krabic</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/2a6b53dcd7bc21a09d7eb66aa3b6bb2c.jpg" alt="Černé plastové vložky" style="max-width: 500px;">
+        <p class="media-caption">Černé plastové vložky na barvy</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip pro identifikaci barev:</strong> Při přesypávání vyfotografujte etiketu produktu s ingrediencemi a číslem šarže, uložte do složky a pojmenujte (např. Slot 1, 2, 3...). Vyfotografujte také novou paletu a přidejte poznámky.
+      </div>
+
+      <h4>Štětce</h4>
+      <p>Správné skladování štětců je jedním z nejlepších způsobů, jak zajistit jejich dlouhou životnost. Peněženka na štětce (brush wallet) drží štětiny v původním tvaru bez vzájemného dotýkání a může sloužit i jako stojan během práce.</p>
+
+      <div class="media-gallery">
+        <img src="images/f1baf4e06e6a002395d3763a71b87d1d.jpg" alt="Peněženky na štětce" style="max-width: 500px;">
+        <p class="media-caption">Peněženky na štětce od TAG a Mehron</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/90c899fa268a096d66910bd4d4f3402e.jpg" alt="Štětce vystavené v peněženkách" style="max-width: 500px;">
+        <p class="media-caption">Jak face painteři vystavují štětce v peněženkách během akcí</p>
+      </div>
+
+      <h4>Nádobka na čištění štětců</h4>
+      <p>Je velmi důležité, aby nádobka nebyla průhledná — klienti by neměli vidět špinavou vodu. Nejpohodlnější nádobky jsou ty rozdělené na sekce, se žebrováním na dně a otvory pro štětce.</p>
+
+      <div class="media-gallery">
+        <img src="images/548447a05cd2edf5725d500207523374.jpg" alt="Nádobky na štětce" style="max-width: 500px;">
+        <p class="media-caption">Specializované nádobky na čištění štětců</p>
+      </div>
+
+      <div class="note">
+        <strong>📝 Pravidla pro nádobky:</strong> Používejte 2–3 nádobky — první pro první opláchnutí, druhou pro dočištění, třetí jen pro bílou barvu (pro jasné bílé linky). Ideální objem je 150–200 ml. Používejte barevný plast nebo kov.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/e6fe9a01ae8ce6e4df7d2072e56696c6.jpg" alt="Nádobky na stolech" style="max-width: 500px;">
+        <p class="media-caption">Nádobky na štětce na pracovních stolech</p>
+      </div>
+
+      <h4>Ergonomická organizace stolu</h4>
+      <p>Hlavní pravidlo: každý předmět by měl mít své vlastní místo. Často používané materiály mějte na dosah ruky, méně používané dále.</p>
+
+      <div class="media-gallery">
+        <img src="images/fb8cd071b6d8ee6670709f265f08e75e.jpg" alt="Ergonomická organizace pracovního stolu" style="max-width: 600px;">
+        <p class="media-caption">Ergonomická organizace pracovního stolu (pro praváky — leváci si uspořádání zrcadlově obraťte)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M9L2: Přepravní systémy -->
+  <div class="lesson" id="m9l2">
+    <div class="lesson-title"><h3>Lekce 2: Přepravní systémy</h3></div>
+    <div class="lesson-content">
+      <p>Šikovný přepravní systém — lehký, snadno přenosný a pojme celý váš face paintingový setup — je super důležitý, pokud jste aktivní face painter pracující mimo domov.</p>
+
+      <h4>Řemeslnický kufřík</h4>
+      <p>Většina mého setupu se vejde do řemeslnického kufříku, který jsem přeorganizovala jako face paintingovou stanici. Doporučuji kufříky velikosti A3 nebo mírně větší.</p>
+
+      <div class="media-gallery">
+        <img src="images/f8b4f0002b66f7476ed8d727d9d8d112.jpg" alt="Kufříky na face painting" style="max-width: 500px;">
+        <p class="media-caption">Příklady kufříků vhodných pro face painting</p>
+      </div>
+
+      <h4>Kufr na kolečkách</h4>
+      <p>Další řešení je kufr na kolečkách s teleskopickou rukojetí. Vhodné kufry lze najít ve specializovaných obchodech kdekoli na světě.</p>
+
+      <div class="media-gallery">
+        <img src="images/53ef2d5a176bf0ff0a8a55a2bb927505.jpg" alt="Retro kufr" style="max-width: 400px;">
+        <p class="media-caption">Margarita Taranina používá retro kufr</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/a65f3154af95760322b0e3370f3f84fd.jpg" alt="Kufr na kolečkách" style="max-width: 500px;">
+        <p class="media-caption">Chytré propojení kufru se skládací židlí a stolem</p>
+      </div>
+
+      <h4>DJ Hero Case a kreativní řešení</h4>
+      <p>Někteří face painteři přeměnili DJ Hero Case na malířskou stanici! Názory se různí — někteří si stěžují na kvalitu, jiní jsou spokojeni roky.</p>
+
+      <div class="media-gallery">
+        <img src="images/c8f65c520ef4adc6a19fd89248e740f0.jpg" alt="DJ Hero Case" style="max-width: 500px;">
+        <p class="media-caption">DJ Hero Case přeměněný na face paintingovou stanici</p>
+      </div>
+
+      <h4>Profesionální malířské stanice</h4>
+      <p>Lídrem na trhu je společnost Craft-N-Go (www.craftngo.com). Vyrábí profesionální vysoce kvalitní stanice ve dvou velikostech — 71 cm a 91 cm. Výhodou je, že je to nejen přepravní systém, ale kompletní stanice se stabilními nohami, speciálně navržená pro face paintery.</p>
+
+      <div class="media-gallery">
+        <img src="images/a84e0ddcfab2a9aa1261d8bc81ce8c0a.jpg" alt="Craft-N-Go stanice" style="max-width: 500px;">
+        <p class="media-caption">Profesionální stanice Craft-N-Go</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/96b2897afa0f6360042468cac52a4d53.jpg" alt="Kufr na elektrickou kytaru" style="max-width: 500px;">
+        <p class="media-caption">Kreativní řešení — pouzdro na elektrickou kytaru přeměněné na stanici</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M9L3: Zobrazování vašich designů na akcích -->
+  <div class="lesson" id="m9l3">
+    <div class="lesson-title"><h3>Lekce 3: Zobrazování designů na akcích</h3></div>
+    <div class="lesson-content">
+      <p>Máte setup sbalený a desítky dětí (i dospělých) čekají. Jak nejlépe prezentovat designy, které umíte namalovat? Odpověď závisí na vaší zkušenosti a typu akce.</p>
+
+      <h4>Soukromé dětské oslavy</h4>
+      <p>Obvykle hodinově placená akce s malým počtem dětí (2–30). Nejpohodlnější je album nebo malá tabule. S rostoucími zkušenostmi můžete přejít na seznam designů, který nabízí více svobody.</p>
+
+      <div class="media-gallery">
+        <img src="images/f6bb5d0b3daa598a10983659fa0d5831.jpg" alt="Sketchy na cvičebních deskách" style="max-width: 500px;">
+        <p class="media-caption">Designy namalované na cvičebních deskách pro tematické oslavy</p>
+      </div>
+
+      <h4>Festivaly a PPF akce</h4>
+      <p>PPF (pay per face) — klient platí za každý face painting jednotlivě. Neexistuje lepší možnost než tabule s výběrem designů. Vytvoření vlastního banneru vám pomůže pochopit důležitost budování portfolia s kvalitními fotkami.</p>
+
+      <div class="media-gallery">
+        <img src="images/09c9e07ad0f0e05ee8f6b6004e4fd399.jpg" alt="Pravidla pro banner" style="max-width: 600px;">
+        <p class="media-caption">Pravidla pro tvorbu efektivního prodejního banneru</p>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Důležité:</strong> Nepoužívejte na svém banneru práce jiných umělců — porušuje to autorská práva a vytváří nerealistická očekávání u klientů.
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/a8b3ad879b05d3b8e9aeddb26d6d461f.jpg" alt="Můj banner se stojanem" style="max-width: 500px;">
+        <p class="media-caption">Banner na stojanu s teleskopickými nohami</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/5e5393c62e8114c71da368ebeaa11add.jpg" alt="Bannery jiných umělců" style="max-width: 500px;">
+        <p class="media-caption">Příklady menu boardů různých face painterů</p>
+      </div>
+
+      <h4>Firemní akce</h4>
+      <p>Hodinově placené akce s dlouhými frontami dětí a málo času na každé dítě. Nejlepší možnost je list-board (tabule se seznamem). Pro festivaly nepoužívejte alba — rychle se poničí předáváním mezi klienty.</p>
+
+      <div class="media-gallery">
+        <img src="images/99442d248548ed0e31f28ba2b9eaeb94.jpg" alt="List-board Stephanie" style="max-width: 500px;">
+        <p class="media-caption">Kreativní list-board s obrázky místo slov — srozumitelný pro všechny děti</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/dfe2c8445ac9b05e50da8ea5f2c664b4.jpg" alt="List-board Vanessa Mendoza" style="max-width: 500px;">
+        <p class="media-caption">List-board s charakteristickými prvky od Vanessy Mendozy</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M9L4: Rozšířený kit pro festivaly -->
+  <div class="lesson" id="m9l4">
+    <div class="lesson-title"><h3>Lekce 4: Rozšířený kit pro festivaly</h3></div>
+    <div class="lesson-content">
+      <p>Outdoorové festivaly a velké celodenní akce vyžadují dodatečné vybavení pro komfortní práci po celý den. Bohužel téměř všechny tyto doplňky jsou velké a těžké — budete potřebovat auto na přepravu.</p>
+
+      <h4>Skládací stůl</h4>
+      <p>Skládací stoly najdete ve velkých supermarketech v odděleních s venkovním a zahradním nábytkem. Doporučuji stoly se silnými nohami, dostatečně stabilní i na trávníku.</p>
+
+      <div class="media-gallery">
+        <img src="images/34d76d509b011ba230e136533d442164.jpg" alt="Skládací stůl" style="max-width: 500px;">
+        <p class="media-caption">Skládací stůl vhodný pro face painting</p>
+      </div>
+
+      <h4>Vysoká skládací židle</h4>
+      <p>Moje zkušenost ukázala, že face painting je nejefektivnější, když klient sedí na vysoké židli. Dva nejpopulárnější modely: Franklin židle od IKEA a Director's High Chair.</p>
+
+      <div class="media-gallery">
+        <img src="images/9185672827acbdcb628764158604d171.jpg" alt="Vysoké skládací židle" style="max-width: 500px;">
+        <p class="media-caption">Vysoké skládací židle pro face painting</p>
+      </div>
+
+      <h4>Běžná skládací židle</h4>
+      <p>Střídání stání a sezení během práce pomáhá předcházet únavě při dlouhém dni. Budete potřebovat dvě běžné skládací židle — jednu pro sebe a druhou pro pomocníka s frontou.</p>
+
+      <div class="media-gallery">
+        <img src="images/f277dad438ce511be25e5fee2e173ec1.jpg" alt="Skládací židle" style="max-width: 500px;">
+        <p class="media-caption">Lehké a kvalitní skládací židle</p>
+      </div>
+
+      <h4>Slunečník nebo přístřešek</h4>
+      <p>Outdoorové akce vyžadují ochranu před sluncem a deštěm. Při výběru slunečníku dbejte na stabilní základnu odolnou větru. Přístřešek (canopy/marquee) se stěnou nabízí ochranu i před větrem, ale je těžší a vyžaduje více času na instalaci. Přístřešek ukotvěte do země — velkými kolíky (na hlínu) nebo závažími (na beton).</p>
+
+      <div class="media-gallery">
+        <img src="images/777e2cea22d5b4fe902709520e8951d5.jpg" alt="Slunečník" style="max-width: 400px;">
+        <p class="media-caption">Slunečník pro outdoorový face painting</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/4f4f4fa1b2174ede11abf20601de5ace.jpg" alt="Přístřešky" style="max-width: 500px;">
+        <p class="media-caption">Přístřešky a markýzy pro festivaly</p>
+      </div>
+
+      <h4>Reklamní banner</h4>
+      <p>Cílem banneru je přitáhnout pozornost k vaší face paintingové kabince. Sestavte koláž z vašich nejpopulárnějších designů a přidejte nápis „Face Painting" velkými tučnými písmeny. Buďte struční — klienti musí banner vidět a přečíst z dálky. Tisk venkovního banneru je obvykle levný.</p>
+
+      <h4>Vizitky a věrnostní kartičky</h4>
+      <p>Jednoduchá a stručná vizitka vypadá nejprofesionálněji — jméno/název firmy, služby, 1–3 kvalitní fotky a kontakty. Věrnostní kartička s 4–10 políčky (poslední = face painting zdarma) skvěle funguje pro získání stálých klientů.</p>
+
+      <div class="media-gallery">
+        <img src="images/30500880426a65fc82f02f2399c2ea53.jpg" alt="Vizitka a věrnostní kartička" style="max-width: 500px;">
+        <p class="media-caption">Vizitka a věrnostní kartička</p>
+      </div>
+
+      <h4>Čerstvá voda a kbelík</h4>
+      <p>Vždy mějte dostatečné množství čerstvé vody na celý den. Lahev 5 litrů obvykle stačí. Potřebujete také kbelík na odpadní vodu.</p>
+
+      <div class="media-gallery">
+        <img src="images/65ab3fbed1cf1257a0227363799453ef.jpg" alt="Kompletní setup" style="max-width: 600px;">
+        <p class="media-caption">Kompletní festivalový setup</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- M9L5: Pohodlné pozice těla při face paintingu -->
+  <div class="lesson" id="m9l5">
+    <div class="lesson-title"><h3>Lekce 5: Pohodlné pozice těla při face paintingu</h3></div>
+    <div class="lesson-content">
+      <p>Pohodlná poloha těla při face paintingu je jedním z klíčových faktorů — ovlivňuje jak kvalitu a rychlost vaší práce, tak váš stav po dni práce. Jak často jste se vrátili domů s bolestí zad nebo unavenýma nohama?</p>
+
+      <p>Po několika letech face paintingu jsem přišla na hlavní pravidla, která mi pomohla pracovat lépe a rychleji bez traumatizování těla.</p>
+
+      <h4>Práce s malými dětmi</h4>
+      <p>Malé děti maluji vsedě se dvěma způsoby imobilizace hlavy — podepřením brady a držením shora. První způsob funguje skvěle při padání brady, druhý je univerzální.</p>
+
+      <div class="media-gallery">
+        <img src="images/f893585a0db950b7674633d074eb5d42.jpg" alt="Pozice při práci s malými dětmi" style="max-width: 500px;">
+        <p class="media-caption">Správná pozice při malování malých dětí</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Všimněte si malíčku pravé ruky — nabízí dodatečnou stabilitu při malování na svislém povrchu. Malé děti také žádám, aby zaklonily hlavu podepřenou mou levou rukou. Tato pozice otevírá celý obličej a zjednodušuje malování díky vodorovnému umístění.
+      </div>
+
+      <h4>Práce s většími dětmi</h4>
+      <p>Vyšší děti maluji vestoje, mírně posunutá doleva. Tak mám dostatek prostoru pro pravou ruku, což mi nabízí více svobody. Pokud jste leváci, zrcadlově otočte tuto pozici a posuňte se mírně doprava.</p>
+
+      <p>Pokud musím malovat jinou část těla (rameno, předloktí, nohu, záda atd.), obvykle to dělám vsedě.</p>
+
+      <div class="media-gallery">
+        <img src="images/175eaa11336359dcb7fbf635de6d72b4.jpg" alt="Pozice při práci s většími dětmi" style="max-width: 500px;">
+        <p class="media-caption">Správná pozice při malování větších dětí</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📌 Část druhá — Techniky (Moduly 1-9) — Kompletní</p>
+    <p style="margin-top: 8px;">Zdroj: International Face Painting School — Professional Course<br>
+    Překlad do češtiny</p>
+  </div>
+
+</div>
+
+</body>
+</html>
