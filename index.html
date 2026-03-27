@@ -1,0 +1,2663 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFPS Professional Course — Část první: Materiály</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f0eb; color: #333; line-height: 1.7; }
+    .header { background: linear-gradient(135deg, #6a1b9a, #e91e63); color: white; padding: 40px 20px; text-align: center; }
+    .header h1 { font-size: 2em; margin-bottom: 8px; }
+    .header p { font-size: 1.1em; opacity: 0.9; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .toc { background: white; border-radius: 12px; padding: 24px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .toc h2 { color: #6a1b9a; margin-bottom: 12px; font-size: 1.3em; }
+    .toc ul { list-style: none; padding: 0; }
+    .toc li { padding: 6px 0; }
+    .toc a { color: #e91e63; text-decoration: none; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+    .module-header { background: linear-gradient(135deg, #6a1b9a, #9c27b0); color: white; padding: 20px 24px; border-radius: 12px 12px 0 0; margin-top: 36px; }
+    .module-header h2 { font-size: 1.4em; }
+    .lesson { background: white; border-radius: 0 0 12px 12px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
+    .lesson-title { background: #f3e5f5; padding: 16px 24px; border-bottom: 2px solid #ce93d8; }
+    .lesson-title h3 { color: #6a1b9a; font-size: 1.2em; }
+    .lesson-content { padding: 20px 24px; }
+    .lesson-content p { margin-bottom: 14px; font-size: 0.95em; }
+    .tip { background: #fff3e0; border-left: 4px solid #ff9800; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .tip strong { color: #e65100; }
+    .brand-list { background: #e8f5e9; padding: 12px 16px; border-radius: 8px; margin: 14px 0; }
+    .brand-list strong { color: #2e7d32; }
+    .note { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .warning { background: #fce4ec; border-left: 4px solid #c62828; padding: 12px 16px; margin: 14px 0; border-radius: 0 8px 8px 0; font-size: 0.9em; }
+    .warning strong { color: #c62828; }
+    .media-gallery { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; justify-content: center; }
+    .media-gallery img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    .media-gallery .full { width: 100%; }
+    .media-gallery .half { width: calc(50% - 6px); }
+    .media-caption { text-align: center; color: #777; font-size: 0.8em; margin-top: 4px; font-style: italic; }
+    .footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; margin-top: 40px; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 16px 0; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+    .kit-list { background: #f3e5f5; padding: 16px 20px; border-radius: 8px; margin: 14px 0; }
+    .kit-list strong { color: #6a1b9a; }
+    .kit-list ul { margin: 8px 0 0 20px; }
+    .kit-list li { margin-bottom: 4px; font-size: 0.93em; }
+    .kit-sublist { margin: 4px 0 4px 20px; font-size: 0.9em; color: #555; }
+    @media (max-width: 700px) { .media-gallery .half { width: 100%; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎨 IFPS Professional Course — Část první: Materiály</h1>
+  <p style="font-size: 0.85em; margin-top: 8px;">International Face Painting School — Překlad do češtiny</p>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h2>📋 Obsah kurzu</h2>
+    <ul>
+      <li><a href="#welcome">Úvod — Vítejte v kurzu</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 1: Základy face paintingu</li>
+      <li style="margin-left: 20px;"><a href="#m1l1">Lekce 1: Co je face painting a body art?</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l2">Lekce 2: Profesionální produkty pro face painting a body art</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l3">Lekce 3: Z čeho se skládá výbava face paintera?</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l4">Lekce 4: Alergické reakce a bezpečnost</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l5">Lekce 5: Bezpečnost a hygiena v době COVID-19</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l6">Lekce 6: Hygienické malování rtů</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l7">Lekce 7: Jak odstranit barvy z pokožky</a></li>
+      <li style="margin-left: 20px;"><a href="#m1l8">Lekce 8: Kde nakoupit produkty | Exkluzivní slevy</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 2: Metody tréninku. Porovnání a přehled.</li>
+      <li style="margin-left: 20px;"><a href="#m2l1">Lekce 1: Trénování face paintingu</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l2">Lekce 2: Přehled metod tréninku</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l3">Lekce 3: Tréninkové desky</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l4">Lekce 4: Tréninkové podložky a hlavice</a></li>
+      <li style="margin-left: 20px;"><a href="#m2l5">Lekce 5: Jak vyčistit zabarvenou tréninkovou hlavici</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 3: O barvách na obličej</li>
+      <li style="margin-left: 20px;"><a href="#m3l1">Lekce 1: O barvách na obličej</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l2">Lekce 2: Bílá barva</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l3">Lekce 3: Černá barva</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l4">Lekce 4: Split-cakes a technika one stroke</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l5">Lekce 5: Palety barev na obličej</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l6">Lekce 6: Jak vybrat barvu z obrovské rozmanitosti odstínů</a></li>
+      <li style="margin-left: 20px;"><a href="#m3l7">Lekce 7: Voděodolné barvy na obličej</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 4: Zlaté a stříbrné barvy, lisované pudry a metalické prášky.</li>
+      <li style="margin-left: 20px;"><a href="#m4l1">Lekce 1: Vlastnosti zlatých a stříbrných barev</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l2">Lekce 2: Ukázka nanášení zlaté barvy</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l3">Lekce 3: Ukázka nanášení stříbrné barvy</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l4">Lekce 4: Lisované pudry</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l5">Lekce 5: Metalické prášky</a></li>
+      <li style="margin-left: 20px;"><a href="#m4l6">Lekce 6: Aktivace metalického prášku</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 5: Neonové barvy, terminologie a bezpečnost.</li>
+      <li style="margin-left: 20px;"><a href="#m5l1">Lekce 1: Vysvětlení terminologie</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l2">Lekce 2: Jsou neonové barvy v souladu s FDA, EU a australskými standardy?</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l3">Lekce 3: Pravda o varováních</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l4">Lekce 4: Odpověď výrobce na toto téma</a></li>
+      <li style="margin-left: 20px;"><a href="#m5l5">Lekce 5: Co by měl face painter dělat?</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 6: Štětce, houby, šablony, glitter a další věci.</li>
+      <li style="margin-left: 20px;"><a href="#m6l1">Lekce 1: Štětce</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l2">Lekce 2: Kulaté štětce</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l3">Lekce 3: Ploché a šikmé štětce</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l4">Lekce 4: Filbert a chisel štětce</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l5">Lekce 5: Blendovací štětce</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l6">Lekce 6: Flora štětce a štětce pro double dip</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l7">Lekce 7: Houbičky</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l8">Lekce 8: Šablony</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l9">Lekce 9: Nádoba na štětce (Brush tub)</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l10">Lekce 10: Glitry (třpytky)</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l11">Lekce 11: Průvodce nákupem glitrů</a></li>
+      <li style="margin-left: 20px;"><a href="#m6l12">Lekce 12: Domácí úkol — Zkontrolujte svůj kit</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 7: Hygiena a péče o materiály.</li>
+      <li style="margin-left: 20px;"><a href="#m7l1">Lekce 1: Osobní hygiena a práce s lidmi</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l2">Lekce 2: Péče o barvy</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l3">Lekce 3: Jak opravit poškozený povrch barvy</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l4">Lekce 4: Péče o štětce</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l5">Lekce 5: Jak opravit rozštěpené nebo ohnuté štětiny</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l6">Lekce 6: Péče o houbičky a šablony</a></li>
+      <li style="margin-left: 20px;"><a href="#m7l7">Lekce 7: Péče o nádobu na štětce</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 8: Teorie barev a výroba vlastních split-cakeů.</li>
+      <li style="margin-left: 20px;"><a href="#m8l1">Lekce 1: Základní teorie barev</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l2">Lekce 2: Barevná harmonie</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l3">Lekce 3: Jak si vyrobit vlastní split-cake</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l4">Lekce 4: Jak vybrat barevnou kombinaci</a></li>
+      <li style="margin-left: 20px;"><a href="#m8l5">Lekce 5: Výroba vlastního split-caku</a></li>
+      <li style="margin-top: 12px; color: #999; font-weight: bold;">Modul 9: Bling-clustery.</li>
+      <li style="margin-left: 20px;"><a href="#m9l1">Lekce 1: O bling-clusterech</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l2">Lekce 2: Jak si vyrobit vlastní bling-clustery</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l3">Lekce 3: Bezpečná lepidla pro bling-clustery</a></li>
+      <li style="margin-left: 20px;"><a href="#m9l4">Lekce 4: Příklady bling-clusterů</a></li>
+    </ul>
+  </div>
+
+  <!-- WELCOME SECTION -->
+  <div class="lesson" id="welcome">
+    <div class="lesson-title">
+      <h3>Úvod — Vítejte v kurzu</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Vítejte v profesionálním kurzu face paintingu od International Face Painting School! Jsem Olga Murasev a těší mě, že vás v tomto kurzu vítám.</p>
+
+      <p>Před tím, než se pustíte do lekcí, prosím vás:</p>
+
+      <div class="note">
+        <strong>📌 Začátek:</strong> Zkontrolujte svůj e-mail — měli byste obdržet uvítací zprávu se všemi důležitými informacemi. Ujistěte se, že máte vše, co potřebujete, a vytvořte si svůj účet.
+      </div>
+
+      <div class="tip">
+        <strong>💡 Plánování času:</strong> Doporučuji věnovat tomuto kurzu minimálně 30 minut denně. Postupná a konzistentní práce vám pomůže lépe si zapamatovat a osvojit si techniky.
+      </div>
+
+      <p><strong>Máte nějaké otázky nebo potřebujete pomoc?</strong></p>
+      <p>Neváhejte nás kontaktovat na adrese <strong>support@facepaintingschool.com</strong>. Rádi vám pomůžeme!</p>
+
+      <div class="warning">
+        <strong>⚠️ Autorská práva:</strong> Všechny materiály v tomto kurzu jsou chráněny autorským právem. Sdílení, kopírování nebo reprodukování obsahu bez souhlasu International Face Painting School je zakázáno.
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- MODULE 1 -->
+  <div class="module-header">
+    <h2>Modul 1 — Základy face paintingu</h2>
+    <p style="opacity: 0.85;">Bezpečnost, profesionální materiály, doporučení a praktické rady</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m1l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: Co je face painting a body art?</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Face painting a body art mají kořeny hluboko v minulosti — po tisíce let se tradičně používaly při kmenových obřadech a ve válkách. Moderní face painter se však více zajímá o dekorativní formu, tedy zábavu „jen tak pro radost", nebo občas o vyjádření se prostřednictvím svého oblíbeného uměleckého oboru.</p>
+
+      <p>Namísto zdobení pokožky hlínou, jílem nebo živočišnými produkty používají face painteři ve 21. století <strong>přípravky na vodní bázi</strong>, které byly vyvinuty speciálně pro použití na kůži. Tyto kosmetické produkty obsahují živé pigmenty a minerály, které jim dodávají bohatou a fascinující paletu barev.</p>
+
+      <p>Líčidla se po staletí hojně používala i v divadle. Divadelní make-up (grease paint) je hustý make-up, který ucpává póry a nedovoluje pokožce dýchat. Je odolný proti pocení, což se hodí pod horkými reflektory, ale kvůli speciální technice nanášení zahrnující fixaci pudrem <strong>není vhodný pro děti</strong> a je lepší ho ponechat pouze pro divadlo a filmovou produkci.</p>
+
+      <p>Vývoj make-upu na vodní bázi způsobil revoluci v obličejové a tělesné dekoraci. Usnadnil a zrychlil malování na obličej pro děti a zároveň vytvořil rychle rostoucí a dynamické odvětví.</p>
+
+      <p>Desítky značek dnes soutěží v nabídce profesionálních materiálů, konají se oborové konvence, festivaly a workshopy — svět face paintingu a body artu nikdy nebyl tak vzrušující. Poptávka po profesionálním malování na obličej nikdy nebyla větší a příležitostí k placené práci je rekordně mnoho.</p>
+
+      <p>Tyto služby jsou žádané na nejrůznějších akcích: narozeninové oslavy, firemní propagace, festivaly, tematické párty, svatby, a také těhotné ženy, které si chtějí ozdobit bříško.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/be658ac04690b717.jpg" alt="Ukázky prací">
+          <div class="media-caption">Ukázky prací face paintera</div>
+        </div>
+        <div class="half">
+          <img src="images/dc630533843ece5c.jpg" alt="FABAIC konvence">
+          <div class="media-caption">FABAIC — Face and Body Art International Convention, USA</div>
+        </div>
+        <div class="half">
+          <img src="images/66db8ac2117cbca5.jpg" alt="FABATV natáčení">
+          <div class="media-caption">Natáčení kurzů pro FABATV, USA</div>
+        </div>
+        <div class="half">
+          <img src="images/c726243ee403d07b.jpg" alt="Workshopy po světě">
+          <div class="media-caption">Workshopy po celém světě</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m1l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Profesionální produkty pro face painting a body art</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Jako u všeho — pro nejlepší výsledky potřebujete kvalitní produkty a nástroje. Používání nekvalitních produktů vás může zklamat, nebo — co hůř — může způsobit podráždění pokožky. Doporučujeme vyhledat specializované dodavatele.</p>
+
+      <p>Pamatujte: profesionální barvy na obličej a tělo se jen zřídka najdou v hobby marketech nebo diskontních obchodech. Na eBay nebo Amazonu je sice najdete, ale cena bývá vyšší a/nebo kvalita nižší.</p>
+
+      <p><strong>Profesionální barvy jsou bezpečné a splňují normy</strong></p>
+
+      <p>Profesionální barvy jsou kosmetické produkty — bezpečné pro pokožku, snadno se používají a splňují směrnice FDA, EU a CSPA. Pouze profesionální barvy dají jasné, živé krytí, které nepraská, neloupe se, neteče ani se nerozmazává.</p>
+
+      <p>Profesionální barvy na obličej jsou obvykle <strong>suché konzistence</strong>, dostupné v kelímcích o hmotnosti 30, 32, 40, 45, 60 a 90 gramů — aktivují se malým množstvím vody. Základní složky: voda (aqua), glycerin a/nebo parafín (vosk).</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/2997cb908450f6f0.jpg" alt="Loga značek barev">
+          <div class="media-caption">Přehled profesionálních značek barev na obličej</div>
+        </div>
+      </div>
+
+      <div class="brand-list">
+        <strong>✅ Důvěryhodné značky:</strong><br>
+        TAG, PartyXplosion, Wolfe FX, Diamond FX, Cameleon, Global Colours, Face Paints Australia, Mehron Paradise, Superstar, Kryvaline, Kryolan, Fusion Body Art, Kraze FX, Dimart.
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ O značce Snazaroo:</strong> Ačkoli je bezpečná a schválená, většina barev není tak jasná a živá, barva někdy na kůži praská a je obtížnější dosáhnout rovnoměrného krytí. Pro profesionální použití se nedoporučuje.
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Někteří umělci používají tekuté barvy (pro airbrush) na linky, v kombinaci se suchými barvami (cake).
+      </div>
+
+      <p><strong>Jak číst etiketu barvy:</strong></p>
+
+      <p>Hledejte označení „kosmetický produkt" / „make-up" / „pro face a body art". Dále číslo šarže (lot number) pro sledovatelnost, certifikační značky CSPA, FDA, EU, a značku Cruelty-free.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/20e8ac0c992f3022.jpg" alt="Vysvětlení etikety barvy">
+          <div class="media-caption">Jak číst etiketu profesionální barvy na obličej</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>📅 Trvanlivost:</strong> Výrobce doporučuje 18 měsíců po otevření, ale v praxi fungují i 5 let staré barvy. Vyhoďte jen pokud ucítíte podivný zápach nebo uvidíte plíseň.
+      </div>
+
+      <p><strong>Veganské, cruelty-free nebo přírodní?</strong></p>
+
+      <p>Většina profesionálních značek je veganská a žádná se netestuje na zvířatech. Ne-veganské značky obsahují lanolín, karmín, včelí vosk nebo šelak.</p>
+
+      <div class="brand-list">
+        <strong>🌱 Veganské značky:</strong><br>
+        Fusion Body Art, Global Body Art, Diamond FX, TAG Body Art, Cameleon, Wolfe FX Paradise, Kryvaline.
+      </div>
+
+      <p>Přírodní a veganské barvy <strong>NEJSOU totéž</strong>. Přírodní barvy bývají mdlé, mastné a často obsahují včelí vosk (nejsou veganské). Hůře se s nimi pracuje na detailech a pro profesionální použití se většinou nehodí.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/6c84256843e826db.jpg" alt="Ukázka produktů">
+          <div class="media-caption">Profesionální barvy na obličej</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m1l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Z čeho se skládá výbava face paintera?</h3>
+    </div>
+    <div class="lesson-content">
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/s2yf9umxpi" allowfullscreen></iframe>
+      </div>
+      <div class="media-caption" style="text-align:center; margin-bottom: 16px;">Video: Přehled kompletní výbavy face paintera</div>
+
+      <p>Kompletní výbava face paintera se skládá z:</p>
+
+      <div class="kit-list">
+        <strong>🎨 Barvy na obličej:</strong>
+        <ul>
+          <li>Běžné barvy (jednotlivé barvy nebo paleta 12 barev: vosková bílá, glycerinová bílá, vosková černá, červená, oranžová, žlutá, světle zelená, tmavě zelená, světle modrá, tmavě modrá, růžová, fialová)</li>
+          <li>Metalické barvy (zlato, stříbro, metalická bílá)</li>
+          <li>Neonové barvy (růžová, žlutá, zelená)</li>
+          <li>Split-cakes pro houbu (duhové a další kombinace)</li>
+          <li>Split-cakes pro one stroke (zelená kombo, modrá kombo, růžová kombo atd.)</li>
+        </ul>
+      </div>
+
+      <div class="kit-list">
+        <strong>🖌️ Profesionální štětce:</strong>
+        <ul>
+          <li><strong>Kulaté štětce</strong> — dvě sady velikostí #1–#6 (jedna jen na bílou, druhá na ostatní barvy) + #3 a #4 na černou</li>
+          <li><strong>Šikmé (angled) štětce</strong> — sada tří velikostí: ½, ⅝, ¾</li>
+          <li><strong>Ploché (flat) štětce</strong> — sada tří velikostí: ½, ¾, 1 palec</li>
+          <li><strong>Filbert štětce</strong> — velikost ½ (10 mm), ¾</li>
+          <li><strong>Blending štětce</strong> — sada dvou (Cameleon, Bolt Firm blender nebo make-up štětec)</li>
+        </ul>
+      </div>
+
+      <div class="kit-list">
+        <strong>🧰 Další vybavení:</strong>
+        <ul>
+          <li>Houby (sponges)</li>
+          <li>Nádoba na štětce (brush tub)</li>
+          <li>Rozprašovač (spray bottle)</li>
+          <li>Glitry (kosmetický glitter, glitter gel, chunky glitter)</li>
+          <li>Šablony (stencils) — BAMS, Diva, Graffiti Eyes, PBA</li>
+          <li>Kamínky (gems)</li>
+          <li>Vlhčené ubrousky (nejlépe bio/organické)</li>
+          <li>Pouzdro na štětce, kufřík na barvy, velký kufr na vše</li>
+        </ul>
+      </div>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/db2e39d24d9cf293.jpg" alt="Pracovní stanice face paintera">
+          <div class="media-caption">Pracovní stanice autorky kurzu — Olgy Murasev</div>
+        </div>
+      </div>
+
+      <p>Vaše profesionální výbava se bude proměňovat s tím, jak budete rozvíjet svůj styl. Barvy a nástroje, které používáte, se budou výrazně lišit v závislosti na technikách, které preferujete. Někteří umělci malují převážně štětci, jiní používají jen one stroke, a další preferují houby a pouze pár kulatých štětců na obrysy.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Začněte se základy a postupně doplňujte svou výbavu novými produkty, jak si vyděláte a naučíte se nové věci.
+      </div>
+
+      <p><strong>Předpřipravené kity:</strong></p>
+
+      <p>Škola nabízí dva hotové kity ve spolupráci s JestPaint.com — <strong>Beginner's Kit</strong> (základní startovní sada) a <strong>Professional's Kit</strong> (kompletní profesionální sada). Můžete také prozkoumat startovní kity, které nabízejí mnohé face painting obchody.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/a3233d3aa6f9be9a.jpg" alt="Beginner's Kit">
+          <div class="media-caption">Beginner's Kit — startovní sada</div>
+        </div>
+        <div class="half">
+          <img src="images/919844ad0b286178.jpg" alt="Professional's Kit">
+          <div class="media-caption">Professional's Kit — kompletní sada</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>📝 Poznámka:</strong> Neexistuje přesná odpověď na to, jaké materiály budete používat více či méně — záleží na vašem osobním stylu, technice a smyslu pro krásu. Více o sestavení vlastní pracovní stanice se dozvíte v Části druhé, Modul #9.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m1l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Alergické reakce a bezpečnost</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Přestože je počet alergických reakcí na kvalitní barvy relativně nízký, vždy existuje malé riziko. Dle US Dermatology Association asi 10% populace zažije alergickou reakci na kosmetiku alespoň jednou.</p>
+
+      <div class="brand-list">
+        <strong>✅ Nejbezpečnější značky:</strong><br>
+        Cameleon, TAG, Wolfe FX, Diamond FX, Kryolan, Global, Face Paints Australia, Mehron, Superstar, Kryvaline, Fusion Body Art. Žádná značka však nedává 100% záruku. Certifikaci podléhá pouze pigment, ne celý produkt.
+      </div>
+
+      <p><strong>Jak rozpoznat alergickou reakci:</strong></p>
+
+      <p>Nejzávažnější reakce nastávají <strong>ihned po kontaktu</strong>. Pozdější reakce (po hodinách) bývají méně závažné. Dva kontrolní body:</p>
+
+      <p><strong>1) Během malování:</strong> Barva samotná nebo jiný produkt na kůži — dítě si stěžuje na pálení, svědění či nepříjemné pocity při malování.</p>
+
+      <p><strong>2) Při odstraňování:</strong> Nesprávné odstraňování barvy je hlavní příčina podráždění. Důležité je informovat rodiče o správné péči: mají používat <strong>jen jemné mýdlo, teplou vodu a olej</strong>. Nepoužívat scrub ani alkohol!</p>
+
+      <div class="warning">
+        <strong>⚠️ NIKDY nepoužívejte řemeslné nebo craft barvy!</strong> Obsahují formaldehyd — způsobuje rakovinu a snadno se inhaluje. "Non-toxic" neznamená bezpečné pro pokožku obličeje.
+      </div>
+
+      <p><strong>Hygiena a prevence:</strong></p>
+
+      <p>Udržovat materiály čisté, často měnit oplachovací vodu, nepoužívat stejnou houbu na různé děti. K sanitaci vody: Brush Bath (SillyFarm) nebo Brush Spa (Face Paints Australia). Ostatní dezinfekce ztrácí účinnost ve vodě. <strong>Nepřidávat alkohol ani bělidlo do oplachovací vody!</strong></p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/e1d6c8aa75fb8a01.jpg" alt="Brush Bath a Brush Spa">
+          <div class="media-caption">Brush Bath a Brush Spa — bezpečná čištění štětců</div>
+        </div>
+      </div>
+
+      <p><strong>Tři skupiny příčin podráždění kůže:</strong></p>
+
+      <ol style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Individuální intolerance nebo zdravotní stav dítěte</li>
+        <li>Jiné produkty na kůži (ubrousky, mýdlo, krém)</li>
+        <li>Alergické složky v barvě</li>
+      </ol>
+
+      <div class="note">
+        <strong>📌 Důležité:</strong> Profesionální barva nikdy nevede k závažné reakci (popáleniny, rozsáhlá vyrážka, astmatický záchvat).
+      </div>
+
+      <p><strong>Co dělat při stížnosti:</strong></p>
+
+      <p>Nepanikařit, klidně analyzovat příčiny, kontaktovat výrobce s číslem šarže, doporučit rodiči konzultaci s lékařem, dokumentovat vše.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/4174e1e1d4beb3eb.jpg" alt="Příklady alergických reakcí">
+          <div class="media-caption">Příklady alergických reakcí</div>
+        </div>
+        <div class="half">
+          <img src="images/58ce13bca1488194.jpg" alt="Symptomy intoxikace">
+          <div class="media-caption">Symptomy intoxikace formaldehydem</div>
+        </div>
+      </div>
+
+      <p><strong>Koho NEMALOVAT — kontraindikace:</strong></p>
+
+      <p>Nemalovat děti s infekčními nemocemi (chřipka, herpes, plané neštovice), alergiemi, poškozenou kůží, aktivním astmatem či otevřenými ranami. Nedoporučuje se malovat alergiky a teenagery s rozsáhlým hnisavým akné.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/2071793d44ff47f2.jpg" alt="Koho nemalovat">
+          <div class="media-caption">Kontraindikace pro malování</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m1l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Bezpečnost a hygiena v době COVID-19</h3>
+    </div>
+    <div class="lesson-content">
+      <div class="warning">
+        <strong>⚠️ Disclaimer:</strong> Škola nepropaguje face painting během pandemie. Každá země má vlastní pravidla. Vždy se řiďte místními pokyny a doporučeními zdravotnických úřadů.
+      </div>
+
+      <p><strong>Tři úrovně čistoty — jaký je rozdíl:</strong></p>
+
+      <p><strong>1. ČIŠTĚNÍ (1. úroveň):</strong> Všechny povrchy lze čistit.</p>
+
+      <p><strong>Štětce:</strong> Mýdlo + teplá voda, pak namočit v 70% alkoholu na 5 minut. Alternativně ponořit do vroucí vody na 3 minuty. Nebo použít Brush Bath spray.</p>
+
+      <p><strong>Houby:</strong> Ručně mýdlem nebo v pračce, pak sušička na vysoký teplo.</p>
+
+      <p><strong>Barvy:</strong> Postříkat 70% alkoholem, nechat 5 minut, otřít (ne příliš často — ničí antimikrobiální vlastnosti).</p>
+
+      <p><strong>2. DEZINFEKCE (2. úroveň):</strong> Pouze neporézní povrchy!</p>
+
+      <p>Kit, kovové/plastové části, stencily. Ruce, kůži, štětce, houby, barvy NELZE dezinfikovat. Použít 70% alkohol = 5 minut, nebo bělidlo = 10 minut. <strong>NEPOUŽÍVAT bělidlo, čpavek nebo Barbicide v blízkosti dětí!</strong></p>
+
+      <p><strong>3. STERILIZACE (3. úroveň):</strong> U face paintingu nedosažitelná — vyžaduje autokláv.</p>
+
+      <p><strong>Bezpečnější postupy v provozu:</strong></p>
+
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Čistá plocha — nekreslit nemocné děti, mít ceduli s upozorněním</li>
+        <li>Čistící stanice pro klienty (rozprašovač, ubrousky, dezinfekce na ruce)</li>
+        <li>Re-dipping minimalizovat — naložit štětec hodně barvou (jen jeden ponor)</li>
+        <li>Fresh houby per klient per barva (nové houby na nové barvy)</li>
+        <li>Oplachovací voda: Brush Bath, jednorázové papírové kelímky, 3-kroková oplachová metoda (čistá voda, špinavá voda, alkohol 70%)</li>
+        <li>PPE (osobní ochranné prostředky): rouška, štít, rukavice — ale správně (měnit po každém klientovi)</li>
+      </ul>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/9834598c9645f9d2.jpg" alt="Hygiena 1">
+        </div>
+        <div class="half">
+          <img src="images/843fa6a9541067cd.jpg" alt="Hygiena 2">
+        </div>
+        <div class="half">
+          <img src="images/6c6996e99d6d8cd3.jpg" alt="Hygiena 3">
+        </div>
+        <div class="half">
+          <img src="images/4e4d0943eeabb369.jpg" alt="Hygiena 4">
+        </div>
+        <div class="half">
+          <img src="images/62b4572076007cef.jpg" alt="Hygiena 5">
+        </div>
+        <div class="half">
+          <img src="images/b94ad1fd590d57ae.jpg" alt="Hygiena 6">
+        </div>
+        <div class="half">
+          <img src="images/6788ae6a1b39933e.jpg" alt="Hygiena 7">
+        </div>
+        <div class="half">
+          <img src="images/02bc91ef99e97b85.jpg" alt="Hygiena 8">
+        </div>
+        <div class="half">
+          <img src="images/543faa97cd06ec91.jpg" alt="Hygiena 9">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 6 -->
+  <div class="lesson" id="m1l6">
+    <div class="lesson-title">
+      <h3>Lekce 6: Hygienické malování rtů</h3>
+    </div>
+    <div class="lesson-content">
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/lv2sxhq4kf" allowfullscreen></iframe>
+      </div>
+      <div class="media-caption" style="text-align:center; margin-bottom: 16px;">Video: Správná technika malování rtů</div>
+
+      <p>Jako face painter budete často malovat rty. Je důležité dodržovat přísná hygienická pravidla, aby nedošlo k přenosu infekce.</p>
+
+      <p><strong>Pravidla pro malování rtů:</strong></p>
+
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Mít <strong>oddělený kelímek s barvou jen na rty</strong> (nebo nahradit běžnými rtěnkami)</li>
+        <li>Používat <strong>jednorázové aplikátory na rtěnku nebo vatové tyčinky</strong> (Q-tips). Aplikátory jsou praktičtější a hygieneičtější.</li>
+        <li><strong>NIKDY nenamáčet použitý aplikátor zpět do barvy!</strong> Jednoduché pravidlo — jeden aplikátor = jeden client = do koše</li>
+        <li><strong>NIKDY nenamáčet štětec nebo houbu do barvy na rty!</strong> Riziko krížové kontaminace</li>
+      </ul>
+
+      <div class="tip">
+        <strong>💡 Tip pro pohodlí:</strong> Nejpohodlnější na rtech jsou metalické barvy a barvy na bázi glycerinu. Běžné voskové a neonové barvy mohou svědit a praskat. Některé studentky si dělají vlastní kontejnery na rtěnku z face paint barev (viz video výše).
+      </div>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/ba70866046c33ade.jpg" alt="Kontejner na rtěnku">
+          <div class="media-caption">Kontejner na rtěnku z face paint barev</div>
+        </div>
+        <div class="half">
+          <img src="images/254f744709b8ce21.gif" alt="Aplikace rtěnky">
+          <div class="media-caption">Aplikace rtěnky — správná technika</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 7 -->
+  <div class="lesson" id="m1l7">
+    <div class="lesson-title">
+      <h3>Lekce 7: Jak odstranit barvy z pokožky</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Barvy na obličej jsou na vodní bázi = snadno se rozpouštějí v mýdlové vodě. Ale špatné odstraňování může vést k podráždění nebo zbarvení pokožky.</p>
+
+      <p><strong>Správný postup odstraňování barev — 7 kroků:</strong></p>
+
+      <ol style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>NEZAČÍNAT vodou!</strong> Voda smyje jen vrchní vrstvy, pigment se nerozlomí a může se vtlačit do pórů. Začít <strong>mýdlem</strong>!</li>
+        <li>Tekuté nebo tuhé mýdlo + pár kapek vody</li>
+        <li>Masírovat prsty do blátivy konzistence</li>
+        <li>Otřít vlhčeným ubrouskem, odličovacím ubrouskem nebo navlhčeným papírovým ručníkem</li>
+        <li>Opláchnout teplou vodou</li>
+        <li>Opakovat kroky 2–5, pokud je nutné</li>
+        <li>Na odolné skvrny: jemný olej bez vůně (kokosový, olivový)</li>
+      </ol>
+
+      <div class="warning">
+        <strong>⚠️ NEPOUŽÍVAT scrub ani alkohol!</strong> Oba zhoršují podráždění a rozpuštěné pigmenty se lépe vsakují do pórů.
+      </div>
+
+      <p><strong>Proč dochází k zbarvení:</strong></p>
+
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Oční víčka jsou bohatá na mazové žlázy — tam se pigmenty nejrádě usadí</li>
+        <li>Silné pigmenty (voskové modré, tyrkysové, zelené, fialové) zanechávají stopy snadněji</li>
+        <li>Glycerinové barvy obvykle nezabarvují</li>
+      </ul>
+
+      <div class="tip">
+        <strong>💡 Profesionální tip:</strong> Nabídněte klientům kartičku s pokyny k odstraňování — na zadní straně vizitky. Vypadá to profesionálně a klienti budou vědět, jak postupovat.
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 8 -->
+  <div class="lesson" id="m1l8">
+    <div class="lesson-title">
+      <h3>Lekce 8: Kde nakoupit produkty | Exkluzivní slevy</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Studenti IFPS mají přístup k seznamu přeprodejců a obchodů po celém světě s exkluzivními slevami. Tyto slevové kódy jsou <strong>exkluzivní a je zakázáno je sdílet s ne-studenty</strong>.</p>
+
+      <div class="warning">
+        <strong>⚠️ Důležité:</strong> Slevové kódy IFPS jsou určeny pouze pro registrované studenty. Jejich sdílení s třetími stranami porušuje podmínky kurzu.
+      </div>
+
+      <p><strong>Obchody dle země:</strong></p>
+
+      <p>Certifikovaní prodejci se nacházejí v těchto zemích: Austrálie (6 obchodů), Belgie (5), Kanada (6), Kostarika (2), Francie (2), Německo (6), Maďarsko (2), Izrael (1), Itálie (3), Lichtenštejnsko (1), Mexiko (1), Nizozemsko (6), Nový Zéland (2), Rumunsko (1), Rusko (1), Jižní Afrika (1), Španělsko (3), Švýcarsko (3), Spojené království (12), Spojené státy americké (14).</p>
+
+      <p><strong>Sleva a benefity:</strong></p>
+
+      <p>Některé obchody nabízejí slevy v rozsahu 5–20% s exkluzivními kódy pro studenty IFPS. Kompletní seznam obchodů, slevových kódů a jejich webových adres vám byl zaslán e-mailem v rámci uvítacího balíčku.</p>
+
+      <div class="note">
+        <strong>📌 Pokud jste nenašli seznam:</strong> Zkontrolujte složku spam v e-mailu nebo se obraťte na support@facepaintingschool.com.
+      </div>
+    </div>
+  </div>
+
+<!-- MODULE 2 -->
+  <div class="module-header">
+    <h2>Modul 2 — Tréninkové nástroje a metody. Srovnávací přehled.</h2>
+    <p style="opacity: 0.85;">Kde a jak trénovat face painting — na sobě, na dětech, na deskách a hlavicích</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m2l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: Vlastní obličej, paže, nohy a další dostupné části těla</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Dobrá zpráva je, že vy sami jste ten nejpohodlnější a nejdostupnější model. Můžete se malovat kdykoli chcete, ve dne v noci, a pokud si fotíte a sdílíte svou práci online nebo na výstavní tabuli, brzy budete rozpoznatelní — váš obličej bude na každém obrázku.</p>
+
+      <p>Nepopírám, malovat si vlastní obličej je ze začátku těžké. Ruka se může třást, linie budou hrubé — a navíc pracujete se zrcadlem, takže je vše zrcadlově převrácené. Ale budete překvapeni, jak rychle si ruka zvykne a jak se vaše práce zlepší, pokud budete trénovat pravidelně.</p>
+
+      <p>Jeden z nejtěžších úkolů ve face paintingu je <strong>vytvořit vyváženou kompozici na obličeji</strong> — proto doporučuji trénovat umístění designu na vlastním obličeji. Techniky jako linky, blending, one stroke detaily můžete procvičovat na jakékoli dostupné části těla (ruce, nohy, ramena, boky). Nezapomeňte pak dezinfikovat štětce.</p>
+
+      <p>Doporučuji, aby se tento typ tréninku stal vaší hlavní metodou, zejména na začátku. Cvičte každý den nebo alespoň 3–4x týdně a všimnete si, jak rychle se vaše dovednosti zlepší.</p>
+
+      <p><strong>Výhody:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Nepotřebujete model — máte sami sebe 24/7</li>
+        <li>Můžete vytvářet designy jakékoli složitosti a nikdy neztratíte trpělivost</li>
+        <li>Budete vlastnit „copyright" svých prací s vlastním obličejem na fotkách</li>
+        <li>Můžete trénovat tak detailně, jak chcete, a blíže se seznámit s texturou pokožky</li>
+        <li>Brzy budete vytvářet vyváženější designy, protože najdete nejlepší umístění na obličeji</li>
+        <li>Bonus mistra — klienti jsou vždy překvapeni, když zjistí, že umíte namalovat vlastní obličej</li>
+      </ul>
+
+      <p><strong>Nevýhody a obtíže:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Chcete-li mít hezké fotky, musíte myslet i na účes, make-up a úsměv!</li>
+        <li>Budete potřebovat někoho, kdo vás vyfotí, nebo se naučit dělat dobré selfie</li>
+        <li>Mějte na paměti: pokud tyto fotky použijete v ukázkovém portfoliu, někteří klienti si mohou myslet, že design na dospělém je jen pro dospělé, nebo design na dívce je jen pro dívky (i když je to chlapecký motiv)</li>
+      </ul>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/fb9cc7c341d16939.gif" alt="Ukázka malování na vlastním obličeji">
+          <div class="media-caption">Ukázka malování na vlastním obličeji</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m2l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Děti a modely</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Výhody:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Můžete procvičit design ze správné perspektivy a seznámit se s texturou pokožky a tvarem obličeje</li>
+        <li>Naučíte se vyvažovat design tím, že najdete nejlepší umístění na obličeji</li>
+        <li>Objevíte různé obličeje a různé rysy — některé děti mají velká čela, jiná malá, a vaše plátno nikdy není dvakrát stejné</li>
+        <li>Malování živého modelu, který se může vrtět, být neklidný, znuděný nebo unavený, je nejen skvělý trénink, ale <strong>je to přesně ta práce, kterou budete dělat!</strong> Časem se naučíte, jak nejlépe komunikovat s malými dětmi</li>
+        <li>Máte možnost budovat portfolio s novými designy na různých obličejích. Většinou si dítě vybere konkrétní design, protože se mu (podvědomě) líbilo, jak model vypadal na fotce. Mít fotky namalovaných dětí je proto <strong>zásadní pro vaše portfolio</strong>. Ujistěte se, že máte jasnou dohodu s rodiči o použití fotek</li>
+      </ul>
+
+      <p><strong>Nevýhody a obtíže:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Najít správný model, domluvit čas a místo může trvat déle, než čekáte. Ale jakmile si vytvoříte okruh modelů, půjde to rychle</li>
+        <li>Na začátku může být těžké najít model — začněte s příbuznými, přáteli, sousedy, nebo dejte inzerát na sociální sítě. Ze zkušenosti vím, že se vždy najdou rodiče, kteří rádi přivedou dítě na bezplatné malování. Navíc rodiče sdílejí fotky vaší práce na svých profilech — skvělá reklama!</li>
+        <li>Ideálně by design, který budete malovat na model, měl být <strong>předem nacvičený</strong> — zejména u malých dětí, které mají omezenou trpělivost</li>
+        <li>Je důležité najít fotogenický, výrazný a sebejistý model. Ne všechny děti se umí usmívat a uvolnit před kamerou, zvláště s cizím člověkem. Pracujte s různými dětmi a postupně si vybudujete vlastní databázi oblíbených modelů</li>
+      </ul>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/b4d3ee06dea08c2a.gif" alt="Malování dětského modelu">
+          <div class="media-caption">Malování na dětském modelu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m2l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Tréninkové desky</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Výhody:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>„Vyzkoušení" umístění a kompozice designu před malováním na 3D obličej</li>
+        <li>Dáte své pokožce odpočinek od make-upu</li>
+        <li>Dostupnost 24/7</li>
+        <li>Plastové tréninkové desky se většinou nezbarvují a barva se snadno setře vlhčeným ubrouskem</li>
+        <li>Můžete si vyrobit vlastní desky — vytisknete obrázek obličeje a zalaminujete ho. Doporučuji <strong>matnou laminaci</strong>, aby se štětec neklouzal</li>
+        <li>Desky lze použít i jako ukázkové tabule na tematických akcích</li>
+      </ul>
+
+      <p><strong>Nevýhody a obtíže:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Dodatečná investice do tréninkových nástrojů</li>
+        <li>Povrch může být kluzký a nepřipomíná pokožku. Tip: používejte <strong>méně vody</strong>. Některé techniky nelze na plastové desce procvičit (např. double dip květinové lístky)</li>
+        <li>Ploché desky neumožňují zažít trojrozměrný tvar obličeje — nepochopíte, kde může být na skutečném dítěti obtížné namalovat detail (děti se hýbou, nenechají vás malovat na víčko)</li>
+        <li>Fotky designů na plochých deskách nevypadají tak atraktivně jako na skutečných lidech</li>
+      </ul>
+
+      <p>Na trhu existují dva typy desek: <strong>průsvitné desky</strong> a <strong>barevné desky</strong>. Průsvitné desky vytvořily Sally-Ann Lynch a Sarah-Jane Janakovich a jsou na trhu již několik let. Barevné desky byly uvedeny v roce 2019.</p>
+
+      <p>Dvě velké firmy vyrábějí barevné desky: Sally-Ann přidala barevnou řadu do své kolekce Training Tried &amp; Tested Wipeable, a druhou velkou firmou je <strong>Sparkling Faces</strong> od Svetlany Keller. Barevné desky umožňují face painterům dosáhnout mnohem hezčího výsledku! Designy na barevných deskách vypadají realističtěji — kontrast mezi odstínem pleti a barvami vytváří lepší představu o tom, jak bude design vypadat na skutečném obličeji.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/bbfcbcfc4360858e.jpg" alt="Tréninkové desky">
+          <div class="media-caption">Kompletní sada barevných tréninkových desek od Sparkling Faces</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>📌 Poznámka:</strong> Pro obličeje doporučujeme POUZE desky, které mají realisticky umístěné obočí s odpovídajícími proporcemi — to je velmi důležité pro správné učení face paintingu.
+      </div>
+
+      <p>Můžete si také stáhnout <strong>školní šablony obličejů</strong> pro tréninkové podložky. Vytiskněte je a zalaminujte, nebo je použijte s průhlednou deskou od Sally-Ann:</p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>1 — Celý obličej</li>
+        <li>2 — Levý poloprofil</li>
+        <li>3 — Pravý poloprofil</li>
+        <li>4 — Jednoduchý obličej s oční linkou</li>
+        <li>5 — Jednoduchý obličej se zavřenýma očima</li>
+        <li>6 — Šablona pro těhotenské malování bříška</li>
+      </ul>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/40a6b7234f9a308d.jpg" alt="Sally-Ann průhledná deska">
+          <div class="media-caption">Clear Test Practice Board od Sally-Ann</div>
+        </div>
+        <div class="half">
+          <img src="images/c217ca7fe2262164.jpg" alt="Šablony obličejů">
+          <div class="media-caption">Školní šablony obličejů ke stažení</div>
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Všimněte si jednoduchých obličejů #4 a #5, které mají oční linku. Tu jsem záměrně přidala, aby vám pomohla najít správné umístění designu. Designy, které vypadají nejlépe, sledují křídlo oční linky. Více o tom v Části třetí — Umístění designu na obličeji.
+      </div>
+
+      <p>Další typ desek, který stojí za zvážení, jsou <strong>černobílé desky</strong>. Černá je skvělá na procvičování linek a one stroke, bílá slouží jako cedule na akci s čistou zadní stranou pro trénink. Obě vyvinula Sally-Ann Lynch.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/e28b3854790efa93.jpg" alt="Černobílé desky">
+          <div class="media-caption">Černobílé tréninkové desky od Sally-Ann Lynch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m2l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Tréninkové podložky a hlavice</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Výhody:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Některé jsou vyrobeny ze silikonu a mají podobnou texturu jako pokožka</li>
+        <li>Hlavice jsou trojrozměrné — dávají vám šanci procvičit umístění a vyvážení designu</li>
+        <li>Možnost dát vlastní pokožce odpočinek od make-upu</li>
+        <li>Dostupnost 24/7 — nikdy neřeknou ne!</li>
+        <li>Můžete procvičit širokou škálu technik</li>
+      </ul>
+
+      <p><strong>Nevýhody a obtíže:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Dodatečná investice do tréninkových nástrojů, které nemusí být snadno dostupné</li>
+        <li>Silikon absorbuje pigmenty snadněji než pokožka — odstranění skvrn může být problematické, zejména u silných pigmentů (tmavě zelená, červená atd.)</li>
+        <li>Silikon je v pořádku, ale zatím neexistuje žádný umělý povrch, který by dokonale napodobil lidskou pokožku</li>
+        <li>Fotky namalovaných hlavic nevypadají moc atraktivně v portfoliích — nedoporučuji je používat v reklamě</li>
+      </ul>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/da56efadd5efd279.jpg" alt="Tréninkové hlavice a podložky">
+          <div class="media-caption">Přehled tréninkových hlavic a podložek</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m2l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Jak vyčistit zabarvenou tréninkovou hlavici</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Prevence zabarvení:</strong> Před malováním nastříkejte hlavici <strong>lakem na vlasy</strong>. Nechte sprej důkladně zaschnout mezi vrstvami a před malováním. Tím vytvoříte bariérovou vrstvu, která zabrání pronikání barvy do gumy.</p>
+
+      <p>Další možností bariérové vrstvy je <strong>Mod Podge Glue</strong>. Naneste ho na hlavici, nechte zaschnout, namalujte design, a když je hlavice zabarvená, jednoduše sloupněte vrstvu a začněte znovu.</p>
+
+      <p><strong>Pokud jste nepoužili žádnou bariéru:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Umyjte hlavici <strong>ihned po dokončení</strong> malování</li>
+        <li>Začněte čištění <strong>tekutým mýdlem, NE vodou</strong>! Voda zdá se fixuje barvu na plastikovém/silikonovém povrchu při prvním opláchnutí</li>
+      </ul>
+
+      <p><strong>Dva nejúčinnější postupy čištění:</strong></p>
+      <ol style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>Vodní roztok eukalyptového oleje</strong> + mikrovláknová houbička (jako Magic Eraser Sponge / Gala Rub Out Sponge)</li>
+        <li><strong>Izopropylalkohol nad 90%</strong> + Mr. Clean Magic Eraser</li>
+      </ol>
+
+      <p>Můžete také vyzkoušet speciální čistič štětců (Brush Cleaner), který jedna ze studentek doporučila jako skvělé řešení pro odstraňování skvrn z tréninkové hlavice. Zatím se prodává pouze v Evropě.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/8afcc35ce46b052e.jpg" alt="Čištění tréninkové hlavice">
+          <div class="media-caption">Jak vyčistit zabarvenou tréninkovou hlavici</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Jako u jakékoli dovednosti nebo umělecké formy je praxe nezbytná pro rozvoj a zdokonalování technik. Čím více budete cvičit a dbát na svůj přístup, tím rychleji se zlepšíte a vybudujete si sebedůvěru i portfolio! A pokud uděláte chybu — je to šance se poučit a zlepšit.
+      </div>
+    </div>
+  </div>
+
+<!-- MODULE 3 -->
+  <div class="module-header">
+    <h2>Modul 3 — O barvách na obličej. Přehled, porovnání a doporučení.</h2>
+    <p style="opacity: 0.85;">Typy barev, značky, split-cakes, palety a výběr odstínů</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m3l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: O barvách na obličej</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Tolik značek, tolik barev, tolik typů — to všechno může být při začátku přehlcující. Tato lekce vám osvětlí tajemství barev na obličej a tělo.</p>
+
+      <p><strong>Tři kategorie barev na vodní bázi pro obličej a tělo:</strong></p>
+
+      <p><strong>1. Barvy na bázi parafínu:</strong></p>
+      <div class="brand-list">
+        TAG, Wolfe FX, Diamond FX, PartyXplosion, Kryvaline (normální řada), Face Paints Australia, Kraze FX.
+      </div>
+      <p>Parafín je na petroleji založená látka, která je v pokojové teplotě tuhá a roztavuje se nad 37°C. Je veganská (pochází z petroleje). Konzistence se podobá modelíně — barvy rychle schnou, mají velmi dobrou krytost a jsou skvělé pro jemné detaily a linky. Nevýhodou je, že kvůli suché struktuře se obtížněji blendují (míchají na pokožce).</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Trik na snazší blendování s voskovými barvami je smíchat běžnou barvu s metalickou — získáte pigment z běžné barvy a měkkou strukturu metalické, která se lépe roztírá.
+      </div>
+
+      <p></p>
+
+      <p><strong>2. Barvy na bázi glycerinu:</strong></p>
+      <div class="brand-list">
+        Mehron Paradise, Superstar (FAB), Kryolan, Snazaroo, Graftobian.
+      </div>
+      <p>Glycerin je viskózní kapalina ze zdrojů rostlin (veganská). Je měkčí než parafín a stabilnější v teple — při extrémních teplotách se změní na krém, zatímco parafín se stane lepkavý jako marshmallow. Skvělé pro měkké, hladké podklady — velmi flexibilní a mísitelné. Neparají se a nešupí se. Mírně se snadněji rozmazávají, s více matným vzhledem. <strong>Speciální poznámka:</strong> Mehron (Paradise) je ideální pro houbičky a filbert štětce, ale linie mohou být těžší. Superstar má elastičtější strukturu — vhodná pro houbičky i linie.</p>
+
+      <p><strong>3. Barvy na bázi gumového stromu (Acacia Senegal gum):</strong></p>
+      <div class="brand-list">
+        Fusion Body Art (kromě některých), Cameleon (kromě některých), Kryvaline (krémová řada), Global Body Art.
+      </div>
+      <p>Přírodní guma ze stromů, veganská. Konzistence je někde mezi voskem a glycerinem — lze ji používat na linie jako vosk, lesklá povrch, odolná vůči třepání jako vosk, ale ne tak odolná vůči teplotě.</p>
+
+      <p><strong>Každá značka má tři kategorie barev:</strong> normální/základní, metalické/perlové a neonové barvy.</p>
+
+      <p><strong>Neonové barvy:</strong> Obsahují složku reflektující UV světlo, která se v tmě jeví jako zářící (potřebují černé světlo). Sušší struktura, potřebují více vody. S štětcem často vypadají bledě — lépe fungují s houbičkou. <strong>Tip:</strong> Neonovou barvu několikrát nastříkejte vodou, dejte čas na aktivaci, znovu nastříkejte a znovu aktivujte štětcem nebo houbičkou, dokud se nestane krémovitá. Nejčastěji používané neonové barvy pro běžné použití jsou: žlutá, oranžová, růžová, zelená. Tmavé neony (modrá, purpurová) stojí za to jen pod UV světlem.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/f15a47d9aba78ba9.jpg" alt="Barvy na bázi parafínu">
+          <div class="media-caption">Značky barev na bázi parafínu</div>
+        </div>
+        <div class="full">
+          <img src="images/24c8d0959474f63f.jpg" alt="Barvy na bázi glycerinu">
+          <div class="media-caption">Značky barev na bázi glycerinu</div>
+        </div>
+        <div class="full">
+          <img src="images/9ab31cfebffe5937.jpg" alt="Barvy na bázi Acacia Senegal">
+          <div class="media-caption">Značky barev na bázi Acacia Senegal gum</div>
+        </div>
+        <div class="full">
+          <img src="images/c1f2423ece20ffdc.jpg" alt="Neonové barvy">
+          <div class="media-caption">Příklad neonových barev</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m3l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Bílá barva</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Nejlepší bílá na linie:</strong> Barvy na bázi parafínu a Acacia Senegal gum pracují nejlépe. Značky: Fusion Body Art, Wolfe FX, Diamond FX, Kryvaline (normální), PartyXplosion, Face Paints Australia, Cameleon, Kraze FX. TAG a Global bílá mají mírně odlišný vzorec — méně problémů se měkkostí pro některé umělce, ale někdy nejsou tak kryjící.</p>
+
+      <p><strong>Nejlepší bílá na podklady:</strong> Barvy na bázi glycerinu pracují nejlépe. Doporučujeme Paradise (Mehron), FAB (Superstar) nebo Kryolan. Kupte si zálohu — budete jí potřebovat hodně. Měkčí struktura, lépe se míchá, působí lehčeji. Dokonalá pro houbičku nebo filbert štětec, ale linie nejsou tak rovné/kryjící jako u vosku. Paradise má lehký kokosový olej a s vůní kakaa — uklidňuje malé děti, když se nanáší na horní ret.</p>
+
+      <p><strong>Metalická (perlová) bílá:</strong> Pro houbičky a přechody mezi barvami v split-cakes nebo na pokožce. Jakákoli kvalitní metalická bílá postačí.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/5457391d4d30891b.jpg" alt="Bílá barva">
+          <div class="media-caption">Výběr bílých barev pro obličej</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m3l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Černá barva</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Nejlepší černá na linie:</strong> Pro obrysování a nejtmavější stíny. Často se používá — kupujte v největších obalech (45g, 90g nebo pár 32g). Vždy mějte zálohu. Používají se zejména vosky a Acacia Senegal gum. Každý umělec jí používá více nebo méně podle svého stylu. Vosková černá je velmi krycí a obtížně se míchá na pokožce (silný pigment) — nedoporučuji se s ní učit blendování. Jakákoli kvalitní značka postačí — rozdíly v krytosti a sytosti jsou minimální.</p>
+
+      <p><strong>Nejlepší černá na podklady:</strong> Pro houbičky, měkké stíny a zakrytí víček. Doporučujeme glycerinové — Paradise (Mehron) nebo Superstar černá. Měkčí, méně pigmentované než voskové — snazší míchání. Skvělé pro velké plochy a měkké stíny. Glycerinová černá je více matná, zatímco vosková černá má lesklý povrch.</p>
+
+      <p><strong>Metalická (perlová) černá:</strong> Pro houbičky a mísitelný obrys. Používejte pro měkký grafitový obrys smíšený s mísícím štětcem — měkký stín efekt. Lehčí než ostatní černé, měkká struktura, snadno se míchá — malé množství pigmentu ji činí skvělou pro začátečníky, kteří se učí blendovat. Také skvělá pro perlový pozadí, které vypadá jako lesklá noční obloha, když si jej posypete třpytkami.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/42800b02a0d6837a.jpg" alt="Černá barva">
+          <div class="media-caption">Výběr černých barev pro obličej</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m3l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Split-cakes a technika one stroke — obecný přehled</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Přehled terminologie:</strong></p>
+
+      <p><strong>ONE STROKE:</strong> Malovací technika, kdy umělec najednou načte více barev na štětec, čímž vytvoří vícebarvé/vícedimenzionální efekty jedním tahem (plochý, šikmý nebo filbert štětec). Je to také možné s houbičkou.</p>
+
+      <p><strong>SPLIT-CAKES:</strong> Kelímky obsahující více než jednu barvu, umožňují načíst více barev na jeden štětec nebo houbičku.</p>
+
+      <p>Vyrábějí se ve velkých obalech (pro houbičku a štětec) a v malých úzkých (pro štětec).</p>
+
+      <p><strong>Kdo vyrábí co:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Fusion — „Split cakes" 30g pro štětec, čtvercové „Rainbow cakes" 50g pro houbičku</li>
+        <li>Cameleon — „ColorBlocks" 30g pro štětec, čtvercové „BodyBlocks" 90g pro houbičku</li>
+        <li>TAG — „One Stroke Cakes" 30g pro štětec, čtvercové „Base Blenders" 50g pro houbičku</li>
+        <li>Mehron — „Prisma Cakes" 90g pro houbičku (lze také pro štětec)</li>
+        <li>SillyFarm — „Arty Cakes" 30g pro štětec, FAB „Rainbow Cakes" 90g a kulatá 45g pro houbičku</li>
+        <li>Global — čtvercová „Rainbow Cakes" 50g pro houbičku, „Fun Strokes" 30g pro štětec</li>
+        <li>Wolfe FX — kulatá „Rainbow Cakes" 45g pro houbičku</li>
+        <li>Diamond FX — split-cakes 30g pro štětec, čtvercová 50g pro houbičku</li>
+      </ul>
+
+      <p><strong>Top 5 velkých split-cakes pro houbičku:</strong></p>
+      <ol style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Modrá kombinace pro zimu/Frozen/oceán: Fusion Frozen Shimmer 50g</li>
+        <li>Zelená kombinace pro mořské panny/draky: Fusion Mermaid Splash 50g</li>
+        <li>Korálová-červená pro tropické/draky/tygry: Fusion Tropical Tiger 50g</li>
+        <li>Růžová-purpurová pro jednorožce/princezny: Silly Farm Purple Sprite 50g</li>
+        <li>Duha pro milovníky duhy: Fusion Bright Rainbow 50g</li>
+      </ol>
+
+      <p><strong>Malé split-cakes pro štětec:</strong> Doporučuji Fusion Spectrum Palette Tropical Collection od Leanne Courtney. Nebo jednotlivá neonová duha: Fusion Split Cake Leanne's Rainbow (neon) 30g — jasná, pestrobarevná, vytváří spoustu designů se JEDNÍM split-cakem.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/419a5b80b0e73fee.jpg" alt="Split-cakes přehled">
+          <div class="media-caption">Přehled split-cakes</div>
+        </div>
+        <div class="half">
+          <img src="images/d667ad8bc7c8d643.jpg" alt="Split-cakes koláž">
+          <div class="media-caption">Přehled různých split-cakes značek</div>
+        </div>
+        <div class="half">
+          <img src="images/6f2aa54a5cec41af.jpg" alt="Split-cakes příklady 1">
+          <div class="media-caption">Příklady split-cakes</div>
+        </div>
+        <div class="half">
+          <img src="images/bb2fe5b717947f2e.jpg" alt="Split-cakes příklady 2">
+          <div class="media-caption">One stroke kreace s split-cakes</div>
+        </div>
+        <div class="half">
+          <img src="images/e5d073a99362874f.jpg" alt="Split-cakes příklady 3">
+          <div class="media-caption">Další příklady one stroke technik</div>
+        </div>
+        <div class="half">
+          <img src="images/5a59aa16dc2234c9.jpg" alt="Split-cakes příklady 4">
+          <div class="media-caption">Designy s split-cakes</div>
+        </div>
+        <div class="half">
+          <img src="images/34ee41e48b5e32c0.jpg" alt="Split-cakes příklady 5">
+          <div class="media-caption">Kreativní one stroke designs</div>
+        </div>
+        <div class="half">
+          <img src="images/dcff0d72f13dc6f1.jpg" alt="Split-cakes příklady 6">
+          <div class="media-caption">Galerie split-cake designů</div>
+        </div>
+        <div class="half">
+          <img src="images/3b9cec7e2dc8fb61.jpg" alt="Split-cakes příklady 7">
+          <div class="media-caption">One stroke kreace</div>
+        </div>
+        <div class="half">
+          <img src="images/904cc3849070d083.jpg" alt="Split-cakes příklady 8">
+          <div class="media-caption">Další příklady technik one stroke</div>
+        </div>
+        <div class="half">
+          <img src="images/c6aeec61dc500813.jpg" alt="One stroke kreace">
+          <div class="media-caption">Ukázky one stroke kreací</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m3l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Palety barev na obličej</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Téměř každá kvalitní značka vyrábí palety 6, 12 nebo více barev. Jednotlivé barvy obvykle v 10g obalech, split-cakes v původní velikosti. Palety se skládají z normálních, metalických, neonových nebo pouze tónů pleti.</p>
+
+      <p>Pokud jste začátečník a rozhodli jste se, jestli chcete žít z malování na obličej, paleta je skvělý start. Pokud nejste připraveni investovat do jednotlivých barev, nebo hledáte mini-kit na cestování, doporučujeme <strong>Fusion Body Art Sampler Face Painting Palette</strong> — živé normální barvy včetně bílé a černé. Kompletní mini sada pro okamžité použití.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/7a9f3177e5714ff3.jpg" alt="Fusion sampler paleta">
+          <div class="media-caption">Fusion Body Art Sampler Face Painting Palette</div>
+        </div>
+        <div class="full">
+          <img src="images/ddc4163eab855a82.jpg" alt="6-barevné palety">
+          <div class="media-caption">Příklady 6-barevných palet</div>
+        </div>
+        <div class="full">
+          <img src="images/5c1bd8f6eb9604c0.jpg" alt="12-barevné palety">
+          <div class="media-caption">Příklady 12-barevných palet</div>
+        </div>
+        <div class="full">
+          <img src="images/ec8a5578eaa28082.jpg" alt="Paradise Mehron paleta">
+          <div class="media-caption">Paradise Mehron 30-barevná paleta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 6 -->
+  <div class="lesson" id="m3l6">
+    <div class="lesson-title">
+      <h3>Lekce 6: Jak vybrat barvu z obrovské rozmanitosti odstínů</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Tolik barev, tolik odstínů, tolik značek — výběr vás může omráčit. Dokonce se i názvy barev liší mezi značkami (např. „teal" vypadá u značek různě). Množství pigmentu se liší od šarže k šarži. Neexistuje snadný způsob, jak se rozhodnout — jen osobní preference a zkušenost.</p>
+
+      <p><strong>Oblíbené barvy autora:</strong></p>
+
+      <p><strong>Perlové/metalické barvy (zlato, stříbro atd.):</strong> Oblíbení jsou Superstar (FAB) — měkká struktura, vibrantní jedinečné odstíny, překvapivý lesk, dokonce i třpytky v barvě. Lepší, než se dalo očekávat.</p>
+
+      <p><strong>Mango od Paradise (Mehron):</strong> Mid-tone mezi žlutou a oranžovou, jako písčité/kryjící zlato. Pro pozadí tygrů, lvů, leopardů. Glycerin — velmi dobře se míchá.</p>
+
+      <p><strong>Tiger od Cameleon:</strong> Mírně tmavší, stejné použití.</p>
+
+      <p><strong>Old Gold od TAG:</strong> Perlová, mezi zlatem a chladným hnědým. Pro mísení s tmavými barvami jako Earth Brown. Kombinujte se zlatem. Alternativy: Steampunk od Cameleon, Old Gold od Superstar.</p>
+
+      <p><strong>Copper od TAG:</strong> Úplné spektrum zlatých odstínů, kombinujte s oranžovou.</p>
+
+      <p><strong>Bronze Green od TAG:</strong> Velmi měkká, kombinujte s limetkou, neonově zelenou, tmavou zelenou. Dobře se míchá, vytváří poloprůhledné pozadí. Alternativa: Fleur de Lise od Cameleon.</p>
+
+      <p><strong>Capulete od Cameleon:</strong> Měkká světle růžová perla pro tvářenku.</p>
+
+      <p><strong>Metallic Magenta + Regular Magenta od Global:</strong> Regular pro double dip květy a jasně silnou růžovou. Metallic je všedobý favorit na rty. Alternativa: Bollywood Pink od Cameleon.</p>
+
+      <p><strong>Magenta od FAB (#139 Superstar):</strong> Mírně chladnější, velmi vibrantní a hluboká, metalická. Oblíbený Jenny Saunders.</p>
+
+      <p><strong>Neon Magenta od TAG:</strong> Super jasná šťavnatá růžová, oblíbená u dívek.</p>
+
+      <p><strong>Red od Paradise (Mehron):</strong> Bohatší a tmavší než ostatní červené (normální Paradise červená je Beach Berry). Na rty, tmavou bohatou sametu červenou, krevní stříkance.</p>
+
+      <p><strong>№043 od Superstar:</strong> Šťavnatá vibrantní bohatá tmavá modrá, rychle se stala oblíbenou autora.</p>
+
+      <p><strong>№213 od Superstar (FAB Ziva Blue):</strong> Perlová světle modrá, vibrantní, skvělá alternativa k teal, protože nezanechává skvrny na pokožce.</p>
+
+      <p><strong>№025 od Superstar:</strong> Nejtmavší hnědá v jakékoli značce, tmavší a chladnější než normální hnědá. Pro stíny, měkčí obrys (alternativa k černé), větve, zombies. Alternativy: Earth Brown od TAG, Espresso od Cameleon.</p>
+
+      <p><strong>Shrnutí:</strong> Jako začátečník začněte se základy a svůj kit personalizujte, jak získáte zkušenosti.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/da7665517850a461.jpg" alt="Výběr barev 1">
+          <div class="media-caption">Galerie oblíbených barev</div>
+        </div>
+        <div class="half">
+          <img src="images/704a44b67b1ed870.jpg" alt="Výběr barev 2">
+          <div class="media-caption">Příklady barevných kombinací</div>
+        </div>
+        <div class="half">
+          <img src="images/557321eee432671d.jpg" alt="Výběr barev 3">
+          <div class="media-caption">Demonstrace barevných odstínů</div>
+        </div>
+        <div class="half">
+          <img src="images/0e1f6f367ab44173.jpg" alt="Výběr barev 4">
+          <div class="media-caption">Více příkladů barev</div>
+        </div>
+        <div class="half">
+          <img src="images/901234ecdf8e0994.jpg" alt="Výběr barev 5">
+          <div class="media-caption">Příklady kombinací barev</div>
+        </div>
+        <div class="half">
+          <img src="images/251175344fb42778.jpg" alt="Výběr barev 6">
+          <div class="media-caption">Barevné schémata</div>
+        </div>
+        <div class="half">
+          <img src="images/e4c5bebf159d5b8f.jpg" alt="Výběr barev 7">
+          <div class="media-caption">Další příklady barev</div>
+        </div>
+        <div class="half">
+          <img src="images/08208af6fe8065f1.jpg" alt="Výběr barev 8">
+          <div class="media-caption">Galerie barevných kombinací</div>
+        </div>
+        <div class="half">
+          <img src="images/d3bd1dd6b5ede613.jpg" alt="Výběr barev 9">
+          <div class="media-caption">Příklady vzorů s barvami</div>
+        </div>
+        <div class="half">
+          <img src="images/efc7f95c1edf4f15.png" alt="TAG neon magenta">
+          <div class="media-caption">TAG Neon Magenta barva</div>
+        </div>
+        <div class="half">
+          <img src="images/028f185fa546b397.jpg" alt="Výběr barev 10">
+          <div class="media-caption">Finální příklady barevných výběrů</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 7 -->
+  <div class="lesson" id="m3l7">
+    <div class="lesson-title">
+      <h3>Lekce 7: Voděodolné barvy na obličej</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Díky tvůrčím myslím mohou nyní face painteři vytvářet designy odolné vůči potu, voděodolné a nerozmazatelné — pro bazénové párty a vodní parky! Také pro horké/vlhké klima, kde se barvy na vodní bázi okamžitě rozmazávají.</p>
+
+      <p><strong>Zaměření na ProAiir:</strong> Alkoholová voděodolná značka make-upu z USA. Bezpečná pro pokožku, FDA schválena, není testována na zvířatech, veganská. Čtyři produkty: Hybrids, DIPS, Solids, Inks.</p>
+
+      <p><strong>ProAiir HYBRID:</strong> Především pro airbrush, ale lze je nanášet štětcem (velmi pigmentované). Dostupné v lahvích 2oz a 4oz, jednotlivě nebo v 6-barevných sadách. Varování: dostatečná ventilace, pryč od plamene, pouze pro externí použití, vyhněte se kontaktu s očima.</p>
+
+      <p><strong>ProAiir DIPS:</strong> Speciálně pro linky. NENANÁŠEJTE plošně houbičkou (jsou velmi koncentrované a obtížně se odstraňují). Používejte pouze na detaily a tenké linie. Jde o koncentrovanou verzi Hybrids. Lze je nanášet přes cake make-up, pudr, hybrid podklad nebo přímo na pokožku. Hustá konzistence jako akryl — lze je dokonce používat na one stroke! Bílá je velmi koncentrovaná, může potřebovat promíchání tyčinkou.</p>
+
+      <p><strong>Tipy pro DIPS:</strong> Pečlivě protřepejte lahve. Pokožka musí být čistá (bez emulzí/olejů). Naneste na malou uzavíratelnou misku. Ředěte alkoholem na požadovanou konzistenci. Nabírejte z misky, zvlhčujte alkoholem podle potřeby. Kombinujte DIPS mezi sebou nebo s Hybrid pro nové barvy. Uchovávejte uzavřené, aby nevyschly — reaktivujte alkoholem. Růžová může zanechat skvrny — naneste nejprve bílý základ. Vyzkoušejte kabuki štětec.</p>
+
+      <p><strong>Čištění štětců:</strong> NEPOUŽÍVEJTE vodu! Nechte přirozeně zaschnout (reaktivujte alkoholem) nebo do štětin vetřete TEKUTÉ MÝDLO a otřete papírovým ručníkem.</p>
+
+      <p><strong>ProAiir SOLIDS:</strong> Zbrusu nový produkt, vypadá jako normální barva na vodní bázi, ale místo vody se používá ProLong aktivátor. Pro štětce/houbičky v horkém/vlhkém klimatu, bazénové párty, odolnost vůči pocení. ProLong dává bohatý pigment; 99% IPA dává transparentnější efekt, ale výrobce říká, že jiné produkty než ProLong mohou způsobit odlučování. Tip: Barva schne rychleji kvůli alkoholu — pracujte vyšší rychlostí. Jednotlivě 14g, palety 42g (7g každá + 1oz ProLong). Míchání je možné. Odolnost překonává všechny ostatní produkty ProAiir — může vydržet i několik dní. NEVYTVÁŘEJTE split-cakes ze SOLIDS.</p>
+
+      <p><strong>ProAiir INK:</strong> Pro body painting nebo dočasné tetování. Obtížnější odstranění — NENÍ pro obličej. Lahve 1oz, 2.1oz, 4.2oz. Vydrží 5–10 dní při správném nanášení. Hlavní použití: airbrush dočasné tetování. NENÍ na obličejové malování.</p>
+
+      <p><strong>Jak ODSTRANIT ProAiir:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>DIPS a Hybrid:</strong> Tekutá mýdla, olej nebo odstraňovač make-upu. Začněte tenkou vrstvou tekutého mýdla nebo olejnatého odstraňovače, pracujte dovnitř, opláchněte. Opakujte. Buďte jemní. Nepoužívejte vonné vlhčené ubrousky (vůně může způsobit alergické reakce). Krém na zbývající skvrny. Počkejte 24h, pokud skvrny přetrvávají — přirozené pocení/olej pomáhá.</li>
+        <li><strong>Štětce/houbičky:</strong> Používejte mýdlo na štětce jako Pink Soap od Mona Liza. Umyjte, opláchněte, řádně usušte před uložením. Také 70% alkohol funguje.</li>
+        <li><strong>INK:</strong> 91% IPA nebo dětský olej. Nechte působit, jemně třete houbičkou s mýdlem a vodou. Na celé tělo: namažte olejem a nechte louhovat v teplé vaně.</li>
+        <li><strong>SOLIDS:</strong> Mohou vydržet dny, vyžadují drhnutí, dětský olej nebo IPA. Naneste tekuté mýdlo nebo dětský olej na design, nechte působit a opláchněte až po uvolnění pigmentu.</li>
+      </ul>
+
+      <p><strong>Jak SKLADOVAT:</strong> Mimo přímé světlo, chladné a suché prostředí. Uchovávejte s těsně uzavřeným víčkem. Trvanlivost 3–5 let po otevření, 10 let neotevřeno.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/a2427b3b9dbc8b3a.jpg" alt="ProAiir produkty 1">
+          <div class="media-caption">ProAiir produkty a balení</div>
+        </div>
+        <div class="full">
+          <img src="images/c444d2ebd1d45791.jpg" alt="ProAiir produkty 2">
+          <div class="media-caption">Přehled ProAiir řady</div>
+        </div>
+        <div class="full">
+          <img src="images/e5cb2e77d4d41fe0.jpg" alt="ProAiir produkty 3">
+          <div class="media-caption">ProAiir HYBRID a DIPS</div>
+        </div>
+        <div class="full">
+          <img src="images/d3b55f1dcb4fc8da.jpg" alt="ProAiir produkty 4">
+          <div class="media-caption">ProAiir SOLIDS paleta</div>
+        </div>
+        <div class="full">
+          <img src="images/c4f6bf3821e23310.jpg" alt="ProAiir produkty 5">
+          <div class="media-caption">ProAiir INK lahve</div>
+        </div>
+        <div class="full">
+          <img src="images/6df42b7013154955.jpg" alt="ProAiir produkty 6">
+          <div class="media-caption">Aplikace ProAiir barev</div>
+        </div>
+        <div class="full">
+          <img src="images/183b37180d742912.jpg" alt="ProAiir produkty 7">
+          <div class="media-caption">ProAiir barvy v akci</div>
+        </div>
+        <div class="full">
+          <img src="images/71a1a6cb7b758c34.jpg" alt="ProAiir produkty 8">
+          <div class="media-caption">Voděodolné designy s ProAiir</div>
+        </div>
+        <div class="full">
+          <img src="images/3eef67c09911207b.jpg" alt="ProAiir produkty 9">
+          <div class="media-caption">Ukázka odolnosti ProAiir barev</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Pochopení různých typů barev na obličej — jejich složení, chování a použití — je zásadní pro výstavbu kvalitního kit a vývoj vašeho uměleckého stylu. Experimentujte s různými značkami a typy, až najdete ty, které vám nejlépe vyhovují a pracují s vašimi technikami. Pamatujte, že neexistuje jediná „správná" značka — existuje pouze ta, která funguje nejlépe pro vás a vaše klienty.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 4 ============ -->
+  <div class="module-header" id="module4">
+    <h2>Modul 4 — Zlaté a stříbrné barvy. Pudry pro malování na obličej.</h2>
+    <p style="opacity: 0.85;">Metalické barvy, lisované pudry, metalické prášky a jejich použití</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m4l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: Vlastnosti zlatých a stříbrných barev</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Zlato a stříbro patří mezi nejdrahocennější kovy světa, ale pokud jde o barvy na obličej a tělo a nekonečnou debatu o tom, která značka dává nejlepší výsledky — podle mých zkušeností neexistuje jasný vítěz. Myslím, že každý face painter by měl trochu experimentovat a najít, co nejlépe vyhovuje jemu a jeho stylu malování.</p>
+
+      <p>V tomto modulu vám pomohu pochopit klíčové rozdíly mezi zlatými a stříbrnými barvami různých oblíbených značek a představím vám také lisované pudry, což je jiný typ produktu obzvláště oblíbený u face painterů a vizážistů pracujících ve vlhkém prostředí.</p>
+
+      <p><strong>Jeden z nejpodstatnějších rozdílů mezi značkami je přítomnost (nebo absence) metalického prášku jako složky barvy.</strong></p>
+
+      <p><strong>Barvy obsahující metalický prášek:</strong></p>
+      <div class="brand-list">
+        Paradise Mehron, Superstar (FAB)
+      </div>
+
+      <p><strong>Barvy bez metalického prášku:</strong></p>
+      <div class="brand-list">
+        Cameleon, TAG, Global, Wolfe FX, Diamond FX, Face Paints Australia, Kryvaline
+      </div>
+
+      <p>Řada Paradise od Mehronu se nedávno rozšířila o nový typ zlatých a stříbrných barev s metalickým práškem, čímž se velmi přiblížila metalickým práškům, které tato společnost rovněž vyrábí. Tyto barvy mají velmi lesklý, metalický povrch a vypadají úžasně, pokud chcete pokrýt velké plochy pokožky, např. při vytváření metalických soch. Jsou také perfektní na linky. Důležité je ale pamatovat, že prášek v barvě je lehčí než voda i než jakákoli jiná barva, což může ztížit proces blendování.</p>
+
+      <p>Superstar (FAB) je další značka, která zahrnula metalický prášek do barvy, ale v menším množství než Mehron Paradise. Přesto barvy Superstar (FAB) poskytují pěkné, lesklé metalické krytí, ale bohužel mají stejné problémy s blendováním. Superstar (FAB) má také řadu metalických barev s třpytkami — nazývají se shimmer gold a shimmer silver.</p>
+
+      <p>Barvy bez metalického prášku se snáze míchají s ostatními barvami, ale nedosahují tak lesklého metalického efektu jako ty popsané výše.</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Paradise Mehron nebo Superstar FAB zlatou a stříbrnou používejte na pokrytí velkých ploch pokožky a na linky. Značky bez prášku používejte na blendování s ostatními barvami.
+      </div>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/8ca6934e19715191.jpg" alt="Zlatá barva — plochý štětec">
+          <div class="media-caption">Nanášení zlaté barvy plochým štětcem</div>
+        </div>
+        <div class="half">
+          <img src="images/d1b067e49c756d8c.jpg" alt="Zlatá barva — houbička">
+          <div class="media-caption">Nanášení zlaté barvy houbičkou</div>
+        </div>
+        <div class="half">
+          <img src="images/81db9f6281e6e01a.jpg" alt="Zlatá barva — kulatý štětec">
+          <div class="media-caption">Nanášení zlaté barvy kulatým štětcem</div>
+        </div>
+        <div class="half">
+          <img src="images/7c570ddf76d3fbb9.jpg" alt="Stříbrná barva — plochý štětec">
+          <div class="media-caption">Nanášení stříbrné barvy plochým štětcem</div>
+        </div>
+        <div class="half">
+          <img src="images/6e3576adfd6485ab.jpg" alt="Stříbrná barva — houbička">
+          <div class="media-caption">Nanášení stříbrné barvy houbičkou</div>
+        </div>
+        <div class="half">
+          <img src="images/553b9096ac038890.jpg" alt="Stříbrná barva — kulatý štětec">
+          <div class="media-caption">Nanášení stříbrné barvy kulatým štětcem</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m4l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Ukázka nanášení zlaté barvy</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Podívejte se na animované ukázky nanášení zlaté barvy různými nástroji:</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/c8a92b60fec76f1b.gif" alt="Zlatá barva — plochý štětec (GIF)">
+          <div class="media-caption">Nanášení zlaté barvy plochým štětcem</div>
+        </div>
+        <div class="full">
+          <img src="images/f5b859b03e1df5c8.gif" alt="Zlatá barva — houbička (GIF)">
+          <div class="media-caption">Nanášení zlaté barvy houbičkou</div>
+        </div>
+        <div class="full">
+          <img src="images/5d65a38545302211.gif" alt="Zlatá barva — kulatý štětec (GIF)">
+          <div class="media-caption">Nanášení zlaté barvy kulatým štětcem</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m4l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Ukázka nanášení stříbrné barvy</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Podívejte se na animované ukázky nanášení stříbrné barvy různými nástroji:</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/60f8485ebeaf3970.gif" alt="Stříbrná barva — plochý štětec (GIF)">
+          <div class="media-caption">Nanášení stříbrné barvy plochým štětcem</div>
+        </div>
+        <div class="full">
+          <img src="images/ec338a6808f84b2c.gif" alt="Stříbrná barva — houbička (GIF)">
+          <div class="media-caption">Nanášení stříbrné barvy houbičkou</div>
+        </div>
+        <div class="full">
+          <img src="images/d1f4970589c4bc23.gif" alt="Stříbrná barva — kulatý štětec (GIF)">
+          <div class="media-caption">Nanášení stříbrné barvy kulatým štětcem</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m4l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Lisované pudry</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Lisované pudry lze také využít pro malování na obličej a make-up. V současnosti existují tři nejlepší varianty lisovaných pudrů na trhu. První dvě jsou palety Mehron iNtense a řada Ben Nye Lumiere. Třetí je můj oblíbený produkt vyvinutý neskutečně talentovanou vizážistkou a face painterkou Elisou Griffith. Paletu Elisy můžete zakoupit na jejích oficiálních stránkách www.elisagriffith.com nebo v místním obchodě s potřebami pro face painting. Tato paleta se prodává na všech kontinentech.</p>
+
+      <p>Další variantou, jejíž popularita nedávno vzrostla, jsou lisované pudry Mehron Starblend. I když jsou relativně levné a snadno dostupné, nejsou tak zářivé jako ostatní lisované pudry doporučené zde. Mohou být dobrou volbou pro malíře pracující venku v extrémně horkém a vlhkém klimatu, protože se nerozpouštějí a netečou na zpocených lidech. Výsledky však nebudou tak barevně intenzivní jako u klasických barev na obličej. I v tomto případě doporučuji nejprve vyzkoušet ostatní lisované pudry.</p>
+
+      <p><strong>Výhody lisovaných pudrů:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Skvělá alternativa k barvám na vodní bázi, zejména v horkých a vlhkých oblastech</li>
+        <li>Nepotřebujete vodu k aktivaci</li>
+        <li>Barvy se snadno míchají a blendují</li>
+        <li>Pudry nanesené s primerem (Elisiny pudry) jsou voděodolné — nerozpouštějí se při kontaktu s vodou</li>
+        <li>Linky nanesené přes lisované pudry s primerem (Elisiny pudry) nepřebírají barvy z pozadí</li>
+        <li>Třpytkové gely lze nanášet přímo na pudrový základ bez stírání barvy pozadí</li>
+        <li>Čistší nanášení šablonových vzorů a designů</li>
+        <li>Čisté ruce a nehty díky použití „lízátek" (beauty blenderů) místo houbiček</li>
+        <li>Žádné riziko rozmazání barvy na oblečení klienta</li>
+        <li>Lze použít jak pro face painting, tak pro make-up</li>
+      </ul>
+
+      <p><strong>Nevýhody a obtíže:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Barvy jsou bledší než klasické barvy, pokud se nanáší bez primeru</li>
+        <li>Pudry Ben Nye a iNtense nejsou voděodolné, pravděpodobně proto, že se používají bez primeru</li>
+        <li>Lze použít pouze na pozadí, bez možnosti vytváření linek</li>
+        <li>Mohou být složité na celoplošné designy</li>
+        <li>K odstranění pudrů nanesených s primerem je nutný odstraňovač make-upu nebo olej</li>
+      </ul>
+
+      <p><strong>Color Me Pro paleta od Elisy Griffith:</strong> Hlavní produkt je magnetická paleta s výběrem 18 zářivých a šťavnatých barev. Existují i menší palety jako All You Need, Fancy Life a Ready to Party s 15 barvami. Nový vylepšený magnetický podklad umožňuje přidávat, vyměňovat a odebírat barvy podle potřeby, což usnadňuje přepravu a je praktické pro velké objemy práce. Můžete si zakoupit buď kompletní paletu Color Me Pro, nebo prázdnou magnetickou paletu, kterou si naplníte vlastní kombinací barev.</p>
+
+      <p>Dalším užitečným nástrojem, který Elisa vyvinula pro použití se svými lisovanými pudry, je <strong>Ultimate Primer</strong>. Pudry můžete nanášet s primerem i bez něj, ale pokud nejprve nanesete primer, barvy budou sytější a odolnější vůči rozmazání. Primer nanášejte nadýchaným make-up štětcem (jako kabuki štětec) a rozprostřete tenkou vrstvu po pokožce, jako byste nanášeli krém nebo make-up.</p>
+
+      <p><strong>K nanášení a blendování pudrů potřebujete sadu „lízátek" (beauty blenderů nebo smoothie blenderů).</strong></p>
+
+      <p><strong>Postup malování s lisovanými pudry (ukázka Nancy Wu):</strong></p>
+      <ol style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Naneste vrstvu primeru na pokožku kabuki štětcem (nebo nadýchaným štětcem na oční stíny).</li>
+        <li>Smoothie blendery naneste pudr. Hrubě načrtněte motiv (jednorožec) — přesnost není nutná, protože půjdete přes to linkami.</li>
+        <li>Obtáhněte motiv černou barvou.</li>
+        <li>Přidejte slzičky a spirálky kolem motivu.</li>
+        <li>Protože pudrový základ není na vodní bázi, i při použití světlé barvy na vrch nepřebírá barvy z pozadí. Nezáleží na tom, kolikrát přes to přejedete.</li>
+        <li>Přidejte černý obrys ke slzičkám a spirálkám pro lepší definici.</li>
+        <li>Přidejte bílý obrys k designu a hvězdičky jako ozdobu.</li>
+        <li>Naneste pixie paint (třpytkový gel) na design! Díky voděodolným vlastnostem pudrových barev se z pozadí nic neodstraní.</li>
+      </ol>
+
+      <p>Další známá vizážistka a face painterka <strong>Shawna Del Real</strong> používá Elisiny pudry pro make-up nebo v kombinaci s face paintingem.</p>
+
+      <p><strong>Jedna úžasná vlastnost Elisiných lisovaných pudrů nanesených s primerem je, že se stávají skutečně voděodolnými!</strong> Nancy Wu laskavě sdílela svůj experiment, který to dokazuje.</p>
+
+      <p>Pokud chcete pudry ještě více fixovat, můžete použít speciální produkt zvaný <strong>barrier spray</strong> (fixační sprej). Lze ho nanést dvěma způsoby: buď na čistou pokožku, nebo přes hotový design. Je důležité sprejovat pod správným úhlem. Nicméně na základě osobních testů Elisiny palety v praxi jsem nezaznamenala potřebu fixace pudrů. Použití s primerem vydrží dokonce déle než normální barvy na obličej bez jakéhokoli fixování.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/0b3a2bae3532906d.jpg" alt="Přehled lisovaných pudrů">
+          <div class="media-caption">Přehled lisovaných pudrů na trhu</div>
+        </div>
+        <div class="full">
+          <img src="images/cf56c29891e23218.jpg" alt="Elisa Griffith paleta">
+          <div class="media-caption">Color Me Pro paleta od Elisy Griffith</div>
+        </div>
+        <div class="full">
+          <img src="images/02abc03ca2eb56db.jpg" alt="Smoothie blendery">
+          <div class="media-caption">Smoothie blendery (lízátka) pro nanášení pudrů</div>
+        </div>
+        <div class="full">
+          <img src="images/a8a47874c6d52c8f.jpg" alt="Nancy Wu tutorial">
+          <div class="media-caption">Postup malování jednorožce s lisovanými pudry (Nancy Wu)</div>
+        </div>
+        <div class="full">
+          <img src="images/780e50066727d833.jpg" alt="Rainbow Madness paleta">
+          <div class="media-caption">Další varianta palety</div>
+        </div>
+        <div class="full">
+          <img src="images/b851bc7aa321417d.jpeg" alt="Voděodolnost pudrů">
+          <div class="media-caption">Demonstrace voděodolnosti Elisiných pudrů</div>
+        </div>
+        <div class="full">
+          <img src="images/6da84edae4c5e61f.jpeg" alt="Barrier spray">
+          <div class="media-caption">Fixační sprej (barrier spray)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m4l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Metalické prášky</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Mehron vyrábí speciální sypké metalické prášky v malých lahvičkách, které jsou dostupné ve čtyřech barvách: stříbrná, zlatá, staré zlato a bronzová. Tyto prášky mají silný metalický lesk a jsou perfektní pro pokrytí velkých ploch pokožky. Obzvláště je upřednostňují performeři předvádějící metalické sochy.</p>
+
+      <p><strong>Existují tři způsoby nanášení na pokožku:</strong></p>
+
+      <p><strong>1. Suché nanášení:</strong> Nasypte trochu prášku do čistého víčka od barvy a vlhkou čistou houbičkou do něj ťukejte, poté nanášejte na pokožku ťukavým pohybem. Prášek se nesmíchá s vodou, protože je příliš lehký. Tato metoda je poměrně nepořádná a prášek zůstává na pokožce nezafixovaný, takže se může přenést na jiné předměty, oblečení nebo osoby.</p>
+
+      <p><strong>2. Smíchání s olejem:</strong> Funguje jakýkoli tekutý rostlinný olej — osobně preferuji olivový nebo hroznový olej. Nalijte trochu oleje do čistého víčka a přidejte prášek, důkladně promíchejte, dokud nezískáte metalickou kaši. Směs nanášejte na pokožku širokým štětcem nebo houbičkou. Tato metoda dává velmi silný metalický lesk a je perfektní pro pokrytí celého těla. Ani tato metoda však prášek nezafixuje, takže je třeba být opatrný, aby se barva nepřenesla na okolní předměty.</p>
+
+      <p><strong>3. Smíchání s mixing liquid (směšovací tekutinou):</strong> Mixing liquid vyrábí Mehron a je speciálně navržená pro míchání s metalickými prášky. Technika míchání a nanášení je stejná jako v předchozím případě, s jednou výhodou — tekutina prášek zafixuje, takže nedochází k přenosu barvy z pokožky.</p>
+
+      <p>Další značkou vyrábějící metalické prášky je <strong>Graftobian</strong>. Produkt se jmenuje Cosmetic Powdered Metal a je dostupný ve 3 barvách. Je podobný Mehronu. Jediný rozdíl je, že Mehron mixing liquid je na bázi alkoholu, zatímco Graftobian mixing liquid alkohol neobsahuje (ale obsahuje ureu), takže je univerzálnější.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/f89875f40c06332f.jpg" alt="Mehron metalické prášky">
+          <div class="media-caption">Mehron metalické prášky</div>
+        </div>
+        <div class="half">
+          <img src="images/08d2ffa21e9abad8.jpg" alt="Graftobian metalické prášky">
+          <div class="media-caption">Graftobian Cosmetic Powdered Metal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 6 -->
+  <div class="lesson" id="m4l6">
+    <div class="lesson-title">
+      <h3>Lekce 6: Aktivace metalického prášku</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Postup:</strong></p>
+      <ol style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Nasypte trochu prášku do čistého víčka od barvy.</li>
+        <li>Přidejte pár kapek mixing liquid a důkladně promíchejte, dokud nezískáte hladký krém.</li>
+        <li>Přidávejte více tekutiny nebo prášku podle dosažené konzistence.</li>
+      </ol>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Vždy míchejte jen malé množství prášku a mixing liquid najednou, protože alkohol se odpařuje a předem namíchaná směs dlouho nevydrží.
+      </div>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/fc9f18153da1416d.gif" alt="Aktivace metalického prášku">
+          <div class="media-caption">Ukázka aktivace metalického prášku</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 5 ============ -->
+  <div class="module-header" id="module5">
+    <h2>Modul 5 — Neonové barvy, terminologie a bezpečnost.</h2>
+    <p style="opacity: 0.85;">UV barvy, regulace, varování na obalech a doporučení pro face paintery</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m5l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: Vysvětlení terminologie</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Skutečné hvězdy světa malování na obličej a tělo — UV (neboli neonové) barvy jsou bezpochyby nejjasnější a možná nejméně pochopené produkty v oboru. V tomto modulu se pokusím tento žánr vysvětlit a vyvrátit některé mýty obklopující tuto vzrušující formu barev na obličej a tělo.</p>
+
+      <p><strong>Neonové barvy</strong> (nebo UV barvy) jsou řadou barev na obličej a tělo obsahujících fluorescenční fosfory, díky kterým zdánlivě svítí ve tmě. Ve skutečnosti ale tyto barvy potřebují „černé světlo" (ultrafialové světlo) k aktivaci.</p>
+
+      <p>Termín „neon" není úplně přesný — neon je plyn, který září červeně při vysoké teplotě a obvykle se používá k výrobě svítících reklamních neonů ze skleněných trubic. Výrobci ho ale používají k popisu toho, že barvy jsou opravdu jasné, jako neonové světlo pod UV lampou. Další plyny používané pro tento účel jsou helium, argon, krypton a xenon.</p>
+
+      <p><strong>Neonové barvy tedy svítí POUZE pod UV světlem. Neexistuje žádná barva na obličej, která by svítila ve tmě bez UV světla.</strong></p>
+
+      <p>Většina neonových barev je v denním světle velmi jasná díky tzv. day glow pigmentům. Neonová žlutá, oranžová, růžová a zelená jsou poměrně výrazné i za denního světla a lze je používat jako běžné barvy na obličej a tělo. Naproti tomu barvy jako neonová modrá a fialová obvykle za denního světla nejsou tak výrazné a svítí pouze pod UV lampou.</p>
+
+      <p>Důležitá poznámka: neonová bílá sice v kelímku vypadá normálně, ale na pokožce téměř zmizí — nebojte se ale, jakmile ji vystavíte černému světlu, krásně zazáří.</p>
+
+      <p>Tady to ale začíná být komplikovanější — zatímco všechny neonové barvy svítí pod UV světlem, ne všechny vypadají jasně a „neonově" i za denního světla. Aby barvy vypadaly superjasně za denního světla, musí make-up obsahovat day glow pigmenty, které nejsou FDA schválené pro kosmetiku. Proto uvidíte varování na obalech neonových barev některých značek.</p>
+
+      <p>Ve snaze nabídnout pouze FDA kompatibilní UV barvy nabízejí Snazaroo, Ruby Red a Diamond FX (speciální FDA NEON White, FDA NEON Blue a FDA NEON Violet) řadu barev, které reagují pod UV světlem. Tyto barvy ale za denního světla nevypadají fluorescenčně a méně svítí pod UV lampou.</p>
+
+      <p>Mezi jednotlivými značkami není velký rozdíl v tom, jak výrazně neonové barvy vypadají za denního světla — pokud se rozhodnete je používat v běžné praxi, jednoduše si vyberte z profesionálních značek představených v Modulu 1. Pokud budete neony používat pod UV světlem (pro UV body painting nebo neon párty), může se hodit vědět, že neonové barvy Cameleon svítí pod UV světlem nejlépe ve srovnání s Diamond FX a TAG.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/54ef79b6c1943adf.png" alt="Neonové barvy pod UV světlem">
+          <div class="media-caption">Neonové barvy pod UV světlem</div>
+        </div>
+        <div class="full">
+          <img src="images/30246779d8835eb8.jpg" alt="Porovnání neonových barev">
+          <div class="media-caption">Porovnání neonových barev různých značek</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m5l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Jsou neonové barvy v souladu s FDA, EU a australskými standardy?</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Právě jste utratili malé jmění za neonový make-up do svého kitu, abyste je otočili a přečetli si něco ve smyslu „ne pro kosmetické použití" nebo „pro vlasy a speciální efekty". Začnete panikařit a přemýšlet, jak vám jakýkoli seriózní prodejce barev na obličej mohl podstrčit tento produkt. Možná se vám začnou honit strašlivé myšlenky o všech těch dětech, které jste pomalovali na posledním eventu, a o rodičích řadících se do fronty, aby vás zažalovali. Nebo si možná říkáte, proč tolik face painterů má neony ve svém kitu, když nejsou vyrobeny pro pokožku.</p>
+
+      <p>Pokud budete hledat toto téma na diskusních fórech a sociálních sítích, najdete nekonečné diskuse s komentáři umělců — od těch, kteří nemají žádný problém používat neonové barvy na kohokoli, až po ty, kteří jsou naprosto proti používání jakékoli neonové barvy.</p>
+
+      <p><strong>Snazaroo, Ruby Red a tři nové barvy Diamond FX</strong> (speciální FDA NEON White, FDA NEON Blue a FDA NEON Violet) jsou zatím jediné značky, jejichž neonové barvy používají pouze FDA schválené neonové pigmenty. Ostatní značky podaly žádosti o FDA testování, ale čekací doba je roky a roky.</p>
+
+      <p>Ale uklidněte se a pojďme se podívat, jak to vlastně s neonovými barvami v oboru face paintingu je.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/d3638594520c0dc3.jpg" alt="Varování na neonových barvách">
+          <div class="media-caption">Příklad varovného štítku na neonových barvách</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m5l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Pravda o varováních</h3>
+    </div>
+    <div class="lesson-content">
+      <p>FDA netestovala UV reaktivní pigmenty, které tyto společnosti používají ve svých barvách, konkrétně pro použití v kosmetice. Většina výrobců barev na obličej si však nechala provést nezávislé testování svých neonových make-upů a zjistila, že jsou bezpečné pro použití na pokožce.</p>
+
+      <p>FDA se ve skutečnosti spoléhá na to, že výrobci sami provedou vlastní testování k zajištění bezpečnosti svých produktů, přičemž uvádí, že výrobci sami nesou právní odpovědnost za to, že jejich produkty jsou bezpečné.</p>
+
+      <p>Proto nikdo nemůže tvrdit, že je jeho produkt „FDA SCHVÁLENÝ" (FDA Approved), protože FDA neschvaluje kosmetiku. Schvaluje pouze ingredience, jako jsou pigmenty, které vstupují do kosmetiky. Takže zatímco některá kosmetika může být označena jako „FDA Compliant" (v souladu s FDA), žádná kosmetika sama o sobě není technicky „FDA Approved".</p>
+
+      <p>Protože FDA dosud netestovala tyto pigmenty pro použití v kosmetice, zákon Fair Package and Labelling Act vyžaduje, aby výrobci označili své obaly s omezeními ohledně toho, zda by se určité pigmenty neměly používat kolem očí, rtů atd. — bez ohledu na jakékoli pozitivní výsledky, které mohli obdržet z nezávislého testování.</p>
+
+      <p>Proto uvidíte varovné štítky na svých neonových/UV barvách. Může to být tím, že přísné pokyny pro označování nedávají fyzicky dostatek prostoru k vysvětlení, kde jsou určité barvy bezpečné k použití, nebo k poznámce o výsledcích vlastního testování (i když některé značky uvádějí vlastní testování na štítku).</p>
+
+      <p><strong>Příklady varování na populárních značkách na trhu:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>„Nepoužívejte kolem očí ani na rty"</li>
+        <li>„Produkt pro speciální efekty"</li>
+        <li>„Dermatologicky testováno pro bezpečnost, ale nesplňuje mezinárodní kosmetické předpisy"</li>
+        <li>„Pouze pro vlasy a nekosmetické účely"</li>
+        <li>„Produkt pro speciální efekty, ne pro kosmetické použití"</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m5l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Odpověď výrobce na toto téma</h3>
+    </div>
+    <div class="lesson-content">
+      <p><strong>Vyjádření zástupce Diamond FX:</strong></p>
+
+      <p>U day glow barev je barvivo vsazeno do pryskyřice a nemá přímý kontakt s pokožkou. Běžné neonové barvy nikdy nebyly oficiálně schváleny pro kosmetické účely — používá se pouze tzv. fosforeskující barevný pigment. Tato barva obsahuje nízké procento volného formaldehydu (pod schváleným procentem).</p>
+
+      <p>V roce 2000 byla schválena FDA pro použití jako kosmetický produkt. USA je jedinou zemí na světě, kde může být takový produkt distribuován s označením „pro kosmetické účely".</p>
+
+      <p>Diamond FX si musel být jistý, že tato barevná přísada neobsahuje žádné nebezpečné materiály. Datový list dodavatele a nezávislé laboratoře to potvrdily. Barvy Diamond FX Aqua Colour byly předány dermatologovi k ověření snášenlivosti pokožky a ujištění, že produkt nepoškodí citlivou pokožku. Závěr: neonové barvy DFX jsou pro lidskou pokožku neškodné. Označení „není kosmetický produkt" je na produktech uvedeno pouze z právních důvodů.</p>
+
+      <p>Protože ale výrobce nebyl 100% spokojen, chtěl zákazníkům nabídnout produkt, u kterého se budou cítit 100% jistě — proto již několik let vyrábí 3 barvy, které jsou 100% FDA schválené: speciální <strong>FDA NEON White, FDA NEON Blue a FDA NEON Violet</strong>. Tyto barvy neobsahují formaldehyd a jsou plně schváleny pro kosmetické účely. Mohou být použity na jakoukoli pokožku, pouze mají mírně slabší efekt pod černým světlem.</p>
+
+      <p><strong>Vyjádření zástupce Global Colours:</strong></p>
+
+      <p>Na nejčastější otázku, zda jsou UV barvy bezpečné pro použití na pokožce, zástupce Global Colours v roce 2016 odpověděl, že UV pigmenty v jejich produktech na obličej a tělo používají 20 let bez známých problémů.</p>
+
+      <p>Vysvětlil, že australské zákony zakazují použití těžkých kovů, olova a nebezpečných toxinů v kosmetických produktech, ale neexistují specifické zákony pro UV pigmenty — proto produkt v Austrálii nevyžaduje specifické označení. V USA a Evropě mají regulace kosmetických produktů odlišný přístup.</p>
+
+      <p>FDA má seznam schválených ingrediencí pro kosmetiku, který nezahrnuje neonové pigmenty. Není to proto, že by byly škodlivé — FDA jednoduše neonové ani fluorescenční pigmenty nikdy netestovala. Proto musí být UV barvy na obličej a tělo prodávané v USA a Evropě označeny jako produkt pro speciální efekty.</p>
+
+      <p>Global Colours Body Art se prodává celosvětově, a proto je produkt formulován podle evropských a amerických standardů, protože ty jsou nejpřísnější.</p>
+
+      <p><strong>Závěr:</strong> Varovný štítek je otázkou místní regulace. Neznamená to, že produkty nejsou bezpečné pro použití na pokožce — jen nebyly testovány pro tento účel. Každý face painter si musí udělat vlastní názor na to, jak přistoupí k používání UV barev. Rozumná opatrnost je na místě, a jako u jakéhokoli kosmetického produktu — pokud se objeví známky podráždění, přestaňte produkt používat.</p>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m5l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Co by měl face painter dělat?</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Nakonec je na vás, zda chcete neonové barvy používat ve svých službách malování na obličej a tělo. Většina profesionálních face painterů spadá do jedné z následujících tří kategorií:</p>
+
+      <p><strong>1. „Nikdy v životě!"</strong> — Tito umělci předpokládají, že pokud barva není FDA schválena pro použití na pokožce, je nebezpečná, nestojí za riziko, a nepoužívají žádné neonové barvy vůbec.</p>
+
+      <p><strong>2. „Občas mohu udělat výjimku"</strong> — Používají některé neonové barvy, s mírou. Drží je od očí a úst a připomínají klientům, aby si barvu po akci (nebo alespoň před spaním) smyli.</p>
+
+      <p><strong>3. „Varování mě nezajímají"</strong> — Tito umělci věří, že pokud FDA nepovažovala pigmenty za dostatečně škodlivé, aby je testovala, a nebyly prokázány jako nebezpečné, riziko je minimální — a používají je, jak se jim zlíbí.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/f586aeae4e6f8f38.jpg" alt="Neonové barvy — příklady">
+          <div class="media-caption">Příklady neonových barev v jednotlivých barvách a split-cakes</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Navzdory mnoha nesrovnalostem v bezpečnostních doporučeních, štítcích a regionálních regulacích se neonové/UV barvy na obličej a tělo nacházejí ve většině kitů profesionálních face painterů. Podle výrobců se tyto produkty používají v oboru po mnoho let bez hlášených nežádoucích reakcí. Nakonec musíte použít vlastní úsudek a rozhodnout se, zda budete mít UV barvy ve svém kitu — a pokud ano, jaká omezení si pro jejich používání stanovíte.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 6 ============ -->
+  <div class="module-header" id="module6">
+    <h2>Modul 6 — Štětce, houby, šablony, glitry a vše ostatní, co face painter potřebuje.</h2>
+    <p style="opacity: 0.85;">Přehled nástrojů a příslušenství pro malování na obličej</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m6l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: Štětce</h3>
+    </div>
+    <div class="lesson-content">
+      <p>V tomto modulu je čas podívat se blíže na všechny nástroje a příslušenství v kitu face paintera. Doufám, že nyní již dobře rozumíte tomu, že kvalitní barvy na obličej a tělo jsou pro vytváření skvělých designů zásadní. Přesto, jelikož mnoho začátečníků má omezený rozpočet, řada z nich může při investici do nástrojů a příslušenství kvalitu podceňovat.</p>
+
+      <p>V předchozích modulech jsme probrali důležité téma profesionálních barev. Ale co štětce? Jaký typ byste měli používat? Dají se koupit v obchodě s výtvarnými potřebami?</p>
+
+      <p>Podle mých zkušeností může typ štětce výrazně ovlivnit konečný výsledek a je mnohem snazší vytvořit pěknou práci se sadou profesionálních kvalitních štětců než s levnými hobby štětci. Pokud se o své kvalitní štětce správně staráte (správně je používáte, myjete, skladujete a dezinfikujete), vydrží vám mnoho let. Možná jste našli sadu hobby štětců, které se zdají na začátku fungovat dobře, ale z mé zkušenosti se levné štětce velmi rychle opotřebovávají a vyžadují výměnu. Tím o své úspory stejně přijdete.</p>
+
+      <p><strong>Kolik štětců potřebujete?</strong> Není neobvyklé vidět stovky štětců v kitu profesionálního face paintera. Ve skutečnosti ale většina face painterů použije na jedné akci maximálně 30 štětců, a pravděpodobně mnohem méně, v závislosti na svém stylu. Můj osobní kit obsahuje přibližně 40 štětců, včetně náhradních.</p>
+
+      <p>Proto doporučuji mít sadu kvalitních štětců, které jsou speciálně navrženy a otestovány pro malování na obličej a body art.</p>
+
+      <p><strong>Štětce pro face painting lze rozdělit do pěti skupin:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Kulaté štětce</li>
+        <li>Ploché štětce</li>
+        <li>Šikmé (úhlové) štětce</li>
+        <li>Filbert a chisel štětce</li>
+        <li>Speciální štětce — blendovací, dvojitý filbert, flora štětec, vějířový štětec</li>
+      </ul>
+
+      <p>Pokud nemáte malířský stojan s oddílem na štětce, nejlepší způsob skladování jsou pouzdra na štětce (brush cases/wallets), zejména taková, která mají vložky a udržují štětiny každého štětce nedotčené. Více o tomto tématu v Části druhé, Modulu 9.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/25714490c5f3e409.jpg" alt="Přehled štětců">
+          <div class="media-caption">Přehled typů štětců pro face painting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m6l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Kulaté štětce</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Kulaté štětce se používají hlavně na linky (slzičky, spirálky, kudrlinky, tygří pruhy, obrácené slzičky, tečky, obrysy) a také na budování tvarů.</p>
+
+      <p>Moje oblíbené jsou <strong>Kingart 7950 White nylon series</strong> (žluté dřevěné rukojeti). Také mě uvidíte hodně pracovat se štětci série 7000C (starší šarže — černé plastové rukojeti). Nová šarže s černými dřevěnými rukojeťmi není tak dobrá jako stará, proto ji nedoporučuji.</p>
+
+      <p><strong>Další skvělé možnosti pro kulaté štětce:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>Paint Pal Swirl series</strong> — Navrženy sillyfarm.com, velikosti #1 až #5.</li>
+        <li><strong>Aliyah Round a Ultra Round</strong> — Navrženy a prodávány na brushesandmore.com. Ultra Round série odpovídá velikostí sérii Loew Cornell 795, série Round jsou větší (#4 odpovídá velikosti #6 Loew Cornell).</li>
+        <li><strong>Bolt FIRM kulaté štětce</strong> — Navrženy jestpaint.com, velikosti #2, #3 a #4. Tyto štětce mají špičatý hrot, který vám pomůže okamžitě dosáhnout dlouhých, tenkých a ostrých konců linií. Díky tuhosti štětin se ale mohou občas rozštěpit, zejména při ostrých úhlech. JestPaint vyvinul dodatečnou sérii s měkčími štětinami, velmi podobnou Kingart 7950.</li>
+        <li><strong>Marcela Bustamante kulaté štětce</strong> — Vytvořeny královnou linek, profesionální face painterkou z USA. Marcela má kompletní řadu štětců včetně flora, šikmých, plochých, filbert a liner štětců.</li>
+        <li><strong>Mark Reid Signature brushes</strong> — Hledejte novou šarži s označením Signature, protože dřívější šarže měly problém s rozštěpením štětin. Velikosti #2, #4 a #6.</li>
+        <li><strong>Art Factory Studio Round</strong> — Navrženy shopglittertattoos.com, velikosti #1, #3, #4 a #6.</li>
+        <li><strong>Sparkling Faces brushes</strong> — Vyvinuty Svetlanou Keller z Lichtenštejnska. O něco dražší, ale pokud je seženete, nikdy nebudete litovat. Mírně měkčí než Kingart.</li>
+      </ul>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Pokud ještě nemáte kvalitní štětce, doporučuji zakoupit dvě sady kulatých štětců #1 – #6 a dva extra štětce #3 a #4. Jednu sadu používejte jen na bílou, druhou na barvy a samostatné #3 a #4 na černou. Zrychlí to vaši práci a udrží barvy čisté a jasné.
+      </div>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/847d8481033f89f9.jpg" alt="Kulaté štětce">
+          <div class="media-caption">Přehled kulatých štětců a doporučených značek</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m6l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Ploché a šikmé štětce</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Existuje několik značek, které vyrábějí kvalitní ploché a šikmé štětce. Face painteři používají tyto typy štětců především pro techniku one stroke. Při výběru plochého nebo šikmého štětce dbejte na štětiny — měly by být pružné a čistě zastřižené, aby ve vlhkém stavu připomínaly čepel.</p>
+
+      <p>Technice one stroke se budeme věnovat podrobněji v Části druhé, Lekci 4. Zde si povíme o rozdílech mezi plochými a šikmými štětci a nejlepších značkách.</p>
+
+      <p><strong>Ploché štětce</strong> jsou obecně vhodné pro jednoduchou duhu nebo základní one stroke linky, ale obvykle nejsou příliš pohodlné pro propracované one stroke prvky. Proto osobně ploché štětce už nepoužívám — šikmé fungují mnohem lépe. Nicméně některé umělkyně jako Natalee Davies a Brierley Thorpe preferují one stroke s plochými štětci a dosahují úžasných výsledků.</p>
+
+      <p><strong>Šikmé (úhlové) štětce</strong> jsou asymetrické a mají špičatý hrot na jedné straně (nazývaný „toe" — špička). Tento hrot činí štětec obratnějším a umožňuje vytvářet nejrůznější propracované prvky technikou one stroke.</p>
+
+      <p><strong>Moje oblíbené šikmé štětce s krátkými štětinami:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>FacepaintStuff angled brushes</strong> (facepaintstuff.com) — velikosti 1/2, 5/8 a 3/4. Krátké štětiny, ostré a tenké, snadno se s nimi manipuluje. Kvalitní štětiny dobře drží barvu a uvolňují ji s maximálním pigmentem.</li>
+        <li><strong>Facepaintshop angular</strong> (facepaintshop.eu) — velikosti 1/4, 1/2, 3/4 a 5/8. Podobné FacepaintStuff, ale mírně silnější a měkčí.</li>
+        <li><strong>The Face Paint Shop short angled</strong> (thefacepaintingshop.com) — tužší a tenčí než FacepaintStuff. Umělkyně Debz Mills používá převážně tyto štětce pro one stroke s neuvěřitelnými výsledky.</li>
+      </ul>
+
+      <p><strong>Šikmé štětce s dlouhými štětinami</strong> (drží více barvy):</p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>Superstar angled od Ksenie Dudkiny</strong> — čtyři velikosti, velmi ostré.</li>
+        <li><strong>American Painter 4400</strong> — jedny z nejpopulárnějších šikmých štětců, různé velikosti a velmi dobrá kvalita.</li>
+        <li><strong>Paint Pal angled od Camerona Garretta</strong> — jedna velikost.</li>
+        <li><strong>Nat's Fancy Faces</strong> — od Natalie Davies, v různých velikostech.</li>
+        <li><strong>Marcela Bustamante</strong> — v několika velikostech.</li>
+        <li><strong>Sparkling Faces</strong> — od Svetlany Keller, série tvarů a velikostí.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/cf520d5f8e4cecb9.jpg" alt="Ploché štětce">
+          <div class="media-caption">Přehled plochých štětců</div>
+        </div>
+        <div class="half">
+          <img src="images/543c1e076b8f70f0.jpg" alt="Šikmé štětce">
+          <div class="media-caption">Přehled šikmých (úhlových) štětců</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m6l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Filbert a chisel štětce</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Filbert a chisel štětce představují plochý typ štětců se zakulaceným okrajem. Rozdíl mezi filbertem a chiselem je v délce štětin — u filbertu jsou delší, u chiselu kratší.</p>
+
+      <p>Tyto štětce skvěle fungují pro rychlé pokrytí velkých ploch pokožky, budování zakulacených tvarů, blendování a dokonce i one stroke. Při výběru vybírejte ten s měkkými pružnými štětinami, které drží ostrý zakulacený tvar.</p>
+
+      <p><strong>Kvalitní filbert a chisel štětce vyrábějí:</strong> Marcela Bustamante, Art Factory, Sparkling Faces, Paint Pal, Bolt, Cameleon, TAG a Mehron (včetně série Mark Reid).</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/7a46826e93a5d82d.jpg" alt="Filbert a chisel štětce">
+          <div class="media-caption">Přehled filbert a chisel štětců</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m6l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Blendovací štětce</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Blendovací štětec je speciální typ štětce, který vyrábí Cameleon ve dvou velikostech — #1 a #2. Tyto štětce mají krátké nadýchané štětiny s kulatým hrotem a jsou podobné make-up štětcům, což z nich dělá perfektní nástroje pro blendování. Pokud se chcete naučit blendovat, velmi doporučuji mít tyto štětce ve svém kitu.</p>
+
+      <p>Některé umělkyně si zvykly používat jako alternativu nadýchané make-up štětce, ale jejich kvalita se může velmi lišit — pokud se rozhodnete některý použít, budete muset prozkoumat, jaký nejlepší najdete v místních obchodech.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/5ce6365d1ee1f31c.jpg" alt="Blendovací štětce">
+          <div class="media-caption">Blendovací štětce od Cameleon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 6 -->
+  <div class="lesson" id="m6l6">
+    <div class="lesson-title">
+      <h3>Lekce 6: Flora štětce a štětce pro double dip</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Můj nedávný výzkum a pozorování studentů ukázaly, že existují specifické nástroje, které mohou pomoci zvládnout techniku double dip mnohem snadněji. Jsou to flora štětce a speciální petal (okvětní) štětce.</p>
+
+      <p><strong>Flora štětec</strong> umožňuje vytvářet široké okvětní lístky pro hlavní květiny širokou stranou, a také delší protáhlé lístky úzkou stranou. Tento štětec pojme hodně barvy a může být velmi užitečný, když jste na akci s dlouhou frontou — správně nabitý středně velký flora štětec vám umožní namalovat celý květinový design bez opětovného nabíjení.</p>
+
+      <p>I když mě v kurzu uvidíte provádět double dip běžným kulatým štětcem #6 (mé oblíbené jsou Loew Cornell 3000C a Kingart 7950), zjistila jsem, že tento nástroj nefunguje pro každého. Z mých pozorování většina lidí dosahuje rychlých a působivých výsledků s flora štětci a s novým <strong>Pretty Petal štětcem od Paint Pal</strong>, původně vytvořeným SillyFarm, ale prodávaným v mnoha obchodech. Velmi doporučuji tento štětec vyzkoušet!</p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Mějte na paměti, že ne všechny petal štětce budou stejné! Vyzkoušela jsem různé značky a žádná nefungovala tak dobře jako tento.
+      </div>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/0acd4299e3d95ab4.jpg" alt="Flora štětce">
+          <div class="media-caption">Přehled flora štětců různých značek</div>
+        </div>
+        <div class="half">
+          <img src="images/06627d6c668ac145.jpg" alt="Pretty Petal štětec">
+          <div class="media-caption">Pretty Petal štětec od Paint Pal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 7 -->
+  <div class="lesson" id="m6l7">
+    <div class="lesson-title">
+      <h3>Lekce 7: Houbičky</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Houbičky pro face painting jsou důležitým nástrojem, stejně jako štětce. Umělci obecně preferují jeden typ houbičky před druhým v závislosti na svém osobním stylu práce. Při výběru houbiček je třeba zvážit několik vlastností: hustotu, pórovitost, tvar a velikost.</p>
+
+      <p><strong>Klasifikace podle hustoty:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>Měkké houbičky</strong> — Osobně je nerada používám, protože si při mačkání houbičky s barvou špiním prsty.</li>
+        <li><strong>Houbičky střední hustoty</strong> — Nejběžnější typ, vyráběný značkami TAG, Mehron, Diamond FX a dalšími. Mám zelené houbičky Mehron a jsou mým favoritem č. 1.</li>
+        <li><strong>Husté houbičky</strong> — Znám zatím jen jednu značku s vysokou hustotou — černé houbičky Kryvaline.</li>
+      </ul>
+
+      <p><strong>Klasifikace podle pórovitosti:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>S malými póry</strong> — Husté houbičky Kryvaline, perfektní pro šablonování.</li>
+        <li><strong>Se středními póry</strong> — Obvykle střední hustoty, skvělé pro nanášení barvy ze split-caku.</li>
+        <li><strong>Porézní houbičky</strong> — Žluté houbičky od Wolfe FX, Diamond FX, Mehron a Cameleon. Střední hustota, pojmou hodně barvy, která se vsákne do velkých pórů, a pokryjí velké plochy jedním nabitím. Skvělé pro vytváření textury, dimenze a budování tvarů. Můj favorit č. 2.</li>
+      </ul>
+
+      <p><strong>Klasifikace podle tvaru:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li><strong>Půlkruhové houbičky</strong> — Nejběžnější tvar. Výrobci je vyrábějí v kruzích, které rozříznete na dva půlkruhy (nebo jsou již rozříznuté). Snadno se drží a mají různé strany pro různé účely.</li>
+        <li><strong>Okvětní (petal) houbičky</strong> — Ve tvaru okvětního lístku, vyráběné Paint Pal, AWA, Ruby Red a dalšími. Skvělé pro nanášení tvaru motýlích nebo vílích křídel. Jako začátečník je velmi doporučuji — pomohou přizpůsobit správnou velikost křídel na dětský obličej. Můj favorit č. 3.</li>
+      </ul>
+
+      <p>Doporučuji zakoupit pár tuctů houbiček, abyste stihli praní, sušení a dezinfekci mezi akcemi. V některých zemích (jako v Austrálii) platí přísná pravidla o použití jedné houbičky na jedno dítě.</p>
+
+      <p><strong>Daubers:</strong> Válcové houbičky, které mohou být v plastovém pouzdru nebo na dřevěných tyčkách. Prstové daubers jsou husté houbičky skvělé pro šablonování. Další typy jsou ze středně husté pěny pro nanášení one stroke kombinací. Osobně je ale nepreferuji a dávám přednost běžným houbičkám.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/36514414aa85414b.jpg" alt="Houbičky">
+          <div class="media-caption">Přehled houbiček pro face painting</div>
+        </div>
+        <div class="half">
+          <img src="images/38831065dd98ad1e.jpg" alt="Petal houbičky">
+          <div class="media-caption">Petal (okvětní) houbičky</div>
+        </div>
+        <div class="half">
+          <img src="images/d0a756b737e644d1.jpg" alt="Daubers">
+          <div class="media-caption">Přehled daubers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 8 -->
+  <div class="lesson" id="m6l8">
+    <div class="lesson-title">
+      <h3>Lekce 8: Šablony</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Šablony (stencily) jsou užitečným nástrojem v kitu face paintera. Umožňují rychle vytvářet opakující se vzory, detailní designy a efekty, které by ručně trvaly mnohem déle. Existuje mnoho značek a typů šablon — od jednoduchých geometrických vzorů přes květiny, hvězdičky až po složité mandaly a krajkové vzory.</p>
+
+      <p>Šablony se nanášejí pomocí husté houbičky (jako Kryvaline) nebo prstového dauberu — ťukavým pohybem přes šablonu přiloženou k pokožce. Důležité je nepoužívat příliš mokrou houbičku, aby barva pod šablonou nepodtekla.</p>
+
+      <p><strong>Populární značky šablon:</strong> Ooh! Stencils (TAP), StencilEyes by ShowOffs Body Art, Diva Stencils, Lea Shelley Stencils, Bad Ass Stencils, Schminken by Kristin a mnoho dalších.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/d5814b06ad8d0d87.jpg" alt="Šablony přehled">
+          <div class="media-caption">Přehled šablon pro face painting</div>
+        </div>
+        <div class="half">
+          <img src="images/aff1bcb0d4cac456.jpg" alt="Šablony příklad 1">
+          <div class="media-caption">Příklady šablon</div>
+        </div>
+        <div class="half">
+          <img src="images/4413df79a331c185.jpg" alt="Šablony příklad 2">
+          <div class="media-caption">Ukázky designů se šablonami</div>
+        </div>
+        <div class="half">
+          <img src="images/6432a69966d46143.jpg" alt="Šablony příklad 3">
+          <div class="media-caption">Další příklady šablon</div>
+        </div>
+        <div class="half">
+          <img src="images/d4ba77e07e8f04db.jpg" alt="Šablony příklad 4">
+          <div class="media-caption">Šablonové designy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 9 -->
+  <div class="lesson" id="m6l9">
+    <div class="lesson-title">
+      <h3>Lekce 9: Nádoba na štětce (Brush tub)</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Nádoba na štětce (brush tub) je nezbytné příslušenství pro každého face paintera. Slouží k namáčení a oplachování štětců během práce. Nejlepší nádoby mají přihrádky nebo přepážky pro oddělení čisté a špinavé vody.</p>
+
+      <p>Existují speciální nádoby navržené přímo pro face painting s více oddíly — jeden pro čistou vodu, jeden pro znečištěnou, a mřížku na dně pro otírání štětců. Mnoho face painterů ale používá jednoduché kelímky nebo nádoby s víkem pro přepravu.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/548447a05cd2edf5.jpg" alt="Nádoby na štětce">
+          <div class="media-caption">Přehled nádob na štětce (brush tubs)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 10 -->
+  <div class="lesson" id="m6l10">
+    <div class="lesson-title">
+      <h3>Lekce 10: Glitry (třpytky)</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Glitry přicházejí v nejrůznějších tvarech, velikostech, barvách a schopnostech záření. Je na vás, který si vyberete — jen se ujistěte, že používáte výhradně <strong>kosmetické glitry</strong>. Hobby glitry mohou být levnější a vypadat velmi podobně, ale mohou být vyrobeny z drobných kovových částic, a pokud se dostanou do očí, mohou poškrábat rohovku, vést k vředům na rohovce a dokonce způsobit slepotu. Mohou také zanechat skvrny na pokožce nebo vyvolat alergickou reakci. Proto se hobby glitrům za každou cenu vyhýbejte.</p>
+
+      <p><strong>Transparentní glitry (glitter dust):</strong> Často nazývané holografické — výborné pro face painting, protože dodají designu pěkný opalizující nádech. Nepřekrývají design, ale přidávají krásný lesklý finální dotek.</p>
+
+      <p><strong>Neprůhledné metalické glitry:</strong> Ideální pro glitrová tetování a výrazný třpytivý efekt. Dva typy:</p>
+
+      <p><strong>Suché neprůhledné glitry</strong> — Pro výrazný třpytivý efekt na velkých plochách. Nanášejí se speciálním kožním lepidlem, vazelínou nebo gelem, nebo se používají pro glitrová tetování.</p>
+
+      <p><strong>Glitter-gel markery (liquid bling):</strong> Průsvitný gel smíchaný s práškovou třpytkou v malé plastové lahvičce s úzkou špičkou. Při stlačení dává tenkou třpytivou linii pro obrysy, linky, tečky nebo třpytivé vzory. Ihned po nanesení se snadno rozmaže, ale po zaschnutí drží velmi dobře. Doporučuji glitter-gely s plastovými špičkami místo kovových. Malé lahvičky se lépe drží a dávají přesnější linky. Musí být výhradně kosmetické kvality.</p>
+
+      <p><strong>Chunky (hrubé) glitry:</strong> Větší částice, připevňují se kosmetickým lepidlem (aloe vera gel, vazelína nebo glitter glue). Dva typy: suché chunky glitry a chunky glitry předmíchané s gelem.</p>
+
+      <p><strong>Biologicky rozložitelné glitry:</strong> Vyrobeny z biodegradabilního celulózového filmu z obnovitelných surovin. Řeší problém mikroplastů. Hlavní značky: Eco Glitter Fun a Bio-glitter.</p>
+
+      <p><strong>Způsoby připevnění glitrů:</strong> Glitter dust přilne k lehce vlhkému povrchu. Chunky glitry vyžadují lepidlo. Pro dlouhotrvající vzhled použijte kosmetické glitrové lepidlo (povolené na rty a oční víčka, smývá se mýdlovou vodou). Pozor: toto lepidlo NENÍ totéž jako glitter glue (prosaid) pro glitrová tetování! V ostatních případech použijte kosmetický gel — vlasový gel, glitrový gel nebo aloe vera gel.</p>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/40537027915fa8db.jpg" alt="Transparentní glitry v akci">
+          <div class="media-caption">Použití transparentních glitrů (Annabel Hoogeveen)</div>
+        </div>
+        <div class="half">
+          <img src="images/d8a438f52dcbeb62.jpg" alt="Glitrové tetování">
+          <div class="media-caption">Příklady glitrových tetování</div>
+        </div>
+        <div class="half">
+          <img src="images/1b0ab89896feb654.jpg" alt="Glitter-gel markery">
+          <div class="media-caption">Glitter-gel markery (liquid bling)</div>
+        </div>
+        <div class="half">
+          <img src="images/41fede68dd9349a4.jpg" alt="Chunky glitry">
+          <div class="media-caption">Příklady chunky glitrů</div>
+        </div>
+        <div class="half">
+          <img src="images/4fe1a81ce57b0ab7.jpg" alt="Biodegradabilní glitry">
+          <div class="media-caption">Biodegradabilní glitry</div>
+        </div>
+        <div class="half">
+          <img src="images/5267e2c7c4f7f90d.jpg" alt="Glitrová lepidla">
+          <div class="media-caption">Přehled glitrových lepidel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 11 -->
+  <div class="lesson" id="m6l11">
+    <div class="lesson-title">
+      <h3>Lekce 11: Průvodce nákupem glitrů</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Níže najdete seznam nejpopulárnějších značek glitrů na trhu. Samozřejmě existuje i mnoho dalších — jen se ujistěte, že používáte výhradně kosmetické glitry.</p>
+
+      <div class="brand-list"><strong>Amerikan Body Art</strong> — Jedny z nejpopulárnějších. Hrubé glitry smíchané s gelem „Pixie Paint" jsou oblíbené mnoha face paintery. Glitter-gel marker „Liquid Bling" patří k nejlesknějším.</div>
+      <div class="brand-list"><strong>TAG Body Art</strong> — Transparentní a neprůhledné glitter dust v puffer-lahvičkách různých velikostí.</div>
+      <div class="brand-list"><strong>Diamond FX</strong> — Mnoho variací glitter dust, transparentní a neprůhledné glitry.</div>
+      <div class="brand-list"><strong>Global a Mehron</strong> — Glitter-gel markery, glitter-dust a dokonce glitter-spray!</div>
+      <div class="brand-list"><strong>Kryolan</strong> — Glitter dust, chunky glitry a metalické vločky!</div>
+      <div class="brand-list"><strong>Silly Farm Mama Clown</strong> — Transparentní a neprůhledné glitry, navržené Marcelou Murad.</div>
+      <div class="brand-list"><strong>Ben Nye Aqua Glitter</strong> — Suché glitry, předmíchané s gelem a speciální glitrové lepidlo.</div>
+      <div class="brand-list"><strong>Graftobian</strong> — Suché glitry, předmíchané s gelem a speciální glitrové lepidlo.</div>
+      <div class="brand-list"><strong>Art Factory &amp; Party Place</strong> — Mnoho typů glitrů včetně nástrojů k aplikaci.</div>
+      <div class="brand-list"><strong>Sugar Glitter od Shawny Del Real</strong> — Jedinečná kolekce od vizážistky a face painterky.</div>
+      <div class="brand-list"><strong>Ruby Red Glitter</strong> — Suché glitry a předmíchané s gelem, od Snazaroo.</div>
+      <div class="brand-list"><strong>Meraki Cosmetics</strong> — Úžasná kolekce chunky glitrů.</div>
+      <div class="brand-list"><strong>Glitter Moose</strong> — Velká kolekce různých glitrů a bling.</div>
+      <div class="brand-list"><strong>Eco Glitter Fun a Bio-glitter</strong> — Biodegradabilní glitry.</div>
+
+      <div class="media-gallery">
+        <div class="half">
+          <img src="images/ab6f0da3f8ff5a5e.jpg" alt="Amerikan Body Art">
+          <div class="media-caption">Amerikan Body Art</div>
+        </div>
+        <div class="half">
+          <img src="images/b4f0cbba69e4c7e0.jpg" alt="TAG Body Art">
+          <div class="media-caption">TAG Body Art</div>
+        </div>
+        <div class="half">
+          <img src="images/ad784378f70ac61b.jpg" alt="Diamond FX">
+          <div class="media-caption">Diamond FX</div>
+        </div>
+        <div class="half">
+          <img src="images/c500b68915245ec3.jpg" alt="Global a Mehron">
+          <div class="media-caption">Global a Mehron</div>
+        </div>
+        <div class="half">
+          <img src="images/f4edc2349fc29138.jpg" alt="Kryolan">
+          <div class="media-caption">Kryolan</div>
+        </div>
+        <div class="half">
+          <img src="images/476f1e8cd63a89f7.jpg" alt="Silly Farm">
+          <div class="media-caption">Silly Farm Mama Clown</div>
+        </div>
+        <div class="half">
+          <img src="images/c259c6ab6f566755.jpg" alt="Ben Nye">
+          <div class="media-caption">Ben Nye Aqua Glitter</div>
+        </div>
+        <div class="half">
+          <img src="images/94051aa8ee643a40.jpg" alt="Graftobian">
+          <div class="media-caption">Graftobian</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 12 -->
+  <div class="lesson" id="m6l12">
+    <div class="lesson-title">
+      <h3>Lekce 12: Domácí úkol — Zkontrolujte svůj kit</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Profesionální kit face paintera není kompletní bez kvalitních štětců, houbiček, nádoby na vodu, šablon a kosmetických glitrů. Ujistěte se, že vybíráte tu nejlepší kvalitu, kterou si můžete dovolit — lepší kvalita pravděpodobně přinese lepší výsledky.</p>
+
+      <p>A také nezapomeňte se o své nástroje dobře starat — měly by vám vydržet mnoho let.</p>
+
+      <p>Nyní byste měli rozumět tomu, jaké typy nástrojů a produktů se očekávají v kitu face paintera.</p>
+
+      <div class="warning">
+        <strong>❗ Je čas podívat se zblízka na své zásoby a zjistit, zda máte vše, co potřebujete.</strong>
+      </div>
+
+      <p>V dalším modulu začneme s praxí! Abyste z učení vytěžili maximum, ujistěte se, že máte vše důležité na dosah ruky.</p>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Kvalitní nástroje jsou stejně důležité jako kvalitní barvy. Investujte do profesionálních štětců (kulatých, šikmých, filbert), houbiček různých typů, šablon a kosmetických glitrů. Organizujte své štětce podle barev (bílá/barvy/černá) pro rychlejší práci. Vyhýbejte se hobby glitrům a vždy používejte pouze kosmetické produkty bezpečné pro pokožku.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 7 ============ -->
+  <div class="module-header" id="module7">
+    <h2>Modul 7 — Hygiena a péče o materiál. Jak opravit rozštěpené štětce a poškozené barvy.</h2>
+    <p style="opacity: 0.85;">Osobní hygiena, péče o barvy, štětce, houbičky a pracovní místo</p>
+  </div>
+
+  <!-- LESSON 1 -->
+  <div class="lesson" id="m7l1">
+    <div class="lesson-title">
+      <h3>Lekce 1: Osobní hygiena a práce s lidmi</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Malování na obličej je speciální druh umění a face painteři pracují na živém plátně. Proto je velmi důležité věnovat zvláštní pozornost osobní hygieně, čistotě materiálů, pracovního místa a hygienickým pracovním postupům.</p>
+
+      <p><strong>Osobní hygiena:</strong> Váš vzhled a čistý kit jsou jedněmi z klíčových prodejních bodů a vlastně vaší vizitkou. Samozřejmě víte, že byste měli být vhodně oblečeni — žádné minisukně ani výstřihy při práci s dětmi. Ale uvažovali jste i o tom, jak voníte? Face painteři pracují v těsné blízkosti klientů, proto je rozumné vyhnout se silným deodorantům nebo parfémům. Malé děti (a dokonce někteří dospělí) mohou být na parfémy extra citliví a někteří mohou mít alergie. A samozřejmě, pokud kouříte, nikdy nekuřte v blízkosti, před nebo během práce, zejména u dětí.</p>
+
+      <p>Věnujte pozornost i svým rukám. Jsou vaším hlavním nástrojem — i když si lidé obvykle nevšímají, zda máte make-up, vždy si všimnou vašich rukou. Ujistěte se, že jsou vždy čisté s upravenými nehty.</p>
+
+      <p><strong>Biologické tekutiny:</strong> Jedna z nejdůležitějších věcí je, že nechcete, aby jakékoli biologické tekutiny (vaše ani cizí) kontaminovaly váš kit nebo se přenesly z jedné osoby na druhou. Tím myslíme slzy, sliny, hlen a krev. Mějte vždy po ruce dezinfekci na ruce a dezinfikujte si je mezi klienty nebo alespoň jednou za 10–15 minut.</p>
+
+      <p><strong>Vaše pracovní místo:</strong> Kit a pracovní místo by měly vypadat uklizeně, organizovaně a čistě. Vždy mějte dostatek vlhčených ubrousků. Používejte ubrousky bez chemikálií. Nikdy neváhejte otřít barvy, nádoby, štětce, šablony a veškeré vybavení alespoň jednou za pár týdnů. Správně organizované pracoviště, kde má každá věc své místo, urychlí vaši práci a přidá body vašemu profesionálnímu vzhledu.</p>
+
+      <p><strong>Práce s lidmi:</strong> Nemalujte nemocné děti, ani ty se slinami, šmouhami nebo zbytky jídla na obličeji. Tip pro rušné akce: nechte balíček otevřených vlhčených ubrousků s cedulkou „Prosím, otřete svému dítěti obličej před malováním, pokud je špinavý". Doporučuji mít i informační banner s podmínkami vašich služeb.</p>
+
+      <p>Pokud má dítě na obličeji škrábnutí nebo odřeninu — nikdy nemalujte na poškozenou pokožku! Nabídněte jako alternativu malování na zdravou pokožku (ruku, nohu) nebo nabídněte gem-cluster či nálepku.</p>
+
+      <p><strong>Dezinfekce štětců během práce:</strong> Dezinfikujte štětce během práce — někteří malíři po každém klientovi, ale alespoň jednou za 20–30 minut. Skvělé dezinfekční přípravky jsou <strong>Brush Bath od SillyFarm</strong> a <strong>Brush Spa od Face Paints Australia</strong>. Jsou speciálně navrženy tak, že zůstávají účinné i po zředění vodou. Stačí přidat pár kapek do oplachovací vody — nejen že bude vaše práce čistší, ale štětce budou i lépe klouzat při one stroke. Další možností je <strong>Beauty So Clean Mist</strong>, ale funguje pouze na suché štětce a make-up.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/db2e39d24d9cf293.jpg" alt="Moje pracovní místo">
+          <div class="media-caption">Příklad organizovaného pracovního místa</div>
+        </div>
+        <div class="full">
+          <img src="images/f00e903e6a4e6f17.jpg" alt="Špatné příklady pracovních míst">
+          <div class="media-caption">Špatné příklady — jak by vaše pracovní místo vypadat NEMĚLO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 2 -->
+  <div class="lesson" id="m7l2">
+    <div class="lesson-title">
+      <h3>Lekce 2: Péče o barvy</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Hlavní pravidlo: udržujte všechny barvy čisté a suché mezi akcemi. Když se vrátíte z akce, vyndejte všechny barvy z kitu, sundejte víčka, otřete je vlhčenými ubrousky (bez chemikálií) a nechte uschnout. Doporučuji skladovat a přenášet barvy bez víček — urychluje to schnutí a brání růstu bakterií.</p>
+
+      <p><strong>Čištění povrchu barev:</strong> U jednobarevných barev jemně otřete nečistoty vlhčeným ubrouskem. U split-caku lehce postříkejte vodou a přitlačte vlhčený ubrouska na povrch — tím vyčistíte povrch bez smíchání barev.</p>
+
+      <p>Pokud se povrch split-caku po použití stal drsným, položte na něj potravinovou fólii a přitlačte barvu na okrajích prsty nebo zadní stranou lžíce. Poté fólii odstraňte a otřete každý barevný pruh zvlášť.</p>
+
+      <p><strong>Dezinfekce barev:</strong> Všechny barvy obsahují konzervační látky bránící růstu bakterií, které se ale postupně odpařují. Dříve jsem barvy dezinfikovala postříkáním chlorhexidinem nebo miramistinem, ale pozdější výzkum ukázal, že chlorhexidin se z povrchu zcela neodpaří a ve vzácných případech může způsobit alergickou reakci. Nejbezpečnější dezinfekční možností zůstává Brush Bath nebo Brush Spa přidaný do oplachovací vody během práce a udržování barev čistých a suchých mezi akcemi.</p>
+
+      <p><strong>Výrobci doporučují skladovat použité barvy bez víček.</strong> Mokré barvy zakryté víčkem se změní v Petriho misku (kultivační nádobu pro bakterie). Čisté a suché barvy mohou vydržet pět i více let.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/diejwghbfa" allowfullscreen></iframe>
+        <div class="media-caption">Ukázka čištění barev</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 3 -->
+  <div class="lesson" id="m7l3">
+    <div class="lesson-title">
+      <h3>Lekce 3: Jak opravit poškozený povrch barvy</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Opravit poškozený měkký povrch barvy je velmi snadné — stačí ho přitlačit zpět prsty a vyhladit. Abyste si nezašpinili prsty, položte na barvu nejprve kus potravinové fólie.</p>
+
+      <p>Pokud je barva suchá a popraskaná, postříkejte ji vodou a nechte několik hodin nebo přes noc se zavřeným víčkem. Poté opakujte postup popsaný výše.</p>
+
+      <div class="warning">
+        <strong>❗ Upozornění:</strong> Na internetu se můžete setkat s názorem, že barvu můžete změkčit v mikrovlnce — NEDOPORUČUJI to, protože to může roztavit vosk a zničit barvu.
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/f7ruoyktde" allowfullscreen></iframe>
+        <div class="media-caption">Jak obnovit starý split-cake</div>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/krukfhrhqy" allowfullscreen></iframe>
+        <div class="media-caption">Jak obnovit malý split-cake</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 4 -->
+  <div class="lesson" id="m7l4">
+    <div class="lesson-title">
+      <h3>Lekce 4: Péče o štětce</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Protože jste investovali do kvalitních profesionálních a drahých štětců, chcete, aby vydržely co nejdéle. Tyto jednoduché tipy vám pomohou udržet štětce jako nové po celé roky:</p>
+
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Štětce vždy skladujte čisté a suché.</li>
+        <li>Ujistěte se, že se štětiny navzájem nedotýkají ani žádných jiných povrchů, aby se neohýbaly a vždy měly ostrý tvar.</li>
+        <li>Při nabírání barvy držte štětec pod úhlem 45 stupňů — i když ho otáčíte, nikdy nerozštěpujte štětiny.</li>
+        <li><strong>NIKDY nenechávejte štětce namočené ve vodě.</strong></li>
+        <li>Po každé akci umyjte každý štětec zvlášť mýdlem a teplou tekoucí vodou a nechte je uschnout naplocho na chladném suchém místě přes noc. Můžete je také nechat schnout zavěšené štětinami dolů.</li>
+        <li>Neskladujte mokré štětce štětinami nahoru — voda může zatéci pod objímku a zničit štětec.</li>
+        <li>Po umytí a uschnutí štětce vydezinfikujte. Preferuji Brush Bath, který je speciálně navržen pro face paintery a udržuje dezinfekční účinek i po zředění vodou.</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/fccccay7g3" allowfullscreen></iframe>
+        <div class="media-caption">Mytí štětců</div>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/5hv68h72lp" allowfullscreen></iframe>
+        <div class="media-caption">Sušení a dezinfekce štětců</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 5 -->
+  <div class="lesson" id="m7l5">
+    <div class="lesson-title">
+      <h3>Lekce 5: Jak opravit rozštěpené nebo ohnuté štětiny</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Existují dva způsoby, jak opravit rozštěpené nebo ohnuté štětiny:</p>
+
+      <p><strong>1. Metoda vařící vody:</strong> Ponořte štětiny do vroucí vody na 5–10 sekund. Vyhněte se ponoření objímky (kovové části) do vroucí vody, aby se nerozpustilo lepidlo. Tvarujte štětec do požadovaného tvaru a nechte uschnout naplocho.</p>
+
+      <p><strong>2. Metoda s barvou:</strong> Pokud první metoda nezafungovala, nabijte štětec hustou krémovou bílou barvou a nechte ho uschnout naplocho přes noc. Opláchněte barvu a zkontrolujte, zda se štětiny opravily. Pokud ne, opakujte postup s vroucí vodou.</p>
+
+      <p>Pokud i po všech opravných postupech zůstanou nějaké neposlušné chloupky, můžete je ostříhat nůžkami.</p>
+
+      <div class="media-gallery">
+        <div class="full">
+          <img src="images/882458c7400736dc.jpg" alt="Oprava štětce">
+          <div class="media-caption">Před a po opravě rozštěpeného štětce</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 6 -->
+  <div class="lesson" id="m7l6">
+    <div class="lesson-title">
+      <h3>Lekce 6: Péče o houbičky a šablony</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Některé země jako Kanada již zavedly pravidlo jedné houbičky na jedno dítě, a toto pravidlo má logický základ. Studie ukázaly, že jakmile se bakterie dostanou do pórů houbičky, je téměř nemožné je odtud dostat. Neexistují tedy skutečně účinné způsoby sterilizace houbiček doma. Pokud se ale o ně dobře staráte, můžete odstranit většinu mikrobů.</p>
+
+      <p><strong>Používání jedné houbičky na jedno dítě je doporučeno, ale ne nutné.</strong> Vím, že mnoho umělců to nedělá, ale měli byste alespoň houbičky čistit co nejlépe.</p>
+
+      <p><strong>Můj postup:</strong></p>
+      <ul style="margin-left: 20px; margin-bottom: 14px;">
+        <li>Nikdy nenechávám houbičky namočené ve vodě během práce.</li>
+        <li>Po návratu z akce umyji houbičky antibakteriálním mýdlem pod tekoucí vodou.</li>
+        <li>Čištění houbiček ve speciálním sáčku v pračce nebo myčce při 90°C zabije většinu mikrobů.</li>
+        <li>Nechám všechny houbičky uschnout na čistém ručníku přes noc.</li>
+        <li>Když jsou čisté a suché, vetřu kapku Brush Bath jemným zmáčknutím houbičky v rukou a nechám znovu uschnout.</li>
+        <li>Houbičky skladuji a přenáším suché — nikdy je nenechávám ve vzduchotěsných prostorech, když jsou mokré (vede to k růstu bakterií a plísní).</li>
+      </ul>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/905doz585b" allowfullscreen></iframe>
+        <div class="media-caption">Mytí houbiček</div>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/q3qhxw5nnl" allowfullscreen></iframe>
+        <div class="media-caption">Mytí šablon</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSON 7 -->
+  <div class="lesson" id="m7l7">
+    <div class="lesson-title">
+      <h3>Lekce 7: Péče o nádobu na štětce. Jak vyčistit zabarvenou nádobu.</h3>
+    </div>
+    <div class="lesson-content">
+      <p>Obvykle stačí nádobu na štětce jednoduše opláchnout tekoucí vodou a důkladně vyčistit. Odolné skvrny lze odstranit drhnutím starým zubním kartáčkem a krémovým abrazivním čistícím prostředkem. Při výzkumu jsem také zjistila, že ubrousky Lysol nebo Clorox by měly skvěle fungovat na odstranění skvrn od barvy z plastu, i když jsem to osobně nezkoušela.</p>
+
+      <p>Jakmile otřete všechny větší ploché povrchy, je čas vyřešit rohy a drážky. Používám k tomu aplikátor na rtěnku, ale můžete zkusit i ostrý konec rukojeti štětce, který se dostane do každého rohu nádoby.</p>
+
+      <p>Jakmile vyndáte všechnu barvu, důkladně nádobu opláchněte — mohli jste uvolnit více barvy, která se vypláchne. Ráda používám kuchyňský sprej a stříkám přímo do drážek. Tím se nejen odstraní více barvy, ale je to důležité i pro odstranění čistících chemikálií z ubrousků, aby se nedostaly do oplachovací vody pro štětce.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/oibbpn4gqn" allowfullscreen></iframe>
+        <div class="media-caption">Mytí nádoby na štětce</div>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Hygiena je zásadní součástí profesionálního face paintingu. Udržujte sebe, svůj kit i pracovní místo čisté. Barvy skladujte suché a bez víček. Štětce myjte po každé akci mýdlem a teplou vodou, nikdy je nenechávejte ve vodě. Rozštěpené štětiny opravte vroucí vodou. Houbičky perte a dezinfikujte. Používejte Brush Bath nebo Brush Spa jako bezpečnou dezinfekci během práce.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 8 ============ -->
+  <div class="module-header" id="module8">
+    <h2>Modul 8 — Teorie barev a výroba vlastních split-cakeů</h2>
+    <p style="opacity: 0.85;">Barevný kruh, barevná harmonie, jak si vyrobit vlastní split-cake</p>
+  </div>
+
+  <!-- Lekce 1 -->
+  <div class="lesson" id="m8l1">
+    <div class="lesson-title"><h3>Lekce 1: Základní teorie barev</h3></div>
+    <div class="lesson-content">
+      <p>Barva — žádný kit face paintera by bez ní nebyl kompletní. Pokud je použita promyšleně, dobře zvolená kombinace barev dokáže design rozzářit. Pokud se ale výběru barevné palety nevěnuje pozornost, výsledek může být přesně opačný.</p>
+
+      <p>Není žádným tajemstvím, že barva je mocným nástrojem pro vytváření emocí a přitahování pozornosti. Umělci a grafičtí designéři už dávno pochopili její schopnost vzbudit nebo utlumit smysly, a barvu k tomuto účelu velmi efektivně využívají.</p>
+
+      <p>Otázka zní — co funguje a co ne? A jak mohou face painteři využít barvu k co nejlepšímu efektu?</p>
+
+      <p>V tomto modulu se podíváme na základní teorii barev pomocí barevného kruhu. Pak naše nové znalosti uvedeme do praxe — ukážu vám, jak si vytvořit vlastní příjemné barevné kombinace ve vlastním split-caku.</p>
+
+      <h4>Barevný kruh</h4>
+
+      <p>Za barevný kruh vděčíme Siru Isaacu Newtonovi, který mimo jiné vytvořil první kruhový diagram barev v roce 1666. To položilo základ barevného kruhu a teorie barev obecně, kterou od té doby v různých formách a definicích studují umělci i vědci.</p>
+
+      <p>Je užitečné si teorii barev představit jako způsob, jak vytvořit logickou strukturu pro barvy. Pokud máme například sortiment face paintových barev, můžeme je uspořádat podle barvy a umístit na kruh, který ukazuje vzájemné vztahy mezi barvami.</p>
+
+      <p>Barevný kruh jste se s největší pravděpodobností učili ve škole — ale malé osvěžení neuškodí!</p>
+
+      <div class="media-gallery">
+        <img src="images/69402a2b5ba02206.jpg" alt="Barevný kruh" style="max-width: 300px;">
+        <p class="media-caption">Barevný kruh založený na červené, žluté a modré</p>
+      </div>
+
+      <p>Barevný kruh založený na červené, žluté a modré je v oboru umění tradiční. Existují také definice (neboli kategorie) barev založené na barevném kruhu. Začneme třídílným barevným kruhem.</p>
+
+      <p><strong>Primární barvy: Červená, žlutá a modrá</strong></p>
+      <p>V tradiční teorii barev (používané pro malby a pigmenty) jsou primární barvy 3 pigmentové barvy, které nelze namíchat ani vytvořit žádnou kombinací jiných barev. Všechny ostatní barvy jsou odvozeny z těchto 3 odstínů.</p>
+
+      <p><strong>Sekundární barvy: Zelená, oranžová a fialová</strong></p>
+      <p>To jsou barvy vzniklé smícháním primárních barev.</p>
+
+      <p><strong>Terciární barvy: Žluto-oranžová, červeno-oranžová, červeno-fialová, modro-fialová, modro-zelená a žluto-zelená</strong></p>
+      <p>To jsou barvy vzniklé smícháním primární a sekundární barvy. Proto mají dvouslovný název, například modro-zelená, červeno-fialová a žluto-oranžová.</p>
+    </div>
+  </div>
+
+  <!-- Lekce 2 -->
+  <div class="lesson" id="m8l2">
+    <div class="lesson-title"><h3>Lekce 2: Barevná harmonie</h3></div>
+    <div class="lesson-content">
+      <p>Harmonii lze definovat jako příjemné uspořádání částí, ať už jde o hudbu, poezii, barvu nebo design. V hudebních termínech harmonie prostě „zní správně". Je příjemná a potěšující pro poslech. Ve vizuálních termínech je harmonie něco, co vypadá dobře. Zaujme diváka a vytváří podvědomý vnitřní pocit pořádku, rovnováhy a logiky ve vizuálním zážitku.</p>
+
+      <p>Pokud harmonie chybí, výsledek je buď nudný, nebo chaotický. Ve vizuálních termínech nudná kombinace barev může znamenat, že face paintingovému designu chybí dopad a jakýkoli pocit „wow". Chaotické uspořádání barev nechává mozek zmatený a neschopný zpracovat vizuální podněty — výsledkem je odpor. To rozhodně není žádoucí efekt pro face paintingový design.</p>
+
+      <p>Úkol je tedy jasný — jako face painteři potřebujeme vytvořit harmonickou, logickou rovnováhu barevné kompozice — kombinaci barev, která přinese vizuální zájem a pocit řádu.</p>
+
+      <p>Existuje mnoho teorií harmonie. Následující ilustrace a popisy představují některé základní vzorce.</p>
+
+      <h4>1. Monochromatické barevné schéma</h4>
+      <p>Monochrom je první a nejjednodušší barevný vztah. Používá jen jednu barvu, ale různé její variace a odstíny. Příkladem by byly odstíny fialové — fialová, středně fialová, magenta, růžová atd.</p>
+      <p><strong>Proč funguje:</strong> Monochromatické vztahy fungují, protože jsou čisté a jednoduché. Dílo má pocit jednoty, protože všechny odstíny jsou odvozeny z jedné barvy. Vizuální zájem lze přidat a pozornost nasměrovat k určité oblasti zvolením různých odstínů s různými hodnotami a saturací. Podívejte se na pět vzorků níže — kam vaše oko bloudí? Mělo by skončit zpět na vzorku č. 3, protože to je nejvýraznější růžová z celé skupiny. To je perfektní příklad, jak vytvořit vizuální zájem a ohnisko v monochromatickém barevném schématu.</p>
+
+      <div class="media-gallery">
+        <img src="images/60692f72d65fd6ea.jpg" alt="Monochromatické schéma" style="max-width: 300px;">
+        <p class="media-caption">Monochromatické barevné schéma — různé odstíny jedné barvy</p>
+      </div>
+
+      <h4>2. Analogické barevné schéma</h4>
+      <p>Analogické vztahy používají 2–4 barvy, které sedí vedle sebe na barevném kruhu. Příkladem by byla modrá / světle modrá / zelená. Můžete si vybrat kolik barev chcete, ale obecně je lepší držet se dvou, tří nebo čtyř.</p>
+      <p><strong>Proč funguje:</strong> Analogické vztahy fungují, protože barvy přecházejí jedna v druhou způsobem, který dává našemu mozku smysl (díky sekundárním a terciárním barvám, které pomáhají spojit jednotlivé body). Souvisí to s učením barev duhy v dětství — víme, že zelená přichází před modrou a modrá před fialovou. Takže pokud použijeme modrou, modrozelenou a zelenou společně, dává nám to smysl. Je tu přirozený tok, protože modrá je použita k vytvoření dalších dvou barev.</p>
+
+      <h4>3. Rozdělené analogické schéma (split-analogous)</h4>
+      <p>Variací analogického vztahu je rozdělené analogické schéma, které stále používá dvě nebo více barev, ale vybíráte každou druhou barvu na barevném kruhu (za předpokladu, že váš barevný kruh má 12 vzorků jako ten výše). Příklady: tmavě zelená / zelená / žlutá, červená / oranžová / žlutá, nebo modrá / fialová / červená.</p>
+
+      <h4>4. Komplementární barevné schéma</h4>
+      <p>Komplementární vztahy se tvoří v párech — ty sedí přímo naproti sobě na barevném kruhu. Červená a zelená, oranžová a modrá, žlutá a fialová jsou všechno komplementární barvy.</p>
+      <p><strong>Proč funguje:</strong> Komplementární barvy jsou silné, protože přirozeně hrají jedna proti druhé díky svému umístění na barevném kruhu — červená nikdy nevypadá více červeně, než když je vedle zelené, a naopak. Komplementární barvy navíc vždy obsahují jednu teplou barvu (červená, oranžová, žlutá a jejich variace) a jednu studenou barvu (zelená, modrá, fialová a jejich variace). Protože barvy sedí naproti sobě a teplá barva je spárována se studenou, vzniká v tomto barevném vztahu přirozené napětí, které je pro náš mozek zajímavé. Ať už to děláme vědomě nebo nevědomě, náš mozek neustále hledá harmonii a barva není výjimkou. Když tedy vidíme přirozené napětí mezi komplementárními páry, nutí to náš mozek zastavit se a dívat se.</p>
+
+      <div class="media-gallery">
+        <img src="images/dee4f20ded1e2b81.jpg" alt="Komplementární schéma" style="max-width: 400px;">
+        <p class="media-caption">Komplementární barvy — protilehlé barvy na kruhu</p>
+      </div>
+
+      <h4>5. Rozdělené komplementární schéma (split-complementary)</h4>
+      <p>Variací komplementárního schématu je rozdělené komplementární. Začnete jednou barvou a pak vyberete dvě barvy, které sedí po stranách jejího komplementu. Takže místo červená / zelená byste zvolili tmavě červenou / oranžovou / zelenou.</p>
+      <p><strong>Proč funguje:</strong> Rozdělené komplementární barvy využívají komplementární vztah a také nutí náš mozek zastavit se a dívat se (ale z jiného důvodu). Zatímco červená a zelená nás zastaví, protože jsou přesné protiklady, u červené / žlutozelené / modrozelené se zastavujeme, protože to nejsou přesné protiklady. Je tu dostatek napětí a vizuálního zájmu, aby udržely náš mozek zapojený, zatímco přemýšlí nad tím, co vidí. A dokud je náš mozek zapojený, stále se díváme — a to je vždy plus, pokud jde o umění.</p>
+
+      <div class="media-gallery">
+        <img src="images/ea4138917830975f.jpg" alt="Rozdělené komplementární schéma" style="max-width: 300px;">
+        <p class="media-caption">Rozdělené komplementární barevné schéma</p>
+      </div>
+
+      <h4>6. Triádové barevné schéma</h4>
+      <p>Triádový vztah používá tři barvy — vybírají se tak, že vezmete každou čtvrtou barvu na barevném kruhu. Název pochází z tvaru, který mezi barvami vznikne. Rozdělené komplementární schéma může fungovat i jako variace triádového. Příklady triád: červená / žlutá / modrá, nebo červená / žlutá / tmavomodrá.</p>
+      <p><strong>Proč funguje:</strong> Triády fungují, protože mezi barvami na barevném kruhu je stejná vzdálenost. I když divák nezná barevný kruh nebo teorii barev, jeho mozek vnímá tento vztah jako vyvážený — a „rovnováha" se rovná „harmonii" pro náš mozek a oči.</p>
+
+      <div class="media-gallery">
+        <img src="images/062fd36fa63efbc4.jpg" alt="Triádové schéma" style="max-width: 300px;">
+        <p class="media-caption">Triádové barevné schéma — tři rovnoměrně rozmístěné barvy</p>
+      </div>
+
+      <h4>7. Tetrádové barevné schéma</h4>
+      <p>Tetrádový vztah používá čtyři barvy, které se vybírají jako každá třetí barva na barevném kruhu. Stejně jako u triádového vztahu název tetráda pochází z tvaru vytvořeného mezi barvami. Oranžová / žlutá / světle modrá / fialová je jen jedním příkladem.</p>
+      <p><strong>Proč funguje:</strong> Přestože má tetráda o jednu barvu více než triáda, funguje pozoruhodně podobně. Funguje ze stejného důvodu jako triáda — je tu rovnováha díky systematickému výběru barev.</p>
+
+      <div class="media-gallery">
+        <img src="images/f7eeb968797d69fd.jpg" alt="Tetrádové schéma" style="max-width: 300px;">
+        <p class="media-caption">Tetrádové barevné schéma — čtyři rovnoměrně rozmístěné barvy</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Tyto znalosti stačí pro úspěšnou kariéru v face paintingu. Pokud byste ale chtěli toto téma prozkoumat hlouběji, doporučuji navštívit stránku <a href="https://www.colormatters.com" target="_blank">www.colormatters.com</a>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 3 -->
+  <div class="lesson" id="m8l3">
+    <div class="lesson-title"><h3>Lekce 3: Jak si vyrobit vlastní split-cake</h3></div>
+    <div class="lesson-content">
+      <p>Konečně můžeme uvést naučenou teorii do praxe a vytvořit si vlastní split-cakey. Než začnete, ujistěte se, že máte připravené všechny potřeby a nástroje.</p>
+
+      <h4>Materiály:</h4>
+      <ul>
+        <li>3, 4, 5 nebo i 6 jednotlivých barev 30g nebo 32g barev.</li>
+        <li>Čistá nádobka zbylá po kulaté 32g barvě nebo obdélníková nádobka — já obvykle používám kulaté nádobky, které zbudou po tom, co spotřebuji celou 32g barvu, ale můžete použít i hranaté nádobky, pokud najdete vhodnou velikost a výšku (to je velmi důležité!).</li>
+        <li>Máslový nůž nebo plastová stěrka k vyjmutí proužků z kelímků s barvou — můžete také potřebovat žiletku nebo ostrou kovovou stěrku k řezání barvy.</li>
+        <li>Vlhčené ubrousky.</li>
+        <li>Latexové rukavice — pro případ, že si nechcete zabarvit prsty.</li>
+      </ul>
+
+      <div class="media-gallery">
+        <img src="images/c0299ce316f11600.jpg" alt="Materiály pro výrobu split-caku" style="max-width: 500px;">
+        <p class="media-caption">Potřebné materiály pro výrobu vlastního split-caku</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Používám tento typ stěrky — nerezová make-up stěrka (Stainless Steel Makeup Spatula). Je to skvělý nástroj i pro práci se special FX materiály.
+      </div>
+
+      <p>Vybrala jsem si tyto čtyři barvy a seřadila je v pořadí, ve kterém se budou hezky mísit jedna s druhou. Všimněte si, že máme komplementární kombinaci (světle zelená a růžová), která vyžadovala přechodovou barvu. Proto jsem mezi ně vložila perleťovou bílou.</p>
+    </div>
+  </div>
+
+  <!-- Lekce 4 -->
+  <div class="lesson" id="m8l4">
+    <div class="lesson-title"><h3>Lekce 4: Jak vybrat barevnou kombinaci</h3></div>
+    <div class="lesson-content">
+      <p>Prvním krokem je důkladně promyslet, k čemu budete novou barevnou kombinaci nejčastěji používat. Já mám například tři nejpoužívanější split-cakey, které nosím ve svém kitu:</p>
+
+      <ul>
+        <li><strong>Žluto-zeleno-modrá kombinace</strong> — používám ji pro klučičí designy jako dinosauři, draci, hadi.</li>
+        <li><strong>Růžovo-fialová kombinace</strong> — nejoblíbenější holčičí kombinace.</li>
+        <li><strong>Žluto-oranžovo-červená kombinace</strong> — skvělá pro tygry, tropické designy, piráty, draky a mnoho dalšího.</li>
+      </ul>
+
+      <p>Existuje nespočet krásných kombinací kromě těch, které jsem uvedla výše, a s tolika možnostmi to může být trochu zdrcující. Proto doporučuji následující jednoduché kroky, abyste si vyrobili split-cake, který budete milovat a nejčastěji používat.</p>
+
+      <p><strong>1. Najděte designy, které se vám líbí, a pozorně se podívejte na barevné kombinace, které umělec použil — a pak je zkopírujte.</strong> Více o vyhledávacích systémech a jak najít maximum krásných designů se dozvíte v Části třetí, Modul 5 — Tvorba vlastního designu.</p>
+
+      <p><strong>2. Zkontrolujte, že vedle sebe nejsou umístěny komplementární barvy (jako žlutá a fialová).</strong> Komplementární barvy vytvářejí živou barevnou paletu, ale nikdy by neměly být vzájemně míšeny, protože mezilehlá barva by byla špinavá. Příkladem je žlutá a fialová. Řešením pro tento typ kombinace je vložení přechodové spojovací barvy. Pokud například vložíte proužek bílé nebo modré mezi žlutou a fialovou, získáte pěkný gradientní přechod, protože žlutá a modrá, stejně jako modrá a fialová, jsou sousední barvy. Bílá a černá jsou neutrální barvy a lze je použít v kombinaci s jakýmikoli jinými barvami.</p>
+
+      <div class="media-gallery">
+        <img src="images/69402a2b5ba02206.jpg" alt="Barevný kruh — komplementární barvy" style="max-width: 300px;">
+        <p class="media-caption">Barevný kruh — komplementární barvy nelze mísit vedle sebe</p>
+      </div>
+
+      <p><strong>3. Vyberte z vašeho kitu barvy, které budou fungovat s vaším nápadem.</strong></p>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Vyberte nové, středně měkké barvy a dejte je na 10–15 minut do ledničky, aby trochu ztuhly pro snadnější řezání a přeskládání. Nedoporučuji používat staré barvy — ty jsou obvykle příliš tvrdé a mohou se drolit.
+      </div>
+
+      <p><strong>4. Naneste vybrané barevné kombinace na paži a jemně je rozetřete houbičkou</strong> — lépe tak pochopíte, jakého výsledku se svým novým split-cakem dosáhnete.</p>
+    </div>
+  </div>
+
+  <!-- Lekce 5 -->
+  <div class="lesson" id="m8l5">
+    <div class="lesson-title"><h3>Lekce 5: Výroba vlastního split-caku</h3></div>
+    <div class="lesson-content">
+      <p><strong>1.</strong> Odměřte velikost každého proužku, který chcete do split-caku vložit.</p>
+
+      <p><strong>2.</strong> Použijte ostrou, čistou žiletku k řezání a máslový nůž k vysunutí / vyjmutí proužků ze starých kelímků s barvou. Pokud je potřeba, přetvarujte staré barvy. Poté přeneste proužky do čistého, prázdného kelímku na barvu.</p>
+
+      <p><strong>3.</strong> Barvy pevně přitlačte prsty na místo.</p>
+
+      <p><strong>4.</strong> A máte to — váš vlastní split-cake!</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/e7d83booa9" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Výroba vlastního split-caku krok za krokem</p>
+      </div>
+
+      <p>Takto lze vytvořit celé palety split-cakeů. Podívejte se na tyto krásky ručně vyrobené Kristin Olsson a Sally-Ann Lynch!</p>
+
+      <div class="media-gallery" style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <div>
+          <img src="images/aa97af276032debe.jpg" alt="Split-cakey od Kristin Olsson" style="max-width: 300px;">
+          <p class="media-caption">Split-cakey od Kristin Olsson</p>
+        </div>
+        <div>
+          <img src="images/3bd5624c773fe7f5.jpg" alt="Split-cakey od Sally-Ann Lynch" style="max-width: 300px;">
+          <p class="media-caption">Split-cakey od Sally-Ann Lynch</p>
+        </div>
+      </div>
+
+      <p>Obě umělkyně používají rybářské boxy jako nádoby na své split-cakey.</p>
+
+      <div class="media-gallery">
+        <img src="images/dcffde33526b1fcb.jpg" alt="Rybářský box na split-cakey" style="max-width: 400px;">
+        <p class="media-caption">Rybářské boxy jako úložiště na split-cakey — lze zakoupit na eBay</p>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Barvy — milujeme je, ale je důležité je vybírat moudře! Kombinování barev může vytvořit úžasné efekty, ale stejně tak může špatná volba barev zničit jinak pěkný design. Používejte barevný kruh, abyste identifikovali, co funguje a co ne, a inspirujte se jinými umělci, které obdivujete.
+      </div>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Vyberte si jakékoli barevné schéma, které se vám líbí, a vytvořte si vlastní split-cake.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODUL 9 ============ -->
+  <div class="module-header" id="module9">
+    <h2>Modul 9 — Bling-clustery</h2>
+    <p style="opacity: 0.85;">Jak vyrobit a aplikovat ozdobné clustery z kamínků, perel a dalších prvků</p>
+  </div>
+
+  <!-- Lekce 1 -->
+  <div class="lesson" id="m9l1">
+    <div class="lesson-title"><h3>Lekce 1: O bling-clusterech</h3></div>
+    <div class="lesson-content">
+      <p>Díky sociálním sítím se umělci a face painteři z celého světa mohou spojit a sdílet nápady, což vedlo k mnoha vzrušujícím inovacím ve face paintingu. Jednou z takových novinek je „bling" — tedy přidávání kamínků nebo clusterů (shluků) kamínků k face paintingovému designu.</p>
+
+      <p>Podívejme se blíže na to, jak bling, a konkrétněji bling-clustery, mohou zvýšit hodnotu vaší práce.</p>
+
+      <h4>Proč používat bling-clustery?</h4>
+
+      <p>Jednou z nejžhavějších inovací, kterou svět face painterů přijal, jsou „bling-clustery" neboli shluky kamínků. Zatímco face painteři přidávají kamínky ke svým designům už několik let, vytváření celého clusteru přímo na obličeji bylo časově náročné. V dnešní době si ale můžete clustery vyrobit předem, nebo je koupit hotové.</p>
+
+      <p>Proč používat bling-clustery ve svých designech?</p>
+
+      <ul>
+        <li><strong>Dívky všech věkových skupin milují kamínky a třpytky!</strong> Přidáním těchto prvků ke svým službám zvýšíte hodnotu svého designu A velikost svého trhu.</li>
+        <li><strong>Bling šetří čas.</strong> Při akcích s platbou za obličej můžete strávit méně času malováním, ale vaše designy budou mít stále wow efekt díky třpytivým kamínkům.</li>
+        <li><strong>Vaše služby budou zapamatovány</strong> jako výjimečné — profesionál, který nejen maluje, ale přidává i kamínky! Tím se zvyšuje pravděpodobnost opětovného najímání.</li>
+        <li><strong>Bling lze vyrobit z různých kamínků, krystalů, šperků, květin, pírek atd.</strong> — jediným požadavkem je plochá zadní strana.</li>
+        <li><strong>Bling může zachránit situaci,</strong> když máte dítě, které se nechce nechat namalovat, nebo je nemocné a nemůže být namalováno. Bling-cluster udělá dítě i rodiče šťastné a udrží bakterie daleko od vašeho kitu.</li>
+      </ul>
+
+      <h4>Co budete potřebovat:</h4>
+      <ul>
+        <li><strong>Sortiment kamínků</strong> různých velikostí — drahokamy, perly, květiny, pírka nebo jakékoli jiné kousky, které chcete do svých bling-clusterů přidat.</li>
+        <li><strong>Párátka nebo bambusové špejle</strong> — jedno z nich by mělo mít na špičce voskovou kuličku.</li>
+        <li><strong>Silikonové lepidlo na rukodělné práce</strong> nebo dimenzionální barva na textil. Pamatujte: bezpečnost je v našem podnikání nesmírně důležitá — proto musíte být opatrní při výběru materiálů, které přijdou do kontaktu s pokožkou. Viz níže moje tipy pro výběr silikonu.</li>
+        <li><strong>Plastový obal na dokumenty</strong> (eurofolie).</li>
+        <li><strong>Milimetrový papír.</strong></li>
+        <li><strong>Tekutý obvaz</strong> (volitelné).</li>
+        <li><strong>Lepidlo na glitter tetování nebo lepidlo na řasy</strong> (Quo je bezlatexové a rozpustné ve vodě).</li>
+      </ul>
+
+      <h4>Kamínky</h4>
+      <p>Kamínky lze zakoupit v hobby obchodech, ve velkých obchodních domech, online na eBay nebo ve specializovaných face paintingových obchodech. Při výběru kamínků pro vaše bling-clustery si dávejte pozor na zadní stranu — musí být plochá. Mějte sortiment různých krásných centrálních prvků a nezapomeňte, že budete potřebovat 3–4× menší kamínky, které se přidají kolem centrálního prvku. Můžete také experimentovat s různými kousky, jako jsou textilní nebo plastové květiny, pírka nebo dokonce kousky krajky.</p>
+
+      <div class="media-gallery">
+        <img src="images/de23ccf57794d6c9.jpg" alt="Kamínky pro bling-clustery" style="max-width: 500px;">
+        <p class="media-caption">Sortiment kamínků, perel a ozdobných prvků pro bling-clustery</p>
+      </div>
+
+      <h4>Silikon</h4>
+      <p>Vyberte produkt, který splňuje tyto požadavky:</p>
+      <ul>
+        <li>Průhledný</li>
+        <li>Bez zápachu</li>
+        <li>Neprůmyslový (nepoužívejte silikon z hobby marketu, protože obsahuje chemikálie, které nechcete na obličejích dětí, a navíc má silný zápach, ze kterého se můžete po pár hodinách práce otrávit)</li>
+        <li>Bezpečný silikon obvykle přichází v malých tubách (ne ve velkých stříkačkách)</li>
+      </ul>
+
+      <p>Tento typ silikonu lze zakoupit v chovatelských potřebách (zeptejte se na průhledný akvarijní těsnicí silikon) nebo v hobby obchodech.</p>
+
+      <div class="media-gallery">
+        <img src="images/80c12bc7ef72ccb3.jpg" alt="Bezpečný silikon" style="max-width: 400px;">
+        <p class="media-caption">Příklady bezpečného silikonu pro výrobu bling-clusterů</p>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Důležité:</strong> Silikon se nikdy nesmí nanášet přímo na pokožku. Bling-clustery budete sestavovat na plastu a čekat, dokud bezpečně nevyschnou, než je sundáte. Obecně trvá minimálně 24 hodin, než silikon ztuhne a stane se inertním, aby je bylo možné použít. Dimenzionální barva na textil obvykle schne kolem 48 hodin.
+      </div>
+
+      <p>Někteří face painteři také doporučují používat pojivo na kamínky (gem binder), které udrží kamínky pohromadě. Osobně jej nepoužívám, ale vím, že Lilly Walters Schermerhorn a Beth MacKinney používají lékařský tekutý obvaz, který aplikují jako první vrstvu na pracovní plochu a překryjí ho silikonem.</p>
+
+      <h4>Pracovní plocha</h4>
+      <p>Různí face painteři doporučují různé pracovní plochy — a to proto, že některé neumožňují snadné sejmutí bling-clusterů po zaschnutí. Karen Husted a Lilly Walters Schermerhorn používají plastové obaly na dokumenty (eurofolie). Výhodou eurofolií je, že jsou průhledné — můžete dovnitř vložit milimetrový papír nebo šablonu obličeje, což vám umožní vytvářet symetrické designy s vodítky pod spodem. Heather Green doporučuje plastové sáčky. Já používám eurofolie. Doporučuji otestovat různé značky, než je použijete pro sestavování svých bling-clusterů — z nějakého důvodu může silikon na některých příliš tvrdě přilnout.</p>
+    </div>
+  </div>
+
+  <!-- Lekce 2 -->
+  <div class="lesson" id="m9l2">
+    <div class="lesson-title"><h3>Lekce 2: Jak si vyrobit vlastní bling-clustery</h3></div>
+    <div class="lesson-content">
+      <p><strong>1.</strong> Shromážděte výběr kamínků a pěkných prvků v různých barvách, tvarech, velikostech a formách.</p>
+
+      <p><strong>2.</strong> Položte list milimetrového papíru do plastového obalu na dokumenty na stůl. Milimetrový papír vám pomůže vytvářet symetrické clustery.</p>
+
+      <p><strong>3.</strong> Naplánujte tvar vašeho clusteru. Běžné tvary clusterů jsou tvar Y, tvar V, tvar T, tvar slzy, tvar diamantu a asymetrický tvar. Při výběru tvaru zvažte, k jakým účelům budete bling-cluster chtít používat.</p>
+
+      <p><strong>4.</strong> Předem si rozložte kamínky bez lepení, abyste se ujistili, že jste spokojeni s výsledným vzhledem.</p>
+
+      <p><strong>5.</strong> Pokud používáte primární základ (jako tekutý obvaz), rozetřete ho na celou plochu vašeho budoucího clusteru. Nebojte se, pokud jste ho nanesli na větší plochu — můžete ho odstřihnout, až bling-cluster vyschne.</p>
+
+      <p><strong>6.</strong> Vytlačte trochu silikonu na plastový povrch a rozetřete ho párátkem do požadovaného tvaru. Jakmile si zvyknete na vytváření vlastních bling-clusterů, budete cítit, kolik silikonu potřebujete na jeden kus. Použijte párátko nebo bambusovou špejli s voskovou kuličkou na špičce — přilepte na ni kamínek a pak ho opatrně umístěte na silikon. Opakujte postup se všemi ostatními kamínky, dokud nezískáte požadovaný design.</p>
+
+      <p>Některé umělkyně, jako Laura Oliver, používají místo silikonu také akrylový gel-konturu (metalickou nebo glitterovou) pro přidávání krajkových detailů kolem kamínku. Existuje mnoho různých kontur, které lze pro tento účel použít, i když vím, že značka Tulip je nejpoužívanější.</p>
+
+      <p><strong>7.</strong> Nechte bling-cluster schnout 24 hodin, nebo 48 hodin, pokud jste místo silikonu použili barvu na textil.</p>
+
+      <p><strong>8.</strong> Zkuste sundat pár kousků z plastového povrchu, abyste zjistili, zda se snadno oddělují.</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/xcsv3npzto" allowfullscreen frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+        <p class="media-caption">Video: Jak vyrobit vlastní bling-cluster krok za krokem</p>
+      </div>
+
+      <div class="tip">
+        <strong>💡 Tip:</strong> Clustery můžete skladovat a vystavovat přímo na povrchu, na kterém jste je vyrobili (eurofoliích), a uložit je do složky. Každý umělec si najde vlastní metodu pro skladování a vystavování bling-clusterů.
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 3 -->
+  <div class="lesson" id="m9l3">
+    <div class="lesson-title"><h3>Lekce 3: Bezpečná lepidla pro bling-clustery</h3></div>
+    <div class="lesson-content">
+      <p>Jakmile máte svou kolekci bling-clusterů, budete je chtít bezpečně přidat na obličej dítěte. Existuje několik různých lepidel, která lze pro tento účel použít — jen pamatujte, že nejbezpečnější bude lékařské lepidlo.</p>
+
+      <p>Mezi ně patří <strong>Pros-Aide</strong> a <strong>lepidlo na glitter tetování</strong>, což je v podstatě totéž.</p>
+
+      <p>Pokud používáte lepidlo na glitter tetování, mějte na paměti, že není rozpustné ve vodě a bude nutné ho odstranit čisticím alkoholem nebo dětským olejem — tyto pokyny sdělte rodičům dítěte.</p>
+
+      <p>Pokud s těmito lepidly nejste obeznámeni, měli byste vědět, že lepidlo funguje nejlépe, když zaschne — je připravené k použití, když se stane průsvitným.</p>
+
+      <p>Alternativou k Pros-Aide je <strong>lepidlo na řasy</strong>, dostupné v drogerii nebo v oddělení kosmetiky. Karen Husted například doporučuje používat Quo #1 lepidlo na řasy, které je bezlatexové a rozpustné ve vodě.</p>
+
+      <p>Experimentování vám pomůže zjistit, jaký produkt vám nejlépe funguje pro udržení clusterů na místě za různých podmínek.</p>
+
+      <div class="warning">
+        <strong>⚠️ Varování:</strong> Latex může u některých lidí způsobit alergickou reakci, proto nedoporučuji používat lepidlo na bázi latexu pro přidávání kamínků k designům.
+      </div>
+
+      <h4>Jak aplikovat bling-cluster na obličej:</h4>
+      <p>Pro přípravu pokožky na bling-cluster se nejprve ujistěte, že oblast je čistá a suchá — lepidlo funguje nejlépe, pokud je aplikováno přímo na pokožku. Pokud jste dítěti již namalovali obličej, můžete vatovou tyčinkou opatrně odstranit barvu z pokožky pouze v tomto místě. Poté naneste trochu lepidla na zadní stranu clusteru a jemně ho přitlačte k obličeji na finální pozici.</p>
+
+      <div class="media-gallery">
+        <img src="images/c190c6f6719bdbf2.jpg" alt="Bezpečné lepidlo na bling-clustery" style="max-width: 400px;">
+        <p class="media-caption">Příklady bezpečného lepidla na pokožku — všimněte si označení „Latex-Free"!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lekce 4 -->
+  <div class="lesson" id="m9l4">
+    <div class="lesson-title"><h3>Lekce 4: Příklady bling-clusterů</h3></div>
+    <div class="lesson-content">
+      <div class="media-gallery">
+        <img src="images/6b5b8077fc429afc.jpg" alt="Bling-clustery od Mileny Potehiny" style="max-width: 500px;">
+        <p class="media-caption">Bling-cluster od Mileny Potehiny</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/34ecab71a6ddf8a4.jpg" alt="Bling-clustery od Natalie Yankovové" style="max-width: 500px;">
+        <p class="media-caption">Bling-clustery od Natalie Yankovové</p>
+      </div>
+
+      <div class="media-gallery">
+        <img src="images/4d6c9cde7bc0982c.jpg" alt="Bling-clustery od Poliny Kopaliny" style="max-width: 500px;">
+        <p class="media-caption">Krásné face paintingové designy s bling-clustery od Poliny Kopaliny</p>
+      </div>
+
+      <div class="note">
+        <strong>📌 Shrnutí modulu:</strong> Face painting už není jen o barvách! Buďte kreativní, šetřete čas a přidejte okamžitý wow efekt pomocí blingu!
+      </div>
+
+      <div class="warning">
+        <strong>❗ Domácí úkol:</strong> Buďte kreativní! Zkuste ve svých clusterech použít i jiné prvky — pírka, textilní květiny, kousky krajky nebo jakékoli jiné hezké prvky s plochou zadní stranou.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📌 Část první — Materiály (Moduly 1-9) — Kompletní</p>
+    <p style="margin-top: 8px;">Zdroj: International Face Painting School — Professional Course<br>
+    Překlad do češtiny</p>
+  </div>
+
+</div>
+
+</body>
+</html>
